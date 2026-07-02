@@ -39,6 +39,12 @@ These examples answer the question: *"What does it actually look like when the f
 
 **Key takeaway:** All 8 agents ran in parallel and produced coherent, cross-referencing plans without coordination overhead. The output demonstrates the agency's ability to go from "find an opportunity" to "here's the full blueprint" in a single session.
 
+### [agency-noize-global.md](./agency-noize-global.md)
+
+**What:** A company-specific deployment blueprint — one real music business (Noize Global) mapped onto the Music division, with each revenue line assigned an owner agent, a written brand voice, and a staged revenue-goal ladder that says which agents lead at each stage.
+
+**Key takeaway:** The pattern for running The Agency as *your* company's team: define the company once, give every revenue line one accountable agent, and let the goal ladder decide which playbooks are active.
+
 ## Adding New Examples
 
 If you run an interesting multi-agent exercise, consider adding it here. Good examples show:

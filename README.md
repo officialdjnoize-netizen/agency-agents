@@ -90,7 +90,7 @@ Browse the agents below and copy/adapt the ones you need!
 ./scripts/install.sh --tool hermes
 ```
 
-**Install only the teams you need** (not everyone wants all 16 divisions):
+**Install only the teams you need** (not everyone wants all 17 divisions):
 
 ```bash
 ./scripts/install.sh                                    # interactive wizard: pick tools + teams
@@ -238,6 +238,23 @@ Growing your audience, one authentic interaction at a time.
 | 📧 [Email Marketing Strategist](marketing/marketing-email-strategist.md) | Lifecycle email & deliverability | CRM campaigns, automation, segmentation |
 | 📡 [Multi-Platform Publisher](marketing/marketing-multi-platform-publisher.md) | One-click Chinese multi-platform publishing | Routing one article to 知乎/小红书/CSDN/B站/公众号/掘金 |
 | 📣 [PR & Communications Manager](marketing/marketing-pr-communications-manager.md) | PR, media relations & crisis comms | Press releases, thought leadership, reputation |
+
+### 🎶 Music Division
+
+Running the business of music, from the studio to the settlement.
+
+| Agent | Specialty | When to Use |
+|-------|-----------|-------------|
+| 🎤 [Artist Brand Strategist](music/music-artist-brand-strategist.md) | Artist positioning, identity systems, bios/EPK narrative | Defining an artist's lane, rebrands, brand partnership decisions |
+| 💿 [Release Campaign Manager](music/music-release-campaign-manager.md) | Distribution ops, DSP editorial pitching, rollout timelines | Single/EP/album releases that need momentum, not just a date |
+| 📇 [Booking & Gig Agent](music/music-booking-gig-agent.md) | Promoter outreach, fee negotiation, deal memos, riders | Filling the calendar, raising fees, professionalizing show ops |
+| 📺 [Music YouTube Channel Strategist](music/music-youtube-channel-strategist.md) | Mix/set channels, Content ID strategy, tracklist SEO | Growing a music channel while staying strike-free and converting fans |
+| 🎼 [Sync Licensing & Royalties Strategist](music/music-sync-licensing-strategist.md) | Sync placements, PRO/publishing registration, split sheets | Catalog monetization, unclaimed royalty recovery, sync pitching |
+| 🫂 [Fan Community Builder](music/music-fan-community-builder.md) | Email/SMS lists, Discord communities, superfan tiers | Building an owned audience and direct-to-fan revenue |
+| 🎛️ [Music Production Director](music/music-production-director.md) | Client production services, packages, rights-tiered pricing | Running music production as a scoped, profitable service business |
+| 🎚️ [Mixing & Mastering Engineer](music/music-mixing-mastering-engineer.md) | Mix translation, streaming loudness, revision workflows | Client mixing/mastering with label-grade delivery discipline |
+| 🌱 [Artist Development Coach](music/music-artist-development-coach.md) | A&R diagnostics, 90-day development cycles, release readiness | Developing raw artists into release-ready, bookable acts |
+| 🧑‍🏫 [AI Music Education Lead](music/music-ai-education-lead.md) | AI production curricula, course products, YouTube-to-course funnels | Building an AI-education revenue line with honest teaching standards |
 
 ### 📊 Product Division
 
@@ -648,7 +665,7 @@ Each agent is designed with:
 
 ## 📊 Stats
 
-- 🎭 **232 Specialized Agents** across 16 divisions
+- 🎭 **243 Specialized Agents** across 17 divisions
 - 📝 **10,000+ lines** of personality, process, and code examples
 - ⏱️ **Months of iteration** from real-world usage
 - 🌟 **Battle-tested** in production environments
@@ -1036,7 +1053,7 @@ MIT License - Use freely, commercially or personally. Attribution appreciated bu
 
 ## 🙏 Acknowledgments
 
-What started as a Reddit thread about AI agent specialization has grown into something remarkable — **232 agents across 16 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
+What started as a Reddit thread about AI agent specialization has grown into something remarkable — **243 agents across 17 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
 
 To everyone who has opened a PR, filed an issue, started a Discussion, or simply tried an agent and told us what worked — thank you. You're the reason The Agency keeps getting better.
 

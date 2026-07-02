@@ -48,7 +48,7 @@ FAIL = float(os.environ["ORIGINALITY_FAIL"])
 WARN = float(os.environ["ORIGINALITY_WARN"])
 
 AGENT_DIRS = ("academic design engineering finance game-development marketing "
-              "paid-media product project-management sales spatial-computing "
+              "music paid-media product project-management sales spatial-computing "
               "specialized strategy support testing").split()
 
 # Proper nouns we neutralize so a find-replace re-skin (swap the country/platform
