@@ -23,6 +23,7 @@ AGENT_DIRS = [
     "game-development",
     "gis",
     "marketing",
+    "music",
     "paid-media",
     "product",
     "project-management",

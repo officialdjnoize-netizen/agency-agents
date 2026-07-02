@@ -136,7 +136,7 @@ ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor a
 # same set as AGENT_DIRS in convert.sh / lint-agents.sh, which exclude strategy
 # entirely — see divisions.json (the source of truth) and scripts/check-divisions.sh.
 AGENT_DIRS=(
-  academic design engineering finance game-development gis marketing paid-media product project-management
+  academic design engineering finance game-development gis marketing music paid-media product project-management
   sales security spatial-computing specialized strategy support testing
 )
 
@@ -145,7 +145,7 @@ AGENT_DIRS=(
 # ---------------------------------------------------------------------------
 # Selectable divisions = AGENT_DIRS minus strategy/ (NEXUS docs, not agents).
 ALL_DIVISIONS=(
-  academic design engineering finance game-development gis marketing paid-media
+  academic design engineering finance game-development gis marketing music paid-media
   product project-management sales security spatial-computing specialized support testing
 )
 

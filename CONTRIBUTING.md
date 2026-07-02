@@ -31,7 +31,7 @@ This project and everyone participating in it is governed by our Code of Conduct
 Have an idea for a specialized agent? Great! Here's how to add one:
 
 1. **Fork the repository**
-2. **Choose the appropriate division** (one of the 16 — or propose a new one):
+2. **Choose the appropriate division** (one of the 17 — or propose a new one):
    - `academic/` - Research, scholarship, and domain-expert specialists
    - `design/` - UX/UI and creative specialists
    - `engineering/` - Software development specialists
@@ -39,6 +39,7 @@ Have an idea for a specialized agent? Great! Here's how to add one:
    - `game-development/` - Game design and development specialists
    - `gis/` - Geospatial, mapping, and spatial-analysis specialists
    - `marketing/` - Growth and marketing specialists
+   - `music/` - Music business, release, booking, and fan-growth specialists
    - `paid-media/` - Paid acquisition and media specialists
    - `product/` - Product management specialists
    - `project-management/` - PM and coordination specialists
