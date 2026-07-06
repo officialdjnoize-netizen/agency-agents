@@ -675,6 +675,8 @@
   <canvas id="heroScene" aria-hidden="true"></canvas>
   <video class="hero-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
     <source src="assets/hero-loop.mp4" type="video/mp4">
+    <!-- hosted preview fallback; replace with your self-hosted file before launch -->
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260706_192131_11964653-d5d1-4743-b7b7-99ffdbf59a22.mp4" type="video/mp4">
   </video>
   <div class="hero-inner">
     <div class="hero-mark" aria-hidden="true">
@@ -867,6 +869,8 @@
 <section id="studio" class="studioband" aria-labelledby="studio-h">
   <video class="bgvid" autoplay muted loop playsinline data-optional aria-hidden="true" poster="">
     <source src="assets/studio-loop.mp4" type="video/mp4">
+    <!-- hosted preview fallback; replace with your self-hosted file before launch -->
+    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260706_185654_52d35e9c-4d49-4859-8d11-cb699c359fe6.mp4" type="video/mp4">
   </video>
   <div class="wrap">
     <div class="reveal">
@@ -1188,9 +1192,13 @@
       if (host) host.classList.add('no-video');
       v.remove();
     }
-    v.addEventListener('error', gone, true);
-    var s = v.querySelector('source');
-    if (s) s.addEventListener('error', gone);
+    /* a <source> error only means that candidate failed; give up on the last one */
+    var sources = v.querySelectorAll('source');
+    if (sources.length) {
+      sources[sources.length - 1].addEventListener('error', gone);
+    } else {
+      v.addEventListener('error', gone, true);
+    }
     v.addEventListener('canplay', function(){
       var host = v.closest('section') || v.closest('figure');
       if (host) host.classList.add('video-on');
