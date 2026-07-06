@@ -44,6 +44,21 @@ template structure (hero → work → about → connect).
   the format AI answer engines (ChatGPT, Perplexity, Google AI Overviews) cite
 - Quotable facts: credits list, Billboard №1 plaque, how-to-work-with steps
 
+## Selling beats & collecting emails
+
+- **Beat store** (`#beats`) — six beat cards with visual waveform players and
+  three license tiers (MP3 $34.99 / WAV+trackout $99.99 / exclusive $499+).
+  To take real payments, point each card's "License →" link at your
+  BeatStars/Airbit beat page (or embed their player), or wire a Stripe
+  Payment Link per license tier. `Service` + `Offer` JSON-LD is already in
+  place so the pricing is machine-readable.
+- **Email capture** (`#list`) — "free tagged beat pack" opt-in. Replace
+  `YOUR_FORM_ID` in the form's `action` with a real
+  [Formspree](https://formspree.io) form ID (free tier works) — submissions
+  then land in your inbox/dashboard. Netlify Forms, ConvertKit, or Mailchimp
+  embed codes drop in the same spot. Until an ID is set, the form shows a
+  demo success state without sending anything.
+
 ## Before going live — swap the placeholders
 
 1. Drop `portrait.jpg` into `assets/` — the About frame displays it
