@@ -157,10 +157,34 @@
     background:linear-gradient(180deg,rgba(6,3,3,.8),transparent 18%,transparent 82%,rgba(12,9,6,.9));
   }
   .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
-  .hero-mark{margin-bottom:10px}
+  .hero-mark{margin-bottom:14px}
   .hero-mark svg{
-    width:clamp(150px,22vw,230px);height:auto;display:block;
-    filter:drop-shadow(0 10px 44px rgba(232,25,44,.5));
+    width:clamp(170px,24vw,270px);height:auto;display:block;
+    filter:drop-shadow(0 14px 50px rgba(232,25,44,.45)) drop-shadow(0 4px 10px rgba(0,0,0,.7));
+  }
+  /* 3D extruded wordmark: dark stepped copies behind the gradient glyphs */
+  .hero h1 .t3d{position:relative;display:inline-block;-webkit-text-stroke:.5px rgba(255,255,255,.18)}
+  .hero h1 .t3d::before{
+    content:attr(data-text);position:absolute;left:0;top:0;z-index:-1;
+    -webkit-text-stroke:0;
+  }
+  .hero h1 .t3d-chrome::before{
+    color:#4d535c;
+    text-shadow:
+      0 .014em 0 #454b54, 0 .028em 0 #3a4049, 0 .042em 0 #30353d,
+      0 .056em 0 #262a31, 0 .07em 0 #1d2026, 0 .082em 0 #14161a,
+      0 .1em .12em rgba(0,0,0,.6), 0 .16em .3em rgba(0,0,0,.55);
+  }
+  .hero h1 .t3d-red::before{
+    color:#a01120;
+    text-shadow:
+      0 .014em 0 #8c0f1c, 0 .028em 0 #780d18, 0 .042em 0 #640a14,
+      0 .056em 0 #500811, 0 .07em 0 #3e060d, 0 .082em 0 #2e040a,
+      0 .1em .12em rgba(0,0,0,.6), 0 .12em .35em rgba(232,25,44,.55);
+  }
+  /* floor reflection under the wordmark (WebKit/Chromium; decorative) */
+  .hero h1{
+    -webkit-box-reflect:below .04em linear-gradient(transparent 62%,rgba(255,255,255,.16));
   }
   .btn-red{
     background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#a80f1d);
@@ -485,31 +509,89 @@
   <canvas id="heroScene" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 0 220 150">
+      <svg viewBox="0 0 240 170">
         <defs>
           <linearGradient id="chromeV" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#fdfeff"/><stop offset=".45" stop-color="#c6ccd6"/>
-            <stop offset=".55" stop-color="#79808e"/><stop offset="1" stop-color="#eef1f6"/>
+            <stop offset="0" stop-color="#fdfeff"/><stop offset=".42" stop-color="#c9cfd9"/>
+            <stop offset=".54" stop-color="#767d8b"/><stop offset=".72" stop-color="#aab1bd"/>
+            <stop offset="1" stop-color="#f2f5fa"/>
           </linearGradient>
           <linearGradient id="redV" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ff8a95"/><stop offset=".5" stop-color="#e8192c"/>
-            <stop offset=".6" stop-color="#9c1020"/><stop offset="1" stop-color="#ff5a68"/>
+            <stop offset="0" stop-color="#ff97a1"/><stop offset=".46" stop-color="#e8192c"/>
+            <stop offset=".58" stop-color="#8e0e1b"/><stop offset=".82" stop-color="#d41628"/>
+            <stop offset="1" stop-color="#ff7581"/>
           </linearGradient>
+          <linearGradient id="cupRim" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#eef1f6"/><stop offset=".4" stop-color="#9aa1ae"/>
+            <stop offset=".62" stop-color="#565d69"/><stop offset="1" stop-color="#c9cfd9"/>
+          </linearGradient>
+          <radialGradient id="cupBody" cx=".35" cy=".28" r="1.1">
+            <stop offset="0" stop-color="#41454e"/><stop offset=".45" stop-color="#17181c"/>
+            <stop offset="1" stop-color="#050607"/>
+          </radialGradient>
+          <radialGradient id="glowR" cx=".5" cy=".5" r=".5">
+            <stop offset="0" stop-color="rgba(232,25,44,.5)"/>
+            <stop offset=".6" stop-color="rgba(232,25,44,.14)"/>
+            <stop offset="1" stop-color="rgba(232,25,44,0)"/>
+          </radialGradient>
+          <filter id="redGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#e8192c" flood-opacity=".85"/>
+          </filter>
+          <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".65"/>
+          </filter>
         </defs>
-        <path d="M30 98 C30 40, 66 14, 110 14 C154 14, 190 40, 190 98"
+
+        <!-- ambient red glow behind the mark -->
+        <ellipse cx="120" cy="92" rx="112" ry="80" fill="url(#glowR)"/>
+
+        <!-- headband: dark under-edge, chrome body, top highlight -->
+        <path d="M34 110 C34 46, 74 17, 120 17 C166 17, 206 46, 206 110"
+              fill="none" stroke="#15171b" stroke-width="18" stroke-linecap="round"/>
+        <path d="M34 110 C34 46, 74 17, 120 17 C166 17, 206 46, 206 110"
               fill="none" stroke="url(#chromeV)" stroke-width="13" stroke-linecap="round"/>
-        <rect x="15" y="84" width="35" height="54" rx="13" fill="#0d0709" stroke="url(#chromeV)" stroke-width="4"/>
-        <rect x="170" y="84" width="35" height="54" rx="13" fill="#0d0709" stroke="url(#chromeV)" stroke-width="4"/>
-        <text x="84" y="116" font-family="Arial Black,Impact,sans-serif" font-size="54" font-weight="900"
-              fill="url(#chromeV)" text-anchor="middle">N</text>
-        <rect x="106" y="58" width="8" height="62" fill="url(#redV)"/>
-        <text x="140" y="116" font-family="Arial Black,Impact,sans-serif" font-size="54" font-weight="900"
-              fill="url(#redV)" text-anchor="middle">B</text>
+        <path d="M40 102 C40 52, 78 24, 120 24"
+              fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M200 102 C200 60, 176 32, 142 24"
+              fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.6" stroke-linecap="round"/>
+
+        <!-- left cup: depth shadow, chrome rim, padded body, highlight -->
+        <g filter="url(#softShadow)">
+          <rect x="17" y="92" width="44" height="66" rx="17" fill="#07080a"/>
+          <rect x="14" y="88" width="44" height="66" rx="17" fill="url(#cupRim)"/>
+          <rect x="19" y="93" width="34" height="56" rx="13" fill="url(#cupBody)"/>
+          <ellipse cx="30" cy="108" rx="8" ry="13" fill="rgba(255,255,255,.10)"/>
+          <rect x="19" y="128" width="34" height="21" rx="10" fill="rgba(232,25,44,.10)"/>
+        </g>
+        <!-- right cup -->
+        <g filter="url(#softShadow)">
+          <rect x="185" y="92" width="44" height="66" rx="17" fill="#07080a"/>
+          <rect x="182" y="88" width="44" height="66" rx="17" fill="url(#cupRim)"/>
+          <rect x="187" y="93" width="34" height="56" rx="13" fill="url(#cupBody)"/>
+          <ellipse cx="198" cy="108" rx="8" ry="13" fill="rgba(255,255,255,.10)"/>
+          <rect x="187" y="128" width="34" height="21" rx="10" fill="rgba(232,25,44,.10)"/>
+        </g>
+
+        <!-- N | B with extruded depth -->
+        <text x="92" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
+              fill="#101318" text-anchor="middle" transform="translate(0,4)">N</text>
+        <text x="92" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
+              fill="url(#chromeV)" text-anchor="middle" stroke="rgba(255,255,255,.35)" stroke-width=".6">N</text>
+
+        <g filter="url(#redGlow)">
+          <rect x="116" y="64" width="9" height="66" fill="#4a0810" transform="translate(0,4)"/>
+          <rect x="116" y="64" width="9" height="66" fill="url(#redV)"/>
+        </g>
+
+        <text x="152" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
+              fill="#3c060c" text-anchor="middle" transform="translate(0,4)">B</text>
+        <text x="152" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
+              fill="url(#redV)" text-anchor="middle" filter="url(#redGlow)">B</text>
       </svg>
     </div>
     <h1 class="display" aria-label="Noize Beatz">
-      <span class="word"><span class="chrome">NOIZE</span></span>
-      <span class="word"><span class="red-metal">BEATZ</span></span>
+      <span class="word"><span class="t3d t3d-chrome chrome" data-text="NOIZE">NOIZE</span></span>
+      <span class="word"><span class="t3d t3d-red red-metal" data-text="BEATZ">BEATZ</span></span>
     </h1>
     <p class="role">Music Producer</p>
     <p class="tagline script">Beats That Move Culture.</p>
