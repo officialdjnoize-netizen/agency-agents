@@ -8,7 +8,7 @@
 <meta name="description" content="Noize Beatz — music producer blending hip hop, R&B, and pop. Credits include Too $hort, TLC, Teamarrr & D Smoke, Elijah Connor, and Jaydon & 310babii. Beats that move culture. Represented by Hi Rize Management.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://noizebeatz.com/">
-<meta name="theme-color" content="#0c0906">
+<meta name="theme-color" content="#060303">
 
 <!-- ===== Open Graph (Facebook / Instagram / LinkedIn) ===== -->
 <meta property="og:type" content="profile">
@@ -37,6 +37,11 @@
     --cream:#f0ebe1;
     --cream-2:#e7e0d2;
     --cream-ink:#1a1510;
+    --red:#e8192c;
+    --red-hot:#ff3448;
+    --red-deep:#8a0d18;
+    --chrome-hi:#f2f4f8;
+    --chrome-lo:#8e95a3;
     --text:#efe9dd;
     --muted:#b0a68f;
     --radius:3px;
@@ -67,6 +72,14 @@
     animation:foil 7s linear infinite;
   }
   @keyframes foil{from{background-position:0% 0}to{background-position:220% 0}}
+  .chrome{
+    background:linear-gradient(180deg,#fdfeff 0%,var(--chrome-hi) 26%,#c6ccd6 45%,#79808e 52%,var(--chrome-lo) 60%,#dde2ea 82%,#f5f7fb 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .red-metal{
+    background:linear-gradient(180deg,#ff8a95 0%,var(--red-hot) 34%,var(--red) 52%,#9c1020 58%,var(--red) 78%,#ff6a78 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
   .script{
     font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
     font-weight:400;text-transform:none;letter-spacing:.01em;
@@ -129,24 +142,40 @@
   .nav .btn{padding:9px 20px}
   @media(max-width:860px){.nav-links li:not(:last-child){display:none}}
 
-  /* ---------- HERO ---------- */
+  /* ---------- HERO — the Noize Beatz banner, rebuilt in code ---------- */
   .hero{
     min-height:100vh;display:flex;flex-direction:column;justify-content:center;
     text-align:center;position:relative;overflow:hidden;
     padding:140px 24px 120px;
     background:
-      radial-gradient(ellipse 90% 60% at 50% 118%,rgba(201,153,46,.16),transparent 60%),
-      radial-gradient(ellipse 70% 45% at 50% -12%,rgba(201,153,46,.09),transparent 60%),
-      var(--ink);
+      radial-gradient(ellipse 75% 55% at 50% 46%,rgba(232,25,44,.10),transparent 65%),
+      #060303;
   }
-  #dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  #heroScene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(6,3,3,.8),transparent 18%,transparent 82%,rgba(12,9,6,.9));
+  }
   .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+  .hero-mark{margin-bottom:10px}
+  .hero-mark svg{
+    width:clamp(150px,22vw,230px);height:auto;display:block;
+    filter:drop-shadow(0 10px 44px rgba(232,25,44,.5));
+  }
+  .btn-red{
+    background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#a80f1d);
+    color:#fff;
+    box-shadow:0 0 26px rgba(232,25,44,.4),inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .btn-red:hover{transform:translateY(-1px);box-shadow:0 0 42px rgba(232,25,44,.6),inset 0 1px 0 rgba(255,255,255,.4)}
+  .btn-steel{background:transparent;color:#e9edf4;border:1px solid rgba(210,218,232,.45)}
+  .btn-steel:hover{border-color:#eef1f6;background:rgba(210,218,232,.08)}
   .hero .kicker{
     font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);
     margin-bottom:30px;
   }
   .hero h1{
-    font-size:clamp(3.4rem,13vw,10.5rem);
+    font-size:clamp(2.9rem,10.5vw,8.2rem);
     display:flex;flex-direction:column;align-items:center;
   }
   .hero h1 .word{display:block;overflow:hidden}
@@ -155,7 +184,7 @@
   @keyframes rise{to{transform:none}}
   @media(prefers-reduced-motion:reduce){.hero h1 .word span{transform:none;animation:none}}
   .hero .role{
-    margin-top:26px;
+    margin-top:28px;
     font-size:clamp(.8rem,1.6vw,1rem);letter-spacing:.62em;text-transform:uppercase;
     color:var(--text);text-indent:.62em;
   }
@@ -172,7 +201,8 @@
     display:flex;gap:14px 40px;justify-content:center;flex-wrap:wrap;margin-top:26px;
     font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
   }
-  .hero-creds b{color:var(--gold-hi);font-weight:400}
+  .hero-creds b{color:#dfe3ea;font-weight:400}
+  .hero-rule{background:linear-gradient(90deg,transparent,var(--red),transparent)!important}
 
   /* ---------- MARQUEE ---------- */
   .marquee{
@@ -215,6 +245,10 @@
   .portrait .ph-note{
     font-family:ui-monospace,Menlo,monospace;font-size:.62rem;
     letter-spacing:.3em;text-transform:uppercase;color:#5e522f;
+  }
+  .portrait-img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:2;
   }
   .about-copy h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:14px 0 26px}
   .about-copy p{color:var(--muted);max-width:58ch}
@@ -432,7 +466,7 @@
 <!-- ================= NAV ================= -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="nav-word" href="#top"><span class="foil">NOIZE&nbsp;BEATZ</span></a>
+    <a class="nav-word" href="#top"><span class="chrome">NOIZE</span>&nbsp;<span class="red-metal">BEATZ</span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -448,18 +482,40 @@
 <!-- ================= HERO ================= -->
 <main id="top">
 <section class="hero" aria-label="Intro">
-  <canvas id="dust" aria-hidden="true"></canvas>
+  <canvas id="heroScene" aria-hidden="true"></canvas>
   <div class="hero-inner">
-    <p class="kicker">Producer · Architect of Sound</p>
+    <div class="hero-mark" aria-hidden="true">
+      <svg viewBox="0 0 220 150">
+        <defs>
+          <linearGradient id="chromeV" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fdfeff"/><stop offset=".45" stop-color="#c6ccd6"/>
+            <stop offset=".55" stop-color="#79808e"/><stop offset="1" stop-color="#eef1f6"/>
+          </linearGradient>
+          <linearGradient id="redV" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ff8a95"/><stop offset=".5" stop-color="#e8192c"/>
+            <stop offset=".6" stop-color="#9c1020"/><stop offset="1" stop-color="#ff5a68"/>
+          </linearGradient>
+        </defs>
+        <path d="M30 98 C30 40, 66 14, 110 14 C154 14, 190 40, 190 98"
+              fill="none" stroke="url(#chromeV)" stroke-width="13" stroke-linecap="round"/>
+        <rect x="15" y="84" width="35" height="54" rx="13" fill="#0d0709" stroke="url(#chromeV)" stroke-width="4"/>
+        <rect x="170" y="84" width="35" height="54" rx="13" fill="#0d0709" stroke="url(#chromeV)" stroke-width="4"/>
+        <text x="84" y="116" font-family="Arial Black,Impact,sans-serif" font-size="54" font-weight="900"
+              fill="url(#chromeV)" text-anchor="middle">N</text>
+        <rect x="106" y="58" width="8" height="62" fill="url(#redV)"/>
+        <text x="140" y="116" font-family="Arial Black,Impact,sans-serif" font-size="54" font-weight="900"
+              fill="url(#redV)" text-anchor="middle">B</text>
+      </svg>
+    </div>
     <h1 class="display" aria-label="Noize Beatz">
-      <span class="word"><span class="foil">NOIZE</span></span>
-      <span class="word"><span class="foil">BEATZ</span></span>
+      <span class="word"><span class="chrome">NOIZE</span></span>
+      <span class="word"><span class="red-metal">BEATZ</span></span>
     </h1>
     <p class="role">Music Producer</p>
     <p class="tagline script">Beats That Move Culture.</p>
     <div class="hero-ctas">
-      <a class="btn btn-gold" href="#singles">Hear The Work</a>
-      <a class="btn btn-line" href="#connect">Work With Noize</a>
+      <a class="btn btn-red" href="#singles">Hear The Work</a>
+      <a class="btn btn-steel" href="#connect">Work With Noize</a>
     </div>
     <div class="hero-rule" aria-hidden="true"></div>
     <p class="hero-creds">
@@ -486,8 +542,11 @@
 <section id="about" aria-labelledby="about-h">
   <div class="wrap about-grid">
     <figure class="portrait reveal" aria-label="Portrait of Noize Beatz">
+      <img class="portrait-img" src="assets/portrait.jpg"
+           alt="Noize Beatz seated at the mixing console in the studio"
+           onerror="this.remove()">
       <span class="nb-mono foil">N|B</span>
-      <span class="ph-note">Drop portrait photo here</span>
+      <span class="ph-note">assets/portrait.jpg goes here</span>
     </figure>
     <div class="about-copy reveal">
       <span class="eyebrow">// The Story</span>
@@ -690,61 +749,119 @@
   }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 
-  /* gold dust drifting in the hero */
-  var canvas = document.getElementById('dust');
+  /* hero banner scene: red waveform, skyline, reflection */
+  var canvas = document.getElementById('heroScene');
   var ctx = canvas.getContext('2d');
-  var motes = [];
+  var W = 0, H = 0, bldgs = [];
+
   function size(){
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var r = canvas.getBoundingClientRect();
     canvas.width = r.width * dpr; canvas.height = r.height * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    motes = [];
-    var n = Math.floor(r.width / 14);
-    for (var i = 0; i < n; i++) {
-      motes.push({
-        x: Math.random() * r.width,
-        y: Math.random() * r.height,
-        r: 0.6 + Math.random() * 1.7,
-        vx: -0.08 + Math.random() * 0.16,
-        vy: -0.05 - Math.random() * 0.16,
-        a: 0.08 + Math.random() * 0.4,
-        tw: Math.random() * Math.PI * 2,
-        w: r.width, h: r.height
-      });
+    W = r.width; H = r.height;
+    build();
+    if (reduced) frame(0);
+  }
+
+  function build(){
+    bldgs = [];
+    var x = 0;
+    while (x < W) {
+      var bw = 16 + Math.random() * 34;
+      var edge = Math.abs(x - W / 2) / (W / 2);           // 0 center → 1 edge
+      var bh = (18 + Math.random() * 80) * (0.35 + edge * 1.05);
+      var wins = [];
+      var n = Math.floor(bh / 16);
+      for (var i = 0; i < n; i++) {
+        if (Math.random() < 0.5) {
+          wins.push({dx: 3 + Math.random() * (bw - 6), dy: 6 + Math.random() * (bh - 10), tw: Math.random() * 6.28});
+        }
+      }
+      bldgs.push({x: x, w: bw, h: bh, spire: Math.random() < 0.16, wins: wins});
+      x += bw + 3 + Math.random() * 9;
     }
   }
+
   function frame(t){
-    if (!motes.length) return;
-    var w = motes[0].w, h = motes[0].h;
-    ctx.clearRect(0, 0, w, h);
-    for (var i = 0; i < motes.length; i++) {
-      var m = motes[i];
-      m.x += m.vx; m.y += m.vy;
-      if (m.y < -4) { m.y = h + 4; m.x = Math.random() * w; }
-      if (m.x < -4) m.x = w + 4;
-      if (m.x > w + 4) m.x = -4;
-      var a = m.a * (0.6 + 0.4 * Math.sin(t * 0.0012 + m.tw));
-      ctx.fillStyle = 'rgba(233,201,107,' + a.toFixed(3) + ')';
-      ctx.beginPath();
-      ctx.arc(m.x, m.y, m.r, 0, 6.2832);
-      ctx.fill();
+    ctx.clearRect(0, 0, W, H);
+    var floor = H * 0.865;
+    var mid = H * 0.42;
+
+    /* red horizon + floor glow */
+    var g = ctx.createRadialGradient(W/2, floor, 0, W/2, floor, W * 0.55);
+    g.addColorStop(0, 'rgba(232,25,44,.26)');
+    g.addColorStop(0.55, 'rgba(232,25,44,.07)');
+    g.addColorStop(1, 'rgba(232,25,44,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+
+    /* equalizer waveform band across the middle */
+    for (var x = 0; x < W; x += 4) {
+      var d = Math.abs(x - W / 2) / (W / 2);
+      var env = 0.22 + 0.78 * Math.exp(-Math.pow((d - 0.52) / 0.3, 2)); // strongest beside the logo
+      var osc = Math.abs(Math.sin(x * 0.055 + t * 0.0016) * 0.6 + Math.sin(x * 0.013 - t * 0.0009) * 0.4);
+      var hgt = env * H * 0.15 * (0.25 + 0.75 * osc);
+      var a = 0.05 + 0.38 * (hgt / (H * 0.15));
+      ctx.fillStyle = 'rgba(232,25,44,' + a.toFixed(3) + ')';
+      ctx.fillRect(x, mid - hgt, 1.6, hgt * 2);
+      if (x % 16 === 0) {
+        ctx.fillStyle = 'rgba(255,80,95,' + (a * 0.9).toFixed(3) + ')';
+        ctx.fillRect(x, mid - hgt * 1.15, 1, hgt * 2.3);
+      }
     }
-    requestAnimationFrame(frame);
+
+    /* skyline silhouettes with red rim light */
+    for (var i = 0; i < bldgs.length; i++) {
+      var b = bldgs[i];
+      ctx.fillStyle = '#0a0405';
+      ctx.fillRect(b.x, floor - b.h, b.w, b.h);
+      ctx.fillStyle = 'rgba(232,25,44,.3)';
+      ctx.fillRect(b.x, floor - b.h, b.w, 1.2);
+      if (b.spire) {
+        ctx.fillStyle = '#0a0405';
+        ctx.fillRect(b.x + b.w / 2 - 1, floor - b.h - 14, 2, 14);
+        ctx.fillStyle = 'rgba(255,80,95,.6)';
+        ctx.fillRect(b.x + b.w / 2 - 1, floor - b.h - 15, 2, 2);
+      }
+      for (var j = 0; j < b.wins.length; j++) {
+        var wn = b.wins[j];
+        var tw = reduced ? 0.5 : 0.35 + 0.35 * Math.sin(t * 0.0011 + wn.tw);
+        ctx.fillStyle = 'rgba(255,72,86,' + tw.toFixed(3) + ')';
+        ctx.fillRect(b.x + wn.dx, floor - b.h + wn.dy, 1.6, 2.4);
+      }
+    }
+
+    /* mirrored reflection below the floor line */
+    ctx.save();
+    ctx.globalAlpha = 0.14;
+    ctx.translate(0, floor * 2);
+    ctx.scale(1, -1);
+    for (var k = 0; k < bldgs.length; k++) {
+      var rb = bldgs[k];
+      ctx.fillStyle = '#e8192c';
+      ctx.fillRect(rb.x, floor - rb.h * 0.7, rb.w, rb.h * 0.7);
+    }
+    ctx.restore();
+    var fg = ctx.createLinearGradient(0, floor, 0, H);
+    fg.addColorStop(0, 'rgba(6,3,3,.35)');
+    fg.addColorStop(1, 'rgba(6,3,3,.95)');
+    ctx.fillStyle = fg;
+    ctx.fillRect(0, floor, W, H - floor);
+
+    /* hot spot under the wordmark */
+    var hs = ctx.createRadialGradient(W/2, floor + 4, 0, W/2, floor + 4, W * 0.16);
+    hs.addColorStop(0, 'rgba(255,60,75,.34)');
+    hs.addColorStop(1, 'rgba(255,60,75,0)');
+    ctx.fillStyle = hs;
+    ctx.fillRect(0, floor - 30, W, H - floor + 30);
+
+    if (!reduced) requestAnimationFrame(frame);
   }
+
   size();
   window.addEventListener('resize', size);
-  if (reduced) {
-    // draw one static frame
-    var w = motes.length ? motes[0].w : 0, h = motes.length ? motes[0].h : 0;
-    ctx.clearRect(0, 0, w, h);
-    motes.forEach(function(m){
-      ctx.fillStyle = 'rgba(233,201,107,' + m.a.toFixed(3) + ')';
-      ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 6.2832); ctx.fill();
-    });
-  } else {
-    requestAnimationFrame(frame);
-  }
+  if (!reduced) requestAnimationFrame(frame);
 })();
 </script>
 

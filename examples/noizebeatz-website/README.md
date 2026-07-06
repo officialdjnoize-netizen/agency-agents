@@ -12,7 +12,10 @@ template structure (hero → work → about → connect).
 
 - **Palette** — ink black `#0C0906`, animated gold-foil gradient
   (`#F0D283 → #C9992E → #8A6516`), cream `#F0EBE1` for the pillars section
-  (mirroring the one-sheet's light lower half).
+  (mirroring the one-sheet's light lower half). The hero uses the logo banner's
+  world instead: chrome silver + signal red `#E8192C` on black, drawn live on
+  canvas (red equalizer waveform, city skyline with twinkling windows, floor
+  reflection) with the chrome/red beveled wordmark and headphone N|B mark.
 - **Type** — massive gold-foil display with a continuous shimmer sweep, script
   face for taglines ("Beats That Move Culture.", "It's time to Create."),
   letterspaced caps for labels.
@@ -43,10 +46,11 @@ template structure (hero → work → about → connect).
 
 ## Before going live — swap the placeholders
 
-1. `https://noizebeatz.com` → your real domain (canonical, OG, JSON-LD)
-2. The gold-framed portrait block in About → your press photo
+1. Drop `portrait.jpg` into `assets/` — the About frame displays it
+   automatically (see `assets/README.md`)
+2. `https://noizebeatz.com` → your real domain (canonical, OG, JSON-LD)
 3. Singles grid: CSS-art covers → official artwork; link each card to
    Spotify / Apple Music / YouTube
-4. `og-cover.jpg` → a 1200×630 share image (the one-sheet art crops well)
+4. `og-cover.jpg` → a 1200×630 share image (the banner art crops well)
 5. Footer streaming links (Spotify / Apple Music / YouTube profiles)
 6. `bookings@noizebeatz.com` → your real booking email
