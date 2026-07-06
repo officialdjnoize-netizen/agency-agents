@@ -73,7 +73,7 @@
   }
   @keyframes foil{from{background-position:0% 0}to{background-position:220% 0}}
   .chrome{
-    background:linear-gradient(180deg,#fdfeff 0%,var(--chrome-hi) 26%,#c6ccd6 45%,#79808e 52%,var(--chrome-lo) 60%,#dde2ea 82%,#f5f7fb 100%);
+    background:linear-gradient(180deg,#ffffff 0%,#eef1f6 28%,#c3cad4 45%,#767d8a 53%,#a5adba 62%,#e9edf3 84%,#ffffff 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
   .red-metal{
@@ -140,6 +140,7 @@
   .btn-line{background:transparent;color:var(--gold-hi);border:1px solid rgba(201,153,46,.5)}
   .btn-line:hover{border-color:var(--gold-hi);background:rgba(201,153,46,.08)}
   .nav .btn{padding:9px 20px}
+  .nav-links a.btn-gold,.nav-links a.btn-gold:hover,.nav-links a.btn-gold:focus-visible{color:#171006}
   @media(max-width:860px){.nav-links li:not(:last-child){display:none}}
 
   /* ---------- HERO — the Noize Beatz banner, rebuilt in code ---------- */
@@ -184,7 +185,7 @@
   }
   /* floor reflection under the wordmark (WebKit/Chromium; decorative) */
   .hero h1{
-    -webkit-box-reflect:below .04em linear-gradient(transparent 62%,rgba(255,255,255,.16));
+    -webkit-box-reflect:below .03em linear-gradient(transparent 74%,rgba(255,255,255,.09));
   }
   .btn-red{
     background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#a80f1d);
@@ -208,7 +209,7 @@
   @keyframes rise{to{transform:none}}
   @media(prefers-reduced-motion:reduce){.hero h1 .word span{transform:none;animation:none}}
   .hero .role{
-    margin-top:28px;
+    margin-top:clamp(48px,7vw,84px);
     font-size:clamp(.8rem,1.6vw,1rem);letter-spacing:.62em;text-transform:uppercase;
     color:var(--text);text-indent:.62em;
   }
