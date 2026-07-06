@@ -153,10 +153,18 @@
       #060303;
   }
   #heroScene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+  .hero-vid{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:1;pointer-events:none;
+  }
   .hero::after{
-    content:"";position:absolute;inset:0;pointer-events:none;
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
     background:linear-gradient(180deg,rgba(6,3,3,.8),transparent 18%,transparent 82%,rgba(12,9,6,.9));
   }
+  .hero.video-on::after{
+    background:linear-gradient(180deg,rgba(6,3,3,.75),rgba(6,3,3,.28) 30%,rgba(6,3,3,.32) 70%,rgba(12,9,6,.92));
+  }
+  .hero.video-on .hero-mark,.hero.video-on #heroScene{display:none}
   .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
   .hero-mark{margin-bottom:14px}
   .hero-mark svg{
@@ -665,6 +673,9 @@
 <main id="top">
 <section class="hero" aria-label="Intro">
   <canvas id="heroScene" aria-hidden="true"></canvas>
+  <video class="hero-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
+    <source src="assets/hero-loop.mp4" type="video/mp4">
+  </video>
   <div class="hero-inner">
     <div class="hero-mark" aria-hidden="true">
       <svg viewBox="0 0 240 170">
@@ -1180,6 +1191,10 @@
     v.addEventListener('error', gone, true);
     var s = v.querySelector('source');
     if (s) s.addEventListener('error', gone);
+    v.addEventListener('canplay', function(){
+      var host = v.closest('section') || v.closest('figure');
+      if (host) host.classList.add('video-on');
+    });
   });
 
   /* beat store: waveforms + play toggles (visual preview) */
