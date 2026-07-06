@@ -275,6 +275,7 @@
     position:absolute;inset:0;width:100%;height:100%;
     object-fit:cover;z-index:2;
   }
+  .portrait-vid{z-index:3}
   .about-copy h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:14px 0 26px}
   .about-copy p{color:var(--muted);max-width:58ch}
   .about-copy p+p{margin-top:16px}
@@ -315,6 +316,37 @@
   }
   .pillar h3{font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:#171006}
   .pillar p{color:#5c5142;font-size:.95rem;max-width:30ch}
+
+  /* ---------- STUDIO (video band) ---------- */
+  .studioband{
+    position:relative;overflow:hidden;padding:150px 0;
+    background:linear-gradient(180deg,#0f1420 0%,#26324a 40%,#7a6a4e 78%,#131009 100%);
+  }
+  .studioband .bgvid{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;
+  }
+  .studioband::after{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(12,9,6,.85),rgba(12,9,6,.3) 45%,rgba(12,9,6,.9));
+  }
+  .studioband .wrap{position:relative;z-index:2}
+  .studioband h2{font-size:clamp(2rem,5vw,3.6rem);margin-top:14px;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+  .studioband .lede{color:#ded5c4;max-width:52ch;margin-top:20px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
+  .studio-points{display:flex;flex-direction:column;gap:14px;margin-top:34px}
+  .studio-points .pt{display:flex;gap:14px;align-items:flex-start}
+  .studio-points .pt .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--gold-hi);
+    margin-top:9px;flex-shrink:0;box-shadow:0 0 10px rgba(240,210,131,.8);
+  }
+  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:.96rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+  .studio-points .pt strong{color:#fff}
+  .studioband .vid-note{
+    display:none;margin-top:40px;
+    font-family:ui-monospace,Menlo,monospace;font-size:.64rem;
+    letter-spacing:.26em;text-transform:uppercase;color:#8a7c5e;
+  }
+  .studioband.no-video .vid-note{display:block}
 
   /* ---------- SINGLES ---------- */
   .singles .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:56px}
@@ -619,6 +651,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#work">The Work</a></li>
+        <li><a href="#studio">Studio</a></li>
         <li><a href="#singles">Singles</a></li>
         <li><a href="#beats">Beats</a></li>
         <li><a href="#connect">Connect</a></li>
@@ -749,11 +782,14 @@
 <section id="about" aria-labelledby="about-h">
   <div class="wrap about-grid">
     <figure class="portrait reveal" aria-label="Portrait of Noize Beatz">
+      <video class="portrait-img portrait-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
+        <source src="assets/portrait-loop.mp4" type="video/mp4">
+      </video>
       <img class="portrait-img" src="assets/portrait.jpg"
            alt="Noize Beatz seated at the mixing console in the studio"
            onerror="this.remove()">
       <span class="nb-mono foil">N|B</span>
-      <span class="ph-note">assets/portrait.jpg goes here</span>
+      <span class="ph-note">assets/portrait-loop.mp4 or portrait.jpg goes here</span>
     </figure>
     <div class="about-copy reveal">
       <span class="eyebrow">// The Story</span>
@@ -812,6 +848,29 @@
         <h3>Global Impact</h3>
         <p>Music that connects cultures and moves generations.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STUDIO ================= -->
+<section id="studio" class="studioband" aria-labelledby="studio-h">
+  <video class="bgvid" autoplay muted loop playsinline data-optional aria-hidden="true" poster="">
+    <source src="assets/studio-loop.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">// The Room</span>
+      <h2 id="studio-h" class="display"><span class="foil">The Studio</span> Above The City</h2>
+      <p class="lede">
+        Glass walls, monitors aimed at the skyline, and a room that stays inspiring
+        long after midnight. Records get finished up here — the city lights do half the work.
+      </p>
+      <div class="studio-points">
+        <div class="pt"><span class="dot"></span><p><strong>Attended sessions.</strong> Book time and cut records with production guidance in the room.</p></div>
+        <div class="pt"><span class="dot"></span><p><strong>Remote-first workflow.</strong> Files in, references matched, stems back — same standard local or overseas.</p></div>
+        <div class="pt"><span class="dot"></span><p><strong>Calibrated monitoring.</strong> Every mix checked on mains, nearfields, and the car ride home.</p></div>
+      </div>
+      <p class="vid-note">Drop assets/studio-loop.mp4 here for the live city view</p>
     </div>
   </div>
 </section>
@@ -1109,6 +1168,18 @@
   ['mq1','mq2'].forEach(function(id){
     var t = document.getElementById(id);
     t.innerHTML += t.innerHTML;
+  });
+
+  /* optional local videos: remove cleanly when the asset file is absent */
+  document.querySelectorAll('video[data-optional]').forEach(function(v){
+    function gone(){
+      var host = v.closest('section') || v.closest('figure');
+      if (host) host.classList.add('no-video');
+      v.remove();
+    }
+    v.addEventListener('error', gone, true);
+    var s = v.querySelector('source');
+    if (s) s.addEventListener('error', gone);
   });
 
   /* beat store: waveforms + play toggles (visual preview) */
