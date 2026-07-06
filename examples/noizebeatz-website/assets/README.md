@@ -4,8 +4,7 @@ Drop your files here — the site picks them up automatically:
 
 | File | Where it appears | Notes |
 |---|---|---|
-| `hero-loop.mp4` | Landing hero, full-bleed background | The console knob-twist orbit clip (job `11964653…` / 4K master `3ee0a030…`). When present, it plays behind the NOIZE BEATZ wordmark and CTAs (the headphone mark and drawn skyline hide automatically); until then the 3D banner scene shows. Swap in the city-overlook clip here instead if you prefer that as the opener. |
-| `studio-loop.mp4` | "The Studio Above The City" section, full-bleed background | The city-overlook loop (Higgsfield job `52d35e9c…`, or its 4K upscale). Autoplays muted and loops; a dusk gradient shows until the file exists. |
+| `hero-loop.mp4` | Landing hero, full-bleed background | The console knob-twist orbit clip (job `11964653…` / 4K master `3ee0a030…`). When present, it plays behind the NOIZE BEATZ wordmark and CTAs (the headphone mark and drawn skyline hide automatically); until then the 3D banner scene shows. A hosted preview URL is wired as a second source until you drop the file in. |
 | `portrait-loop.mp4` | About section, gold-cornered frame (video) | The console knob-twist orbit clip (job `11964653…`) or any portrait clip. Takes priority over `portrait.jpg`. |
 | `portrait.jpg` | About section, gold-cornered frame (still) | The studio portrait (mixing console shot). Portrait orientation, ~1200px wide. Until a file exists, the N\|B monogram placeholder shows instead. |
 | `og-cover.jpg` | Social link previews (not on the page) | 1200×630. The red NOIZE BEATZ banner art crops well. Also update the `og:image` URLs in `index.html` to your live domain. |

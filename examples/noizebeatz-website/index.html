@@ -542,6 +542,18 @@
     text-decoration:none;color:inherit;transition:background .2s;
   }
   .connect-rows a:hover{background:rgba(201,153,46,.06)}
+  .qr-card{
+    display:inline-flex;flex-direction:column;align-items:center;gap:12px;
+    text-decoration:none;
+    margin-top:56px;padding:24px 28px 18px;
+    background:var(--cream);border-radius:var(--radius);
+    border:1px solid var(--gold);box-shadow:0 0 34px rgba(201,153,46,.2);
+  }
+  .qr-card .qr{width:132px;height:132px;color:#171006;display:block}
+  .qr-card .qr-cap{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.6rem;
+    letter-spacing:.28em;text-transform:uppercase;color:#5c5142;
+  }
   .connect-rows .lab{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
   .connect-rows .val{font-weight:700;letter-spacing:.04em;color:var(--gold-hi)}
 
@@ -867,11 +879,6 @@
 
 <!-- ================= STUDIO ================= -->
 <section id="studio" class="studioband" aria-labelledby="studio-h">
-  <video class="bgvid" autoplay muted loop playsinline data-optional aria-hidden="true" poster="">
-    <source src="assets/studio-loop.mp4" type="video/mp4">
-    <!-- hosted preview fallback; replace with your self-hosted file before launch -->
-    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260706_185654_52d35e9c-4d49-4859-8d11-cb699c359fe6.mp4" type="video/mp4">
-  </video>
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">// The Room</span>
@@ -885,7 +892,6 @@
         <div class="pt"><span class="dot"></span><p><strong>Remote-first workflow.</strong> Files in, references matched, stems back — same standard local or overseas.</p></div>
         <div class="pt"><span class="dot"></span><p><strong>Calibrated monitoring.</strong> Every mix checked on mains, nearfields, and the car ride home.</p></div>
       </div>
-      <p class="vid-note">Drop assets/studio-loop.mp4 here for the live city view</p>
     </div>
   </div>
 </section>
@@ -1130,6 +1136,11 @@
         <a class="btn btn-line" href="https://www.hirizemanagement.com">Contact Management</a>
       </div>
     </div>
+
+    <a class="qr-card reveal" href="https://instagram.com/noizebeatz" aria-label="Scan or tap to connect on Instagram">
+      <svg class="qr" viewBox="0 0 33 33" role="img" aria-label="QR code linking to Noize Beatz on Instagram"><path d="M2 2h7v1h-7zM11 2h3v1h-3zM15 2h1v1h-1zM18 2h4v1h-4zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM14 3h4v1h-4zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM12 4h4v1h-4zM18 4h5v1h-5zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM12 5h2v1h-2zM15 5h3v1h-3zM20 5h1v1h-1zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM12 6h5v1h-5zM18 6h3v1h-3zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h2v1h-2zM15 7h2v1h-2zM19 7h3v1h-3zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM12 9h3v1h-3zM16 9h1v1h-1zM19 9h2v1h-2zM22 9h1v1h-1zM2 10h1v1h-1zM5 10h1v1h-1zM7 10h2v1h-2zM10 10h3v1h-3zM14 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM25 10h1v1h-1zM2 11h2v1h-2zM7 11h1v1h-1zM13 11h1v1h-1zM16 11h2v1h-2zM22 11h3v1h-3zM27 11h1v1h-1zM30 11h1v1h-1zM5 12h2v1h-2zM8 12h1v1h-1zM13 12h1v1h-1zM18 12h1v1h-1zM20 12h2v1h-2zM26 12h4v1h-4zM3 13h1v1h-1zM6 13h1v1h-1zM9 13h4v1h-4zM14 13h1v1h-1zM16 13h2v1h-2zM20 13h1v1h-1zM25 13h1v1h-1zM28 13h2v1h-2zM2 14h1v1h-1zM5 14h1v1h-1zM7 14h5v1h-5zM13 14h1v1h-1zM18 14h2v1h-2zM21 14h5v1h-5zM27 14h1v1h-1zM29 14h2v1h-2zM4 15h1v1h-1zM6 15h2v1h-2zM10 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM20 15h4v1h-4zM7 16h2v1h-2zM10 16h2v1h-2zM13 16h2v1h-2zM17 16h2v1h-2zM20 16h1v1h-1zM22 16h3v1h-3zM27 16h4v1h-4zM2 17h3v1h-3zM6 17h2v1h-2zM9 17h3v1h-3zM13 17h1v1h-1zM15 17h2v1h-2zM18 17h2v1h-2zM24 17h2v1h-2zM27 17h1v1h-1zM29 17h1v1h-1zM3 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM12 18h1v1h-1zM15 18h3v1h-3zM19 18h1v1h-1zM21 18h3v1h-3zM25 18h1v1h-1zM29 18h1v1h-1zM4 19h1v1h-1zM9 19h1v1h-1zM14 19h1v1h-1zM17 19h1v1h-1zM24 19h2v1h-2zM27 19h1v1h-1zM30 19h1v1h-1zM2 20h1v1h-1zM4 20h2v1h-2zM7 20h3v1h-3zM11 20h1v1h-1zM14 20h2v1h-2zM18 20h1v1h-1zM22 20h1v1h-1zM24 20h1v1h-1zM29 20h2v1h-2zM5 21h1v1h-1zM7 21h1v1h-1zM9 21h2v1h-2zM12 21h2v1h-2zM15 21h1v1h-1zM18 21h6v1h-6zM26 21h1v1h-1zM29 21h2v1h-2zM2 22h1v1h-1zM4 22h1v1h-1zM6 22h4v1h-4zM14 22h1v1h-1zM16 22h2v1h-2zM21 22h6v1h-6zM28 22h1v1h-1zM10 23h2v1h-2zM13 23h1v1h-1zM15 23h1v1h-1zM18 23h2v1h-2zM21 23h2v1h-2zM26 23h1v1h-1zM28 23h3v1h-3zM2 24h7v1h-7zM15 24h2v1h-2zM19 24h2v1h-2zM22 24h1v1h-1zM24 24h1v1h-1zM26 24h1v1h-1zM29 24h1v1h-1zM2 25h1v1h-1zM8 25h1v1h-1zM10 25h2v1h-2zM13 25h1v1h-1zM15 25h1v1h-1zM17 25h2v1h-2zM21 25h2v1h-2zM26 25h4v1h-4zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM19 26h1v1h-1zM22 26h5v1h-5zM30 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM10 27h1v1h-1zM12 27h5v1h-5zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h6v1h-6zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM16 28h1v1h-1zM19 28h1v1h-1zM21 28h2v1h-2zM26 28h3v1h-3zM30 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM12 29h1v1h-1zM14 29h4v1h-4zM19 29h5v1h-5zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h3v1h-3zM14 30h2v1h-2zM19 30h1v1h-1zM22 30h2v1h-2zM27 30h1v1h-1zM29 30h1v1h-1z" fill="currentColor"/></svg>
+      <span class="qr-cap">Scan to Connect</span>
+    </a>
 
     <div class="connect-rows reveal">
       <a href="https://instagram.com/noizebeatz"><span class="lab">Instagram</span><span class="val">@noizebeatz</span></a>
