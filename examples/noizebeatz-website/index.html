@@ -830,7 +830,8 @@
       </video>
       <img class="portrait-img" src="assets/portrait.jpg"
            alt="Noize Beatz seated at the mixing console in the studio"
-           onerror="this.remove()">
+           data-remote="https://d2ol7oe51mr4n9.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/645eda08-90fb-43e9-8844-6c0515ec3891_resize.jpg"
+           onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.remove()}">
       <span class="nb-mono foil">N|B</span>
       <span class="ph-note">assets/portrait-loop.mp4 or portrait.jpg goes here</span>
     </figure>
