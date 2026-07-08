@@ -162,7 +162,17 @@
     border-bottom:1px solid rgba(201,153,46,.16);
   }
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .nav-word{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+  .nav-word{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-logo-img{height:46px;width:auto;display:block}
+  .nav-word.has-img .nav-logo-draw{display:none}
+  .nav-logo-draw{display:flex;align-items:center;gap:9px}
+  .nav-logo-draw svg{display:block;filter:drop-shadow(0 2px 8px rgba(232,25,44,.35))}
+  .nav-logo-draw .nb-words{
+    display:flex;flex-direction:column;line-height:1;
+    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .nav-logo-draw .nb-words b{font-weight:900}
   .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
   .nav-links a{
     color:var(--muted);text-decoration:none;font-size:.74rem;font-weight:400;
@@ -679,7 +689,34 @@
 <!-- ================= NAV ================= -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="nav-word" href="#top"><span class="chrome">NOIZE</span>&nbsp;<span class="red-metal">BEATZ</span></a>
+    <a class="nav-word" href="#top" aria-label="Noize Beatz home">
+      <img class="nav-logo-img" src="assets/logo.png" alt="Noize Beatz"
+           onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+      <span class="nav-logo-draw" aria-hidden="true">
+        <svg width="42" height="34" viewBox="0 0 88 70">
+          <defs>
+            <linearGradient id="navCh" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fdfeff"/><stop offset=".45" stop-color="#c6ccd6"/>
+              <stop offset=".55" stop-color="#79808e"/><stop offset="1" stop-color="#eef1f6"/>
+            </linearGradient>
+            <linearGradient id="navRd" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ff97a1"/><stop offset=".5" stop-color="#e8192c"/>
+              <stop offset=".6" stop-color="#9c1020"/><stop offset="1" stop-color="#ff5a68"/>
+            </linearGradient>
+          </defs>
+          <path d="M14 46 C14 20, 29 8, 44 8 C59 8, 74 20, 74 46"
+                fill="none" stroke="url(#navCh)" stroke-width="6.5" stroke-linecap="round"/>
+          <rect x="7" y="40" width="15" height="24" rx="6" fill="#0d0709" stroke="url(#navCh)" stroke-width="2.4"/>
+          <rect x="66" y="40" width="15" height="24" rx="6" fill="#0d0709" stroke="url(#navCh)" stroke-width="2.4"/>
+          <text x="34" y="54" font-family="Arial Black,Impact,sans-serif" font-size="26" font-weight="900"
+                fill="url(#navCh)" text-anchor="middle">N</text>
+          <rect x="42.5" y="28" width="4" height="30" fill="url(#navRd)"/>
+          <text x="56" y="54" font-family="Arial Black,Impact,sans-serif" font-size="26" font-weight="900"
+                fill="url(#navRd)" text-anchor="middle">B</text>
+        </svg>
+        <span class="nb-words"><b class="chrome">NOIZE</b><b class="red-metal">BEATZ</b></span>
+      </span>
+    </a>
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
