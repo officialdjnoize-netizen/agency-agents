@@ -15,3 +15,10 @@ masters are for socials/press; a 1080p web copy keeps the page fast).
 The hero banner itself (headphones, waveform, skyline) is drawn in code —
 no image file needed — but you can swap in the real banner art as a CSS
 `background-image` on `.hero` if you prefer the original render.
+
+## Player audio & cover art (luxury build)
+
+| Path | Purpose |
+|---|---|
+| `previews/<beat-slug>.mp3` | Tagged preview audio for the Now Playing deck (`culture-shift.mp3`, `gold-standard.mp3`, `pressure.mp3`, `after-hours.mp3`, `smoke-mirrors.mp3`, `night-shift.mp3`). Until a file exists the player runs a visual demo mode. |
+| `covers/<beat-slug>.jpg` | Beat cover art. Six AI covers (generated via Higgsfield, brand palette) are wired as hosted fallbacks already — drop local files here to self-host them. |

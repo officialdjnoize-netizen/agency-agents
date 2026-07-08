@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ===== Primary SEO ===== -->
-<meta name="description" content="Noize Beatz — music producer blending hip hop, R&B, and pop. Credits include Too $hort, TLC, Teamarrr & D Smoke, Elijah Connor, and Jaydon & 310babii. Beats that move culture. Represented by Hi Rize Management.">
+<meta name="description" content="Noize Beatz — music producer blending hip hop, R&B, and pop. Credits include Too $hort, TLC, Teamarrr & D Smoke, Elijah Connor, and Jaydon & 310babii. License beats, hear the singles, and get in touch. Beats that move culture.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://noizebeatz.com/">
-<meta name="theme-color" content="#060303">
+<meta name="theme-color" content="#0c0906">
 
-<!-- ===== Open Graph (Facebook / Instagram / LinkedIn) ===== -->
+<!-- ===== Open Graph ===== -->
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Noize Beatz">
 <meta property="og:title" content="NOIZE BEATZ — Music Producer | Beats That Move Culture">
@@ -24,49 +24,55 @@
 <meta name="twitter:description" content="Beats That Move Culture. Hip hop, R&B, and pop production — Too $hort, TLC, D Smoke, and more.">
 <meta name="twitter:image" content="https://noizebeatz.com/og-cover.jpg">
 
+<!-- ===== Luxury type (Playfair Display + DM Sans; graceful serif/sans fallbacks offline) ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+
 <title>NOIZE BEATZ — Music Producer | Beats That Move Culture</title>
 <style>
   :root{
     --ink:#0c0906;
     --ink-2:#131009;
-    --panel:#1a1610;
+    --charcoal:#181209;
     --line:#2e2617;
     --gold:#c9992e;
     --gold-hi:#f0d283;
     --gold-deep:#8a6516;
-    --cream:#f0ebe1;
-    --cream-2:#e7e0d2;
-    --cream-ink:#1a1510;
+    --gold-glow:rgba(201,153,46,.35);
+    --gold-soft:rgba(201,153,46,.08);
     --red:#e8192c;
     --red-hot:#ff3448;
     --red-deep:#8a0d18;
     --chrome-hi:#f2f4f8;
     --chrome-lo:#8e95a3;
+    --cream:#f0ebe1;
+    --cream-ink:#1a1510;
     --text:#efe9dd;
+    --warm-dim:#cfc4ae;
     --muted:#b0a68f;
+    --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+    --sans:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     --radius:3px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    background:var(--ink);
-    color:var(--text);
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:16px;line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
+    background:var(--ink);color:var(--text);
+    font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:300;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
   }
   ::selection{background:var(--gold);color:#0c0906}
+  @media(hover:hover) and (pointer:fine){ body{cursor:none} a,button,summary,input,select{cursor:none} }
 
   .display{
-    font-family:"Archivo Black","Arial Black",Impact,"Helvetica Neue",sans-serif;
-    font-weight:900;text-transform:uppercase;
-    letter-spacing:.01em;line-height:.92;
+    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
+    font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:.92;
   }
+  .serif{font-family:var(--serif);font-weight:300;letter-spacing:.01em}
+  .serif i,.serif em{font-style:italic}
   .foil{
-    background:linear-gradient(105deg,
-      #a87d24 0%,#e9c96b 18%,#f8ecc0 30%,#d4ab4f 42%,
-      #8a6516 55%,#c9992e 68%,#f0d283 82%,#a87d24 100%);
+    background:linear-gradient(105deg,#a87d24 0%,#e9c96b 18%,#f8ecc0 30%,#d4ab4f 42%,#8a6516 55%,#c9992e 68%,#f0d283 82%,#a87d24 100%);
     background-size:220% 100%;
     -webkit-background-clip:text;background-clip:text;color:transparent;
     animation:foil 7s linear infinite;
@@ -80,328 +86,370 @@
     background:linear-gradient(180deg,#ff8a95 0%,var(--red-hot) 34%,var(--red) 52%,#9c1020 58%,var(--red) 78%,#ff6a78 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  .script{
-    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
-    font-weight:400;text-transform:none;letter-spacing:.01em;
-    color:var(--gold-hi);
-  }
   .eyebrow{
     font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-    font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;
-    color:var(--gold);
+    font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
   }
-  .mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+  .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  section{padding:110px 0;position:relative}
+  section{position:relative}
+  .band{padding:110px 0}
 
-  /* reveal on scroll */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none}
-    .foil{animation:none}
-    html{scroll-behavior:auto}
-  }
 
-  /* ---------- NAV ---------- */
+  /* ================= AMBIENT LAYERS ================= */
+  #grain{
+    position:fixed;inset:-100px;z-index:100;pointer-events:none;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation:grain 8s steps(10) infinite;
+  }
+  @keyframes grain{
+    0%,100%{transform:translate(0,0)}10%{transform:translate(-3%,2%)}30%{transform:translate(2%,-4%)}
+    50%{transform:translate(-4%,-2%)}70%{transform:translate(3%,3%)}90%{transform:translate(-2%,4%)}
+  }
+  #vignette{
+    position:fixed;inset:0;z-index:99;pointer-events:none;
+    background:radial-gradient(ellipse 100% 100% at 50% 50%,transparent 52%,rgba(8,5,3,.5) 100%);
+  }
+  #dust{position:fixed;inset:0;z-index:15;pointer-events:none;opacity:.5}
+
+  /* custom cursor */
+  #cur-dot,#cur-ring{position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;z-index:9998}
+  #cur-dot{width:6px;height:6px;background:#fff;mix-blend-mode:difference;transform:translate(-50%,-50%)}
+  #cur-ring{
+    width:36px;height:36px;border:1px solid rgba(201,153,46,.65);
+    transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,box-shadow .25s;
+  }
+  #cur-ring.hot{width:58px;height:58px;border-color:var(--gold-hi);box-shadow:0 0 24px var(--gold-glow)}
+  @media(hover:none),(pointer:coarse){#cur-dot,#cur-ring{display:none}}
+
+  /* ================= LOADER ================= */
+  #loader{
+    position:fixed;inset:0;z-index:9999;background:var(--ink);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;
+    transition:opacity .7s ease,filter .7s ease;
+  }
+  #loader.done{opacity:0;filter:blur(8px);pointer-events:none}
+  #loader .ld-line{width:1px;height:44px;background:linear-gradient(180deg,transparent,var(--gold),transparent)}
+  #loader .ld-mark{font-size:1.3rem;letter-spacing:.4em;text-indent:.4em}
+  #loader .ld-bar{width:150px;height:1.5px;background:#2a2214;overflow:hidden;border-radius:2px}
+  #loader .ld-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--gold-hi),var(--red));transition:width .3s ease}
+  #loader .ld-pct{font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.3em;color:var(--muted)}
+
+  /* ================= CHAPTER MARKERS ================= */
+  #chapters{
+    position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:50;
+    display:flex;flex-direction:column;align-items:center;gap:0;
+    opacity:0;transition:opacity .5s;pointer-events:none;
+  }
+  #chapters.on{opacity:1}
+  #chapters .ch{display:flex;flex-direction:column;align-items:center}
+  #chapters .ch b{
+    width:7px;height:7px;border-radius:50%;background:#4a3d22;border:0;display:block;
+    transition:background .3s,box-shadow .3s,transform .3s;
+  }
+  #chapters .ch.on b{background:var(--gold-hi);box-shadow:0 0 12px var(--gold-glow);transform:scale(1.25)}
+  #chapters .ch i{display:block;width:1px;height:26px;background:#33291a}
+  #chapters .ch:last-child i{display:none}
+  @media(max-width:820px){#chapters{display:none}}
+
+  /* ================= NAV ================= */
   header.nav{
     position:fixed;top:0;left:0;right:0;z-index:60;
-    background:linear-gradient(180deg,rgba(12,9,6,.92),rgba(12,9,6,.75));
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(201,153,46,.18);
-    transition:transform .3s;
+    background:linear-gradient(180deg,rgba(12,9,6,.92),rgba(12,9,6,.72));
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(201,153,46,.16);
   }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .nav-word{
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-size:1rem;letter-spacing:.06em;text-transform:uppercase;
-    text-decoration:none;
-  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .nav-word{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
   .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
   .nav-links a{
-    color:var(--muted);text-decoration:none;font-size:.78rem;
-    letter-spacing:.2em;text-transform:uppercase;transition:color .2s;
+    color:var(--muted);text-decoration:none;font-size:.74rem;font-weight:400;
+    letter-spacing:.22em;text-transform:uppercase;transition:color .2s;
   }
   .nav-links a:hover,.nav-links a:focus-visible{color:var(--gold-hi)}
   .btn{
-    display:inline-flex;align-items:center;gap:10px;
-    padding:14px 30px;border-radius:var(--radius);
-    font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-    text-decoration:none;cursor:pointer;border:0;
-    transition:transform .15s,box-shadow .25s,background .25s,color .25s;
+    display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:var(--radius);
+    font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    text-decoration:none;cursor:pointer;border:0;transition:transform .15s,box-shadow .25s,background .25s;
   }
   .btn:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
   .btn-gold{
-    background:linear-gradient(180deg,#f0d283,#c9992e 55%,#9a7420);
-    color:#171006;
+    background:linear-gradient(180deg,#f0d283,#c9992e 55%,#9a7420);color:#171006;
     box-shadow:0 0 26px rgba(201,153,46,.3),inset 0 1px 0 rgba(255,255,255,.55);
   }
   .btn-gold:hover{transform:translateY(-1px);box-shadow:0 0 40px rgba(201,153,46,.5),inset 0 1px 0 rgba(255,255,255,.55)}
   .btn-line{background:transparent;color:var(--gold-hi);border:1px solid rgba(201,153,46,.5)}
-  .btn-line:hover{border-color:var(--gold-hi);background:rgba(201,153,46,.08)}
+  .btn-line:hover{border-color:var(--gold-hi);background:var(--gold-soft)}
+  .btn-red{
+    background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#a80f1d);color:#fff;
+    box-shadow:0 0 26px rgba(232,25,44,.4),inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .btn-red:hover{transform:translateY(-1px);box-shadow:0 0 42px rgba(232,25,44,.6),inset 0 1px 0 rgba(255,255,255,.4)}
   .nav .btn{padding:9px 20px}
   .nav-links a.btn-gold,.nav-links a.btn-gold:hover,.nav-links a.btn-gold:focus-visible{color:#171006}
   @media(max-width:860px){.nav-links li:not(:last-child){display:none}}
 
-  /* ---------- HERO — the Noize Beatz banner, rebuilt in code ---------- */
-  .hero{
-    min-height:100vh;display:flex;flex-direction:column;justify-content:center;
-    text-align:center;position:relative;overflow:hidden;
-    padding:140px 24px 120px;
-    background:
-      radial-gradient(ellipse 75% 55% at 50% 46%,rgba(232,25,44,.10),transparent 65%),
-      #060303;
+  /* ================= CINEMA (scroll-scrubbed hero) ================= */
+  #cinema{height:540vh;position:relative}
+  .stage{position:sticky;top:0;height:100vh;overflow:hidden;background:#060303}
+  .stage video,.stage canvas.scene{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
-  #heroScene{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-  .hero-vid{
-    position:absolute;inset:0;width:100%;height:100%;
-    object-fit:cover;z-index:1;pointer-events:none;
+  .stage .shade-l{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,3,3,.78) 0%,rgba(6,3,3,.25) 45%,transparent 70%)}
+  .stage .shade-b{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,3,3,.55),transparent 26%,transparent 62%,rgba(12,9,6,.92))}
+  .stage .tint{position:absolute;inset:0;opacity:.07;background:linear-gradient(120deg,var(--gold),transparent 60%);transition:background 1s}
+
+  .ov{
+    position:absolute;z-index:10;left:max(6vw,28px);top:50%;transform:translateY(-50%) translateX(-20px);
+    max-width:600px;opacity:0;filter:blur(6px);
+    transition:opacity .7s ease,transform .7s ease,filter .7s ease;
+    pointer-events:none;
   }
-  .hero::after{
-    content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
-    background:linear-gradient(180deg,rgba(6,3,3,.8),transparent 18%,transparent 82%,rgba(12,9,6,.9));
+  .ov.visible{opacity:1;transform:translateY(-50%) translateX(0);filter:none;pointer-events:auto}
+  .ov .ov-label{
+    font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.4em;
+    text-transform:uppercase;color:var(--gold);margin-bottom:20px;
   }
-  .hero.video-on::after{
-    background:linear-gradient(180deg,rgba(6,3,3,.75),rgba(6,3,3,.28) 30%,rgba(6,3,3,.32) 70%,rgba(12,9,6,.92));
-  }
-  .hero.video-on .hero-mark,.hero.video-on #heroScene{display:none}
-  .hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
-  .hero-mark{margin-bottom:14px}
-  .hero-mark svg{
-    width:clamp(170px,24vw,270px);height:auto;display:block;
-    filter:drop-shadow(0 14px 50px rgba(232,25,44,.45)) drop-shadow(0 4px 10px rgba(0,0,0,.7));
-  }
-  /* 3D extruded wordmark: dark stepped copies behind the gradient glyphs */
-  .hero h1 .t3d{position:relative;display:inline-block;-webkit-text-stroke:.5px rgba(255,255,255,.18)}
-  .hero h1 .t3d::before{
-    content:attr(data-text);position:absolute;left:0;top:0;z-index:-1;
-    -webkit-text-stroke:0;
-  }
-  .hero h1 .t3d-chrome::before{
+  .ov h2.serif{font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.12;color:var(--text)}
+  .ov .ov-body{color:var(--warm-dim);margin-top:20px;max-width:52ch;font-size:1.02rem;font-weight:300}
+
+  /* stage 1: hero */
+  #ov-hero{max-width:none;right:max(6vw,28px)}
+  #ov-hero .hero-center{text-align:center}
+  #ov-hero h1{font-size:clamp(3rem,10.5vw,8.4rem);margin:0}
+  #ov-hero h1 .t3d{position:relative;display:inline-block;-webkit-text-stroke:.5px rgba(255,255,255,.18)}
+  #ov-hero h1 .t3d::before{content:attr(data-text);position:absolute;left:0;top:0;z-index:-1;-webkit-text-stroke:0}
+  #ov-hero h1 .t3d-chrome::before{
     color:#4d535c;
-    text-shadow:
-      0 .014em 0 #454b54, 0 .028em 0 #3a4049, 0 .042em 0 #30353d,
-      0 .056em 0 #262a31, 0 .07em 0 #1d2026, 0 .082em 0 #14161a,
-      0 .1em .12em rgba(0,0,0,.6), 0 .16em .3em rgba(0,0,0,.55);
+    text-shadow:0 .014em 0 #454b54,0 .028em 0 #3a4049,0 .042em 0 #30353d,0 .056em 0 #262a31,0 .07em 0 #1d2026,0 .082em 0 #14161a,0 .1em .12em rgba(0,0,0,.6),0 .16em .3em rgba(0,0,0,.55);
   }
-  .hero h1 .t3d-red::before{
+  #ov-hero h1 .t3d-red::before{
     color:#a01120;
-    text-shadow:
-      0 .014em 0 #8c0f1c, 0 .028em 0 #780d18, 0 .042em 0 #640a14,
-      0 .056em 0 #500811, 0 .07em 0 #3e060d, 0 .082em 0 #2e040a,
-      0 .1em .12em rgba(0,0,0,.6), 0 .12em .35em rgba(232,25,44,.55);
+    text-shadow:0 .014em 0 #8c0f1c,0 .028em 0 #780d18,0 .042em 0 #640a14,0 .056em 0 #500811,0 .07em 0 #3e060d,0 .082em 0 #2e040a,0 .1em .12em rgba(0,0,0,.6),0 .12em .35em rgba(232,25,44,.55);
   }
-  /* floor reflection under the wordmark (WebKit/Chromium; decorative) */
-  .hero h1{
-    -webkit-box-reflect:below .03em linear-gradient(transparent 74%,rgba(255,255,255,.09));
+  #ov-hero h1 .ch{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.75,.2,1)}
+  #ov-hero.visible h1 .ch{opacity:1;transform:none}
+  #ov-hero .role{margin-top:22px;font-size:.82rem;letter-spacing:.6em;text-transform:uppercase;text-indent:.6em;color:var(--text)}
+  #ov-hero .tagline{
+    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
+    color:var(--gold-hi);font-size:clamp(1.5rem,3.4vw,2.4rem);margin-top:14px;
   }
-  .btn-red{
-    background:linear-gradient(180deg,var(--red-hot),var(--red) 55%,#a80f1d);
-    color:#fff;
-    box-shadow:0 0 26px rgba(232,25,44,.4),inset 0 1px 0 rgba(255,255,255,.4);
+  #ov-hero .hero-ctas{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+  .statbar{
+    display:flex;gap:0;justify-content:center;margin:44px auto 0;max-width:820px;
+    background:rgba(244,240,234,.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(244,240,234,.07);border-radius:var(--radius);
   }
-  .btn-red:hover{transform:translateY(-1px);box-shadow:0 0 42px rgba(232,25,44,.6),inset 0 1px 0 rgba(255,255,255,.4)}
-  .btn-steel{background:transparent;color:#e9edf4;border:1px solid rgba(210,218,232,.45)}
-  .btn-steel:hover{border-color:#eef1f6;background:rgba(210,218,232,.08)}
-  .hero .kicker{
-    font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;color:var(--muted);
-    margin-bottom:30px;
-  }
-  .hero h1{
-    font-size:clamp(2.9rem,10.5vw,8.2rem);
-    display:flex;flex-direction:column;align-items:center;
-  }
-  .hero h1 .word{display:block;overflow:hidden}
-  .hero h1 .word span{display:inline-block;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.75,.2,1) forwards}
-  .hero h1 .word:nth-child(2) span{animation-delay:.14s}
-  @keyframes rise{to{transform:none}}
-  @media(prefers-reduced-motion:reduce){.hero h1 .word span{transform:none;animation:none}}
-  .hero .role{
-    margin-top:clamp(48px,7vw,84px);
-    font-size:clamp(.8rem,1.6vw,1rem);letter-spacing:.62em;text-transform:uppercase;
-    color:var(--text);text-indent:.62em;
-  }
-  .hero .tagline{
-    margin-top:18px;
-    font-size:clamp(1.7rem,4vw,2.8rem);
-  }
-  .hero-ctas{display:flex;gap:16px;justify-content:center;margin-top:44px;flex-wrap:wrap}
-  .hero-rule{
-    width:min(520px,70vw);height:1px;margin:60px auto 0;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  }
-  .hero-creds{
-    display:flex;gap:14px 40px;justify-content:center;flex-wrap:wrap;margin-top:26px;
-    font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
-  }
-  .hero-creds b{color:#dfe3ea;font-weight:400}
-  .hero-rule{background:linear-gradient(90deg,transparent,var(--red),transparent)!important}
+  .statbar .st{flex:1;padding:18px 10px;text-align:center;border-left:1px solid rgba(244,240,234,.06)}
+  .statbar .st:first-child{border-left:0}
+  .statbar .num{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1.35rem}
+  .statbar .lab{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+  @media(max-width:640px){.statbar{flex-wrap:wrap}.statbar .st{flex-basis:50%;border-top:1px solid rgba(244,240,234,.06)}}
 
-  /* ---------- MARQUEE ---------- */
-  .marquee{
-    border-top:1px solid rgba(201,153,46,.35);
-    border-bottom:1px solid rgba(201,153,46,.35);
-    background:linear-gradient(180deg,#171208,#0f0c06);
-    overflow:hidden;white-space:nowrap;padding:18px 0;
-  }
-  .marquee-track{display:inline-block;animation:tick 26s linear infinite}
-  @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
-  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .marquee span{
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-size:1.05rem;letter-spacing:.24em;text-transform:uppercase;
-    margin:0 20px;
-  }
-  .marquee .dim{color:#4a3d22}
-  .marquee .star{color:var(--gold);margin:0 20px;font-size:.9rem}
+  /* stage 2: vision quote */
+  #ov-vision .qmark{font-family:var(--serif);font-size:5.5rem;line-height:.6;color:var(--gold);opacity:.85}
+  #ov-vision blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3.2vw,2.4rem);line-height:1.3;color:var(--text);margin-top:18px}
+  #ov-vision .attr{margin-top:26px;display:flex;align-items:center;gap:14px;color:var(--muted);font-size:.74rem;letter-spacing:.26em;text-transform:uppercase}
+  #ov-vision .attr::before{content:"";width:44px;height:1px;background:var(--gold)}
 
-  /* ---------- ABOUT ---------- */
+  /* stage 4: glass grid */
+  .ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(244,240,234,.07);border:1px solid rgba(244,240,234,.07);border-radius:var(--radius);overflow:hidden;margin-top:26px;max-width:560px}
+  .ov-grid .cell{
+    background:rgba(12,9,6,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    padding:20px 22px;transition:background .3s;
+  }
+  .ov-grid .cell:hover{background:rgba(201,153,46,.08)}
+  .ov-grid h3{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi);font-weight:600}
+  .ov-grid p{font-size:.8rem;color:var(--muted);margin-top:6px;line-height:1.5}
+  @media(max-width:560px){.ov-grid{grid-template-columns:1fr}}
+
+  /* stage 5: credits */
+  .cred-list{margin-top:26px;max-width:480px}
+  .cred-list .cr{
+    display:flex;align-items:baseline;gap:14px;padding:13px 2px;
+    border-bottom:1px dotted rgba(201,153,46,.35);
+  }
+  .cred-list .cr .who{font-family:var(--serif);font-size:1.15rem;color:var(--text)}
+  .cred-list .cr .what{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+  /* stage 6: CTA */
+  #ov-cta{left:50%;right:auto;transform:translate(-50%,-50%) translateX(-20px);text-align:center;max-width:720px;width:calc(100% - 48px)}
+  #ov-cta.visible{transform:translate(-50%,-50%)}
+  #ov-cta .big{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;color:var(--text)}
+  #ov-cta .big em{font-style:italic}
+  #ov-cta .sub{color:var(--warm-dim);margin-top:18px}
+  #ov-cta .ctas{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+
+  .scroll-cue{
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:11;
+    display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);
+    font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;text-indent:.34em;
+    opacity:1;transition:opacity .5s;
+  }
+  .scroll-cue::after{content:"";width:1px;height:34px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 1.6s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.3}50%{opacity:1}}
+  .scroll-cue.off{opacity:0}
+
+  /* ================= ABOUT ================= */
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
   @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}}
   .portrait{
-    aspect-ratio:4/5;position:relative;
-    border:1px solid rgba(201,153,46,.5);
-    background:
-      radial-gradient(ellipse 80% 55% at 50% 30%,rgba(201,153,46,.14),transparent 65%),
-      linear-gradient(180deg,#171208,#0c0906);
-    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;
+    aspect-ratio:4/5;position:relative;border:1px solid rgba(201,153,46,.5);
+    background:radial-gradient(ellipse 80% 55% at 50% 30%,rgba(201,153,46,.14),transparent 65%),linear-gradient(180deg,#171208,#0c0906);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;overflow:hidden;
   }
-  .portrait::before,.portrait::after{
-    content:"";position:absolute;width:26px;height:26px;border-color:var(--gold);border-style:solid;
-  }
+  .portrait::before,.portrait::after{content:"";position:absolute;width:26px;height:26px;border-color:var(--gold);border-style:solid;z-index:4}
   .portrait::before{top:-7px;left:-7px;border-width:2px 0 0 2px}
   .portrait::after{bottom:-7px;right:-7px;border-width:0 2px 2px 0}
-  .portrait .nb-mono{
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-size:4.4rem;line-height:1;
-  }
-  .portrait .ph-note{
-    font-family:ui-monospace,Menlo,monospace;font-size:.62rem;
-    letter-spacing:.3em;text-transform:uppercase;color:#5e522f;
-  }
-  .portrait-img{
-    position:absolute;inset:0;width:100%;height:100%;
-    object-fit:cover;z-index:2;
-  }
+  .portrait .nb-mono{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:4.4rem;line-height:1}
+  .portrait .ph-note{font-family:ui-monospace,Menlo,monospace;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#5e522f}
+  .portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
   .portrait-vid{z-index:3}
-  .about-copy h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:14px 0 26px}
+  .about-copy h2{font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.2rem);margin:14px 0 26px;line-height:1.1}
+  .about-copy h2 em{font-style:italic}
   .about-copy p{color:var(--muted);max-width:58ch}
   .about-copy p+p{margin-top:16px}
-  .about-stats{
-    display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:40px;justify-content:start;
-  }
+  .about-stats{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:40px;justify-content:start}
   @media(max-width:520px){.about-stats{grid-template-columns:1fr;gap:18px}}
   .about-stats .num{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1.6rem}
-  .about-stats .lab{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .about-stats .lab{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
-  /* ---------- PILLARS (cream) ---------- */
-  .pillars{
+  /* ================= MARQUEE ================= */
+  .marquee{
+    border-top:1px solid rgba(201,153,46,.35);border-bottom:1px solid rgba(201,153,46,.35);
+    background:linear-gradient(180deg,#171208,#0f0c06);overflow:hidden;white-space:nowrap;padding:16px 0;
+  }
+  .marquee-track{display:inline-block;animation:tick 26s linear infinite}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marquee span{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1rem;letter-spacing:.24em;text-transform:uppercase;margin:0 20px}
+  .marquee .dim{color:#4a3d22}
+  .marquee .star{color:var(--gold);margin:0 20px;font-size:.85rem}
+
+  /* ================= PLAYER DECK (beats) ================= */
+  .beats-band{background:var(--ink-2);border-top:1px solid var(--line)}
+  .beats-band .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px}
+  .beats-band .section-head h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;line-height:1.08}
+  .beats-band .section-head h2 em{font-style:italic}
+  .beats-band .section-head p{color:var(--muted);max-width:40ch}
+
+  .deck{
+    display:grid;grid-template-columns:minmax(300px,420px) 1fr;gap:0;
+    border:1px solid rgba(244,240,234,.08);border-radius:var(--radius);overflow:hidden;
+    background:rgba(244,240,234,.02);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    position:relative;
+  }
+  @media(max-width:880px){.deck{grid-template-columns:1fr}}
+  .deck-glow{
+    position:absolute;inset:-60px;z-index:0;pointer-events:none;opacity:.5;filter:blur(70px);
+    background:radial-gradient(circle at 25% 40%,rgba(201,153,46,.4),transparent 55%),radial-gradient(circle at 30% 70%,rgba(232,25,44,.16),transparent 60%);
+    transition:opacity .6s;
+  }
+  .np{position:relative;z-index:1;padding:34px;display:flex;flex-direction:column;gap:22px;border-right:1px solid rgba(244,240,234,.07)}
+  @media(max-width:880px){.np{border-right:0;border-bottom:1px solid rgba(244,240,234,.07)}}
+  .np .art{
+    aspect-ratio:1;position:relative;border-radius:var(--radius);overflow:hidden;
+    border:1px solid rgba(201,153,46,.35);
     background:
-      radial-gradient(ellipse 70% 40% at 50% 0%,rgba(201,153,46,.12),transparent 60%),
-      var(--cream);
-    color:var(--cream-ink);
-  }
-  .pillars .eyebrow{color:#9a7420}
-  .pillars h2{font-size:clamp(2rem,5vw,3.6rem);margin-top:14px}
-  .pillars h2 .l2{display:block;color:#9a7420;
-    background:linear-gradient(105deg,#8a6516,#c9992e 40%,#8a6516 70%);
-    background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .pillars .lede{color:#5c5142;max-width:52ch;margin-top:22px}
-  .pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;margin-top:64px;border-top:1px solid #d4cab6}
-  .pillar{
-    padding:44px 34px 10px;border-left:1px solid #d4cab6;
-    display:flex;flex-direction:column;gap:16px;
-  }
-  .pillar:first-child{border-left:0;padding-left:0}
-  @media(max-width:800px){.pillar{border-left:0;padding-left:0;padding-top:34px;border-top:1px solid #d4cab6}.pillar:first-child{border-top:0}}
-  .pillar .icon{
-    width:58px;height:58px;border-radius:50%;
-    background:radial-gradient(circle at 32% 28%,#241c0e,#0c0906 70%);
-    border:1.5px solid var(--gold);
+      radial-gradient(circle at 32% 30%,#241a08,#0c0906 70%);
     display:flex;align-items:center;justify-content:center;
-    box-shadow:0 6px 18px rgba(26,21,16,.25);
   }
-  .pillar h3{font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:#171006}
-  .pillar p{color:#5c5142;font-size:.95rem;max-width:30ch}
+  .np .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+  .np .art .art-fallback{
+    position:relative;z-index:0;font-family:"Archivo Black","Arial Black",Impact,sans-serif;
+    font-size:3rem;opacity:.9;
+  }
+  .np .np-meta .np-title{font-family:var(--serif);font-size:1.7rem;color:var(--text)}
+  .np .np-meta .np-sub{color:var(--muted);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
+  .np .scrub{display:flex;flex-direction:column;gap:8px}
+  .np .scrub-wave{display:flex;align-items:center;gap:2px;height:44px;cursor:pointer}
+  .np .scrub-wave i{flex:1;border-radius:1px;background:#3a3120;min-height:3px;transition:background .2s}
+  .np .scrub-wave i.played{background:linear-gradient(180deg,var(--gold-hi),var(--gold-deep))}
+  .deck.playing .scrub-wave i.played{box-shadow:0 0 6px rgba(201,153,46,.35)}
+  .np .scrub-time{display:flex;justify-content:space-between;font-family:ui-monospace,Menlo,monospace;font-size:.64rem;color:var(--muted);letter-spacing:.1em}
+  .np .np-controls{display:flex;align-items:center;justify-content:center;gap:26px}
+  .np .ctrl{
+    background:transparent;border:0;color:var(--warm-dim);padding:6px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;transition:color .2s,transform .15s;
+  }
+  .np .ctrl:hover{color:var(--gold-hi);transform:scale(1.08)}
+  .np .ctrl:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
+  .np .ctrl-play{
+    width:62px;height:62px;border-radius:50%;
+    background:linear-gradient(180deg,#f0d283,#c9992e 60%,#9a7420);color:#171006;
+    box-shadow:0 0 24px rgba(201,153,46,.4),inset 0 1px 0 rgba(255,255,255,.55);
+  }
+  .np .ctrl-play:hover{color:#171006;transform:scale(1.05)}
+  .np .np-note{font-family:ui-monospace,Menlo,monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#6b5f45;text-align:center}
 
-  /* ---------- STUDIO (video band) ---------- */
-  .studioband{
-    position:relative;overflow:hidden;padding:150px 0;
-    background:linear-gradient(180deg,#0f1420 0%,#26324a 40%,#7a6a4e 78%,#131009 100%);
+  .tracks{position:relative;z-index:1;display:flex;flex-direction:column}
+  .track{
+    display:grid;grid-template-columns:auto 1fr auto auto;gap:18px;align-items:center;
+    padding:19px 26px;border-bottom:1px solid rgba(244,240,234,.05);
+    background:transparent;border-left:2px solid transparent;
+    cursor:pointer;transition:background .2s,border-color .2s;text-align:left;color:inherit;border-top:0;border-right:0;
+    font:inherit;width:100%;
   }
-  .studioband .bgvid{
-    position:absolute;inset:0;width:100%;height:100%;
-    object-fit:cover;z-index:0;
-  }
-  .studioband::after{
-    content:"";position:absolute;inset:0;z-index:1;
-    background:linear-gradient(180deg,rgba(12,9,6,.85),rgba(12,9,6,.3) 45%,rgba(12,9,6,.9));
-  }
-  .studioband .wrap{position:relative;z-index:2}
-  .studioband h2{font-size:clamp(2rem,5vw,3.6rem);margin-top:14px;text-shadow:0 2px 24px rgba(0,0,0,.6)}
-  .studioband .lede{color:#ded5c4;max-width:52ch;margin-top:20px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
-  .studio-points{display:flex;flex-direction:column;gap:14px;margin-top:34px}
-  .studio-points .pt{display:flex;gap:14px;align-items:flex-start}
-  .studio-points .pt .dot{
-    width:8px;height:8px;border-radius:50%;background:var(--gold-hi);
-    margin-top:9px;flex-shrink:0;box-shadow:0 0 10px rgba(240,210,131,.8);
-  }
-  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:.96rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
-  .studio-points .pt strong{color:#fff}
-  .studioband .vid-note{
-    display:none;margin-top:40px;
-    font-family:ui-monospace,Menlo,monospace;font-size:.64rem;
-    letter-spacing:.26em;text-transform:uppercase;color:#8a7c5e;
-  }
-  .studioband.no-video .vid-note{display:block}
+  .track:last-child{border-bottom:0}
+  .track:hover{background:rgba(201,153,46,.05)}
+  .track.on{background:rgba(201,153,46,.08);border-left-color:var(--gold)}
+  .track:focus-visible{outline:2px solid var(--gold-hi);outline-offset:-2px}
+  .track .t-idx{font-family:ui-monospace,Menlo,monospace;color:#5c4f33;font-size:.72rem;width:20px}
+  .track.on .t-idx{color:var(--gold-hi)}
+  .track .t-name{font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem}
+  .track .t-genre{display:block;font-size:.68rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-top:3px;font-weight:300}
+  .track .t-bpm{font-family:ui-monospace,Menlo,monospace;font-size:.66rem;color:var(--gold-hi);border:1px solid rgba(201,153,46,.35);border-radius:3px;padding:3px 8px;white-space:nowrap}
+  .track .t-price{font-family:ui-monospace,Menlo,monospace;font-size:.8rem;color:#fff;white-space:nowrap}
+  @media(max-width:560px){.track{grid-template-columns:auto 1fr auto}.track .t-bpm{display:none}}
 
-  /* ---------- SINGLES ---------- */
-  .singles .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-  .singles h2{font-size:clamp(2rem,5vw,3.6rem);margin-top:14px}
+  /* licenses */
+  .licenses{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:56px}
+  .lic{
+    border:1px solid rgba(244,240,234,.08);border-radius:var(--radius);padding:28px 24px;
+    background:rgba(244,240,234,.025);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    display:flex;flex-direction:column;gap:8px;transition:border-color .25s,background .25s;
+  }
+  .lic:hover{border-color:rgba(201,153,46,.4);background:rgba(201,153,46,.05)}
+  .lic.feature{border-color:var(--gold);box-shadow:0 0 30px rgba(201,153,46,.14);position:relative}
+  .lic.feature::before{
+    content:"MOST POPULAR";position:absolute;top:-10px;left:22px;
+    background:linear-gradient(180deg,#f0d283,#c9992e);color:#171006;
+    font-size:.56rem;letter-spacing:.24em;padding:3px 10px;border-radius:2px;font-weight:700;
+  }
+  .lic h3{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500}
+  .lic .amt{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:2rem}
+  .lic ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
+  .lic li{font-size:.84rem;color:var(--muted);padding-left:18px;position:relative}
+  .lic li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:2px;background:var(--gold)}
+
+  /* ================= SINGLES ================= */
+  .singles .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px}
+  .singles h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;line-height:1.08}
+  .singles h2 em{font-style:italic}
   .singles .section-head p{color:var(--muted);max-width:40ch}
   .singles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
-  .single{
-    text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px;
-    transition:transform .25s cubic-bezier(.2,.7,.2,1);
-  }
+  .single{text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:14px;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
   .single:hover{transform:translateY(-6px)}
   .cover{
     aspect-ratio:1;position:relative;overflow:hidden;border-radius:var(--radius);
-    border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
     transition:box-shadow .25s,border-color .25s;
   }
   .single:hover .cover{border-color:var(--gold);box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 24px rgba(201,153,46,.25)}
-  .cover .art-title{
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    text-transform:uppercase;line-height:.95;text-align:center;padding:0 12px;
-    position:relative;z-index:2;
-  }
-  .cover .badge{
-    position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;
-    background:rgba(12,9,6,.45);opacity:0;transition:opacity .25s;
-  }
+  .cover .art-title{font-family:"Archivo Black","Arial Black",Impact,sans-serif;text-transform:uppercase;line-height:.95;text-align:center;padding:0 12px;position:relative;z-index:2}
+  .cover .badge{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;background:rgba(12,9,6,.45);opacity:0;transition:opacity .25s}
   .single:hover .badge,.single:focus-visible .badge{opacity:1}
-  .badge i{
-    width:54px;height:54px;border-radius:50%;
-    background:linear-gradient(180deg,#f0d283,#c9992e);
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 4px 20px rgba(0,0,0,.5);
-  }
-  /* per-cover art, palette-matched to the real covers */
+  .badge i{width:54px;height:54px;border-radius:50%;background:linear-gradient(180deg,#f0d283,#c9992e);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.5)}
   .cv-pickaside{background:linear-gradient(160deg,#2b2b2b,#0d0d0d 70%)}
   .cv-pickaside .art-title{color:#e8e8e8;font-size:1.5rem}
   .cv-pickaside .dollar{color:var(--gold-hi)}
   .cv-kindalove{background:linear-gradient(160deg,#efe3cf,#cbb290)}
   .cv-kindalove .art-title{color:#4c3421;font-size:1.4rem}
-  .cv-kindalove::after{content:"";position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);
-    width:120px;height:120px;border-radius:50%;background:rgba(140,96,55,.28)}
+  .cv-kindalove::after{content:"";position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;background:rgba(140,96,55,.28)}
   .cv-lemonlime{background:linear-gradient(160deg,#28b7d4,#0e7f9e 60%)}
   .cv-lemonlime .art-title{color:#eaffb0;font-size:1.35rem}
-  .cv-lemonlime::before,.cv-lemonlime::after{
-    content:"";position:absolute;border-radius:50%;border:12px solid #b9e64a;opacity:.85;
-  }
+  .cv-lemonlime::before,.cv-lemonlime::after{content:"";position:absolute;border-radius:50%;border:12px solid #b9e64a;opacity:.85}
   .cv-lemonlime::before{width:90px;height:90px;left:-24px;top:-24px}
   .cv-lemonlime::after{width:70px;height:70px;right:-18px;bottom:-18px}
   .cv-americangold{background:#e91e75}
@@ -413,177 +461,118 @@
   }
   .cv-ahah{background:linear-gradient(160deg,#8e1414,#3a0505 70%)}
   .cv-ahah .art-title{color:#f3e2e2;font-size:1.6rem}
-  .single .meta h3{font-size:.92rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi)}
+  .single .meta h3{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);font-weight:600}
   .single .meta .by{font-size:.78rem;letter-spacing:.06em;color:var(--muted);margin-top:3px}
-  .singles-note{margin-top:44px;color:#6b5f45;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;text-align:center}
 
-  /* ---------- BEAT STORE ---------- */
-  .beatstore{background:var(--ink-2);border-top:1px solid var(--line)}
-  .beatstore .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:56px}
-  .beatstore h2{font-size:clamp(2rem,5vw,3.6rem);margin-top:14px}
-  .beatstore .section-head p{color:var(--muted);max-width:40ch}
-  .beats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-  .beat{
-    background:var(--ink);border:1px solid var(--line);border-radius:var(--radius);
-    padding:22px;display:flex;flex-direction:column;gap:16px;
-    transition:border-color .2s,transform .15s;
+  /* ================= STUDIO ================= */
+  .studioband{
+    position:relative;overflow:hidden;padding:150px 0;
+    background:linear-gradient(180deg,#0f1420 0%,#26324a 40%,#7a6a4e 78%,#131009 100%);
   }
-  .beat:hover{border-color:rgba(201,153,46,.55);transform:translateY(-2px)}
-  .beat-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-  .beat h3{font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase}
-  .beat .genre{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-  .beat .bpm{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.7rem;
-    color:var(--gold-hi);border:1px solid rgba(201,153,46,.4);border-radius:3px;
-    padding:3px 8px;white-space:nowrap;
-  }
-  .player{display:flex;align-items:center;gap:14px}
-  .play{
-    width:46px;height:46px;border-radius:50%;flex-shrink:0;cursor:pointer;border:0;
-    background:linear-gradient(180deg,#f0d283,#c9992e 60%,#9a7420);
-    box-shadow:0 0 16px rgba(201,153,46,.35),inset 0 1px 0 rgba(255,255,255,.55);
-    display:flex;align-items:center;justify-content:center;
-    transition:transform .15s;
-  }
-  .play:hover{transform:scale(1.06)}
-  .play:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
-  .wave{display:flex;align-items:center;gap:2px;height:40px;flex:1}
-  .wave i{flex:1;border-radius:1px;background:#3a3120;min-height:3px}
-  @keyframes eq{from{height:12%}to{height:92%}}
-  .beat.playing .wave i{
-    background:linear-gradient(180deg,#f0d283,#8a6516);
-    animation:eq .9s ease-in-out infinite alternate;
-  }
-  .beat.playing .wave i:nth-child(2n){animation-delay:.15s}
-  .beat.playing .wave i:nth-child(3n){animation-delay:.32s}
-  .beat.playing .wave i:nth-child(5n){animation-delay:.5s}
-  @media(prefers-reduced-motion:reduce){.beat.playing .wave i{animation:none;height:60%!important}}
-  .beat-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px}
-  .beat-foot .price{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.98rem;color:#fff}
-  .beat-foot .price small{color:var(--muted);font-size:.66rem;letter-spacing:.12em}
-  .beat-foot a{
-    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
-    color:var(--gold-hi);text-decoration:none;
-  }
-  .beat-foot a:hover{color:#fff}
-  .licenses{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:56px}
-  .lic{
-    border:1px solid var(--line);border-radius:var(--radius);
-    padding:28px 24px;background:var(--ink);
-    display:flex;flex-direction:column;gap:8px;
-  }
-  .lic.feature{
-    border-color:var(--gold);
-    background:linear-gradient(180deg,#1d1710,#131009);
-    box-shadow:0 0 30px rgba(201,153,46,.16);position:relative;
-  }
-  .lic.feature::before{
-    content:"MOST POPULAR";position:absolute;top:-10px;left:22px;
-    background:linear-gradient(180deg,#f0d283,#c9992e);color:#171006;
-    font-size:.58rem;letter-spacing:.24em;padding:3px 10px;border-radius:2px;font-weight:700;
-  }
-  .lic h3{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-  .lic .amt{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:2rem}
-  .lic ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
-  .lic li{font-size:.85rem;color:var(--muted);padding-left:18px;position:relative}
-  .lic li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:2px;background:var(--gold)}
+  .studioband::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,9,6,.85),rgba(12,9,6,.3) 45%,rgba(12,9,6,.9))}
+  .studioband .wrap{position:relative;z-index:2}
+  .studioband h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;text-shadow:0 2px 24px rgba(0,0,0,.6);line-height:1.08}
+  .studioband h2 em{font-style:italic}
+  .studioband .lede{color:#ded5c4;max-width:52ch;margin-top:20px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
+  .studio-points{display:flex;flex-direction:column;gap:14px;margin-top:34px}
+  .studio-points .pt{display:flex;gap:14px;align-items:flex-start}
+  .studio-points .pt .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);margin-top:9px;flex-shrink:0;box-shadow:0 0 10px rgba(240,210,131,.8)}
+  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:.96rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+  .studio-points .pt strong{color:#fff;font-weight:600}
 
-  /* ---------- EMAIL CAPTURE ---------- */
+  /* ================= EMAIL LIST ================= */
   .list{
-    background:
-      radial-gradient(ellipse 70% 45% at 50% 0%,rgba(201,153,46,.14),transparent 60%),
-      var(--cream);
+    background:radial-gradient(ellipse 70% 45% at 50% 0%,rgba(201,153,46,.14),transparent 60%),var(--cream);
     color:var(--cream-ink);text-align:center;
   }
   .list .eyebrow{color:#9a7420}
-  .list h2{font-size:clamp(2rem,5vw,3.4rem);margin-top:14px}
-  .list h2 .gold-l{
-    background:linear-gradient(105deg,#8a6516,#c9992e 40%,#8a6516 70%);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
+  .list h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);margin-top:14px;line-height:1.12}
+  .list h2 .gold-l{background:linear-gradient(105deg,#8a6516,#c9992e 40%,#8a6516 70%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
   .list .sub{color:#5c5142;max-width:46ch;margin:20px auto 0}
-  .email-form{
-    display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
-    max-width:560px;margin:38px auto 0;
-  }
+  .email-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:560px;margin:38px auto 0}
   .email-form input{
-    flex:1;min-width:240px;
-    background:#fff;border:1px solid #cfc4ad;border-radius:var(--radius);
+    flex:1;min-width:240px;background:#fff;border:1px solid #cfc4ad;border-radius:var(--radius);
     padding:15px 18px;font:inherit;font-size:.98rem;color:#171006;
   }
   .email-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,153,46,.22)}
   .list .fine{margin-top:16px;font-size:.74rem;color:#8a7c66;letter-spacing:.06em}
   .list .ok{
-    display:none;margin:38px auto 0;max-width:480px;
-    padding:18px 22px;border:1px solid var(--gold);border-radius:var(--radius);
-    background:rgba(201,153,46,.1);font-weight:700;color:#171006;
+    display:none;margin:38px auto 0;max-width:480px;padding:18px 22px;
+    border:1px solid var(--gold);border-radius:var(--radius);background:rgba(201,153,46,.1);
+    font-weight:600;color:#171006;
   }
   .list.done .email-form{display:none}
   .list.done .ok{display:block}
 
-  /* ---------- CONNECT ---------- */
+  /* ================= CONNECT ================= */
   .connect{
-    background:
-      radial-gradient(ellipse 80% 60% at 50% 115%,rgba(201,153,46,.18),transparent 65%),
-      var(--ink-2);
-    border-top:1px solid var(--line);
-    text-align:center;
+    background:radial-gradient(ellipse 80% 60% at 50% 115%,rgba(201,153,46,.18),transparent 65%),var(--ink-2);
+    border-top:1px solid var(--line);text-align:center;
   }
   .connect h2{font-size:clamp(2.4rem,7vw,5rem);margin-top:16px}
+  .connect .script-lead{
+    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
+    font-size:.55em;display:block;margin-bottom:10px;color:var(--gold-hi);text-transform:none;letter-spacing:.01em;
+  }
   .connect .sub{color:var(--muted);max-width:52ch;margin:24px auto 0}
   .connect-ctas{display:flex;gap:16px;justify-content:center;margin-top:40px;flex-wrap:wrap}
-  .connect-rows{
-    max-width:640px;margin:64px auto 0;display:flex;flex-direction:column;
-    border-top:1px solid var(--line);text-align:left;
-  }
-  .connect-rows a{
-    display:flex;justify-content:space-between;align-items:center;gap:20px;
-    padding:20px 6px;border-bottom:1px solid var(--line);
-    text-decoration:none;color:inherit;transition:background .2s;
-  }
-  .connect-rows a:hover{background:rgba(201,153,46,.06)}
   .qr-card{
-    display:inline-flex;flex-direction:column;align-items:center;gap:12px;
-    text-decoration:none;
-    margin-top:56px;padding:24px 28px 18px;
-    background:var(--cream);border-radius:var(--radius);
+    display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none;
+    margin-top:56px;padding:24px 28px 18px;background:var(--cream);border-radius:var(--radius);
     border:1px solid var(--gold);box-shadow:0 0 34px rgba(201,153,46,.2);
   }
   .qr-card .qr{width:132px;height:132px;color:#171006;display:block}
-  .qr-card .qr-cap{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.6rem;
-    letter-spacing:.28em;text-transform:uppercase;color:#5c5142;
+  .qr-card .qr-cap{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#5c5142}
+  .connect-rows{max-width:640px;margin:56px auto 0;display:flex;flex-direction:column;border-top:1px solid var(--line);text-align:left}
+  .connect-rows a{
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    padding:20px 6px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .2s;
   }
-  .connect-rows .lab{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
-  .connect-rows .val{font-weight:700;letter-spacing:.04em;color:var(--gold-hi)}
-
+  .connect-rows a:hover{background:rgba(201,153,46,.06)}
+  .connect-rows .lab{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+  .connect-rows .val{font-weight:600;letter-spacing:.04em;color:var(--gold-hi)}
   .faq{max-width:640px;margin:70px auto 0;text-align:left}
-  .faq .faq-title{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;text-align:center}
+  .faq .faq-title{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;text-align:center}
   .faq details{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink);margin-bottom:10px}
-  .faq summary{
-    padding:17px 20px;cursor:pointer;list-style:none;font-weight:700;font-size:.92rem;
-    display:flex;justify-content:space-between;align-items:center;gap:14px;
-  }
+  .faq summary{padding:17px 20px;cursor:pointer;list-style:none;font-weight:500;font-size:.92rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
   .faq summary::-webkit-details-marker{display:none}
   .faq summary::after{content:"+";color:var(--gold);font-family:ui-monospace,Menlo,monospace;transition:transform .2s}
   .faq details[open] summary::after{transform:rotate(45deg)}
   .faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
   .faq .a{padding:0 20px 18px;color:var(--muted);font-size:.92rem;max-width:60ch}
-  .faq .a strong{color:var(--text)}
+  .faq .a strong{color:var(--text);font-weight:600}
 
-  /* ---------- FOOTER ---------- */
+  /* ================= FOOTER ================= */
   footer{padding:70px 0 46px;background:var(--ink);border-top:1px solid rgba(201,153,46,.28);text-align:center}
-  .foot-script{font-size:clamp(2.2rem,5vw,3.2rem)}
-  .foot-motto{
-    margin-top:14px;font-size:.72rem;letter-spacing:.56em;text-transform:uppercase;
-    color:var(--muted);text-indent:.56em;
+  .foot-script{
+    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
+    font-size:clamp(2.2rem,5vw,3.2rem);color:var(--gold-hi);
   }
+  .foot-motto{margin-top:14px;font-size:.7rem;letter-spacing:.56em;text-transform:uppercase;color:var(--muted);text-indent:.56em}
   .foot-social{display:flex;gap:26px;justify-content:center;list-style:none;margin-top:34px}
-  .foot-social a{color:var(--muted);text-decoration:none;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase}
+  .foot-social a{color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
   .foot-social a:hover{color:var(--gold-hi)}
   .foot-mgmt{margin-top:34px;font-size:.74rem;color:#6b5f45;letter-spacing:.12em}
-  .foot-mgmt a{color:var(--gold);text-decoration:none;text-transform:uppercase;letter-spacing:.18em;font-weight:700}
+  .foot-mgmt a{color:var(--gold);text-decoration:none;text-transform:uppercase;letter-spacing:.18em;font-weight:600}
   .foot-mgmt a:hover{color:var(--gold-hi)}
+
+  /* ================= REDUCED MOTION ================= */
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .foil{animation:none}
+    #grain{animation:none}
+    .marquee-track{animation:none}
+    #cinema{height:auto}
+    .stage{position:relative;height:auto;min-height:60vh;padding:120px 0}
+    .stage video,.stage canvas.scene{position:absolute;height:100%}
+    .ov{position:relative;left:auto;top:auto;transform:none;opacity:1;filter:none;margin:60px auto;max-width:720px;padding:0 24px;pointer-events:auto}
+    #ov-hero,#ov-cta{left:auto;transform:none}
+    #ov-hero h1 .ch{opacity:1;transform:none}
+    .scroll-cue{display:none}
+    #chapters{display:none}
+    .scroll-cue::after{animation:none}
+  }
 </style>
 
 <!-- ===== SEO / AEO structured data ===== -->
@@ -663,6 +652,30 @@
 
 </head>
 <body>
+<!-- ================= AMBIENT / CHROME ================= -->
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+<div id="grain" aria-hidden="true"></div>
+<div id="vignette" aria-hidden="true"></div>
+<canvas id="dust" aria-hidden="true"></canvas>
+
+<div id="loader" aria-hidden="true">
+  <span class="ld-line"></span>
+  <span class="ld-mark display"><span class="chrome">NOIZE</span> <span class="red-metal">BEATZ</span></span>
+  <span class="ld-bar"><i id="ldFill"></i></span>
+  <span class="ld-pct" id="ldPct">0%</span>
+  <span class="ld-line"></span>
+</div>
+
+<nav id="chapters" aria-hidden="true">
+  <span class="ch on"><b></b><i></i></span>
+  <span class="ch"><b></b><i></i></span>
+  <span class="ch"><b></b><i></i></span>
+  <span class="ch"><b></b><i></i></span>
+  <span class="ch"><b></b><i></i></span>
+  <span class="ch"><b></b><i></i></span>
+</nav>
+
 <!-- ================= NAV ================= -->
 <header class="nav">
   <div class="wrap nav-inner">
@@ -670,10 +683,9 @@
     <nav aria-label="Main">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">The Work</a></li>
-        <li><a href="#studio">Studio</a></li>
-        <li><a href="#singles">Singles</a></li>
         <li><a href="#beats">Beats</a></li>
+        <li><a href="#singles">Singles</a></li>
+        <li><a href="#studio">Studio</a></li>
         <li><a href="#connect">Connect</a></li>
         <li><a href="#connect" class="btn btn-gold">Work With Noize</a></li>
       </ul>
@@ -681,130 +693,102 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <main id="top">
-<section class="hero" aria-label="Intro">
-  <canvas id="heroScene" aria-hidden="true"></canvas>
-  <video class="hero-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
-    <source src="assets/hero-loop.mp4" type="video/mp4">
-    <!-- hosted preview fallback; replace with your self-hosted file before launch -->
-    <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260706_192131_11964653-d5d1-4743-b7b7-99ffdbf59a22.mp4" type="video/mp4">
-  </video>
-  <div class="hero-inner">
-    <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 0 240 170">
-        <defs>
-          <linearGradient id="chromeV" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#fdfeff"/><stop offset=".42" stop-color="#c9cfd9"/>
-            <stop offset=".54" stop-color="#767d8b"/><stop offset=".72" stop-color="#aab1bd"/>
-            <stop offset="1" stop-color="#f2f5fa"/>
-          </linearGradient>
-          <linearGradient id="redV" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ff97a1"/><stop offset=".46" stop-color="#e8192c"/>
-            <stop offset=".58" stop-color="#8e0e1b"/><stop offset=".82" stop-color="#d41628"/>
-            <stop offset="1" stop-color="#ff7581"/>
-          </linearGradient>
-          <linearGradient id="cupRim" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#eef1f6"/><stop offset=".4" stop-color="#9aa1ae"/>
-            <stop offset=".62" stop-color="#565d69"/><stop offset="1" stop-color="#c9cfd9"/>
-          </linearGradient>
-          <radialGradient id="cupBody" cx=".35" cy=".28" r="1.1">
-            <stop offset="0" stop-color="#41454e"/><stop offset=".45" stop-color="#17181c"/>
-            <stop offset="1" stop-color="#050607"/>
-          </radialGradient>
-          <radialGradient id="glowR" cx=".5" cy=".5" r=".5">
-            <stop offset="0" stop-color="rgba(232,25,44,.5)"/>
-            <stop offset=".6" stop-color="rgba(232,25,44,.14)"/>
-            <stop offset="1" stop-color="rgba(232,25,44,0)"/>
-          </radialGradient>
-          <filter id="redGlow" x="-60%" y="-60%" width="220%" height="220%">
-            <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#e8192c" flood-opacity=".85"/>
-          </filter>
-          <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
-            <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".65"/>
-          </filter>
-        </defs>
+<!-- ================= CINEMA ================= -->
+<section id="cinema" aria-label="Noize Beatz — cinematic intro">
+  <div class="stage">
+    <canvas class="scene" id="heroScene" aria-hidden="true"></canvas>
+    <video id="cineVid" muted playsinline preload="auto" crossorigin="anonymous" aria-hidden="true">
+      <source src="assets/hero-loop.mp4" type="video/mp4">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260706_192131_11964653-d5d1-4743-b7b7-99ffdbf59a22.mp4" type="video/mp4">
+    </video>
+    <div class="shade-l" aria-hidden="true"></div>
+    <div class="shade-b" aria-hidden="true"></div>
+    <div class="tint" id="tint" aria-hidden="true"></div>
 
-        <!-- ambient red glow behind the mark -->
-        <ellipse cx="120" cy="92" rx="112" ry="80" fill="url(#glowR)"/>
-
-        <!-- headband: dark under-edge, chrome body, top highlight -->
-        <path d="M34 110 C34 46, 74 17, 120 17 C166 17, 206 46, 206 110"
-              fill="none" stroke="#15171b" stroke-width="18" stroke-linecap="round"/>
-        <path d="M34 110 C34 46, 74 17, 120 17 C166 17, 206 46, 206 110"
-              fill="none" stroke="url(#chromeV)" stroke-width="13" stroke-linecap="round"/>
-        <path d="M40 102 C40 52, 78 24, 120 24"
-              fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M200 102 C200 60, 176 32, 142 24"
-              fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.6" stroke-linecap="round"/>
-
-        <!-- left cup: depth shadow, chrome rim, padded body, highlight -->
-        <g filter="url(#softShadow)">
-          <rect x="17" y="92" width="44" height="66" rx="17" fill="#07080a"/>
-          <rect x="14" y="88" width="44" height="66" rx="17" fill="url(#cupRim)"/>
-          <rect x="19" y="93" width="34" height="56" rx="13" fill="url(#cupBody)"/>
-          <ellipse cx="30" cy="108" rx="8" ry="13" fill="rgba(255,255,255,.10)"/>
-          <rect x="19" y="128" width="34" height="21" rx="10" fill="rgba(232,25,44,.10)"/>
-        </g>
-        <!-- right cup -->
-        <g filter="url(#softShadow)">
-          <rect x="185" y="92" width="44" height="66" rx="17" fill="#07080a"/>
-          <rect x="182" y="88" width="44" height="66" rx="17" fill="url(#cupRim)"/>
-          <rect x="187" y="93" width="34" height="56" rx="13" fill="url(#cupBody)"/>
-          <ellipse cx="198" cy="108" rx="8" ry="13" fill="rgba(255,255,255,.10)"/>
-          <rect x="187" y="128" width="34" height="21" rx="10" fill="rgba(232,25,44,.10)"/>
-        </g>
-
-        <!-- N | B with extruded depth -->
-        <text x="92" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
-              fill="#101318" text-anchor="middle" transform="translate(0,4)">N</text>
-        <text x="92" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
-              fill="url(#chromeV)" text-anchor="middle" stroke="rgba(255,255,255,.35)" stroke-width=".6">N</text>
-
-        <g filter="url(#redGlow)">
-          <rect x="116" y="64" width="9" height="66" fill="#4a0810" transform="translate(0,4)"/>
-          <rect x="116" y="64" width="9" height="66" fill="url(#redV)"/>
-        </g>
-
-        <text x="152" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
-              fill="#3c060c" text-anchor="middle" transform="translate(0,4)">B</text>
-        <text x="152" y="126" font-family="Arial Black,Impact,sans-serif" font-size="58" font-weight="900"
-              fill="url(#redV)" text-anchor="middle" filter="url(#redGlow)">B</text>
-      </svg>
+    <!-- Stage 1: hero -->
+    <div class="ov" id="ov-hero" data-show="0" data-hide="0.13">
+      <div class="hero-center">
+        <h1 aria-label="Noize Beatz">
+          <span class="t3d t3d-chrome chrome" data-text="NOIZE" data-split>NOIZE</span><br>
+          <span class="t3d t3d-red red-metal" data-text="BEATZ" data-split>BEATZ</span>
+        </h1>
+        <p class="role">Music Producer</p>
+        <p class="tagline">Beats That Move Culture.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-red" href="#beats">Hear The Beats</a>
+          <a class="btn btn-line" href="#connect">Work With Noize</a>
+        </div>
+        <div class="statbar" role="list" aria-label="Track record">
+          <div class="st" role="listitem"><div class="num foil">№1</div><div class="lab">Billboard Plaque</div></div>
+          <div class="st" role="listitem"><div class="num foil">GRAMMY</div><div class="lab">Winning Collaborators</div></div>
+          <div class="st" role="listitem"><div class="num foil" data-count="5">5</div><div class="lab">Charting Singles</div></div>
+          <div class="st" role="listitem"><div class="num foil" data-count="3">3</div><div class="lab">Genres One Signature</div></div>
+        </div>
+      </div>
     </div>
-    <h1 class="display" aria-label="Noize Beatz">
-      <span class="word"><span class="t3d t3d-chrome chrome" data-text="NOIZE">NOIZE</span></span>
-      <span class="word"><span class="t3d t3d-red red-metal" data-text="BEATZ">BEATZ</span></span>
-    </h1>
-    <p class="role">Music Producer</p>
-    <p class="tagline script">Beats That Move Culture.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-red" href="#singles">Hear The Work</a>
-      <a class="btn btn-steel" href="#connect">Work With Noize</a>
+
+    <!-- Stage 2: vision -->
+    <div class="ov" id="ov-vision" data-show="0.16" data-hide="0.33">
+      <span class="qmark serif" aria-hidden="true">“</span>
+      <blockquote>Beats that move culture aren't made by accident — they're built, layer by layer, until the room has no choice.</blockquote>
+      <div class="attr">Noize Beatz</div>
     </div>
-    <div class="hero-rule" aria-hidden="true"></div>
-    <p class="hero-creds">
-      <span><b>Too $hort</b></span>
-      <span><b>TLC</b></span>
-      <span><b>D Smoke</b></span>
-      <span><b>Teamarrr</b></span>
-      <span><b>310babii</b></span>
-    </p>
+
+    <!-- Stage 3: story -->
+    <div class="ov" id="ov-story" data-show="0.36" data-hide="0.52">
+      <p class="ov-label">// The Story</p>
+      <h2 class="serif">An <em>architect of sound</em></h2>
+      <p class="ov-body">
+        Immersive, melodic productions that seamlessly blend hip hop, R&amp;B, and pop —
+        from records for Grammy Award-winning artists to breakout singles for rising
+        talent, fusing commercial appeal with emotional depth and timeless energy.
+      </p>
+    </div>
+
+    <!-- Stage 4: the standard -->
+    <div class="ov" id="ov-standard" data-show="0.55" data-hide="0.71">
+      <p class="ov-label">// The Standard</p>
+      <h2 class="serif">Beats with purpose.<br><em>Sound without limits.</em></h2>
+      <div class="ov-grid">
+        <div class="cell"><h3>Proven Hitmaker</h3><p>Records that resonate worldwide across genres.</p></div>
+        <div class="cell"><h3>Sonic Versatility</h3><p>Hip hop, R&amp;B and pop with a signature touch.</p></div>
+        <div class="cell"><h3>Global Impact</h3><p>Music that connects cultures and moves generations.</p></div>
+        <div class="cell"><h3>Distinctive Ear</h3><p>From chart-topping hits to underground classics.</p></div>
+        <div class="cell"><h3>Work Ethic</h3><p>Unmatched commitment on every record.</p></div>
+        <div class="cell"><h3>Excellence</h3><p>A passion for excellence, without exception.</p></div>
+      </div>
+    </div>
+
+    <!-- Stage 5: credits -->
+    <div class="ov" id="ov-credits" data-show="0.74" data-hide="0.86">
+      <p class="ov-label">// Selected Credits</p>
+      <h2 class="serif">The <em>company</em> the sound keeps</h2>
+      <div class="cred-list">
+        <div class="cr"><span class="who">Too $hort</span><span class="what">Pick A Side</span></div>
+        <div class="cr"><span class="who">TLC</span><span class="what">American Gold</span></div>
+        <div class="cr"><span class="who">Teamarrr &amp; D Smoke</span><span class="what">Kinda Love</span></div>
+        <div class="cr"><span class="who">Elijah Connor</span><span class="what">Lemon &amp; Lime</span></div>
+        <div class="cr"><span class="who">Jaydon &amp; 310babii</span><span class="what">Ah! Ah!</span></div>
+      </div>
+    </div>
+
+    <!-- Stage 6: CTA -->
+    <div class="ov" id="ov-cta" data-show="0.89" data-hide="1.01">
+      <p class="big">It's time to <em class="foil">create.</em></p>
+      <p class="sub">Placements, custom production, writing camps, and collaborations.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#beats">License A Beat</a>
+        <a class="btn btn-line" href="#connect">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue" id="scrollCue">Scroll</div>
   </div>
 </section>
 
-<!-- ================= MARQUEE ================= -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mq1">
-    <span class="foil">It's Time To Create</span><span class="star">✦</span>
-    <span class="dim">Beats That Move Culture</span><span class="star">✦</span>
-    <span class="foil">Noize Beatz</span><span class="star">✦</span>
-    <span class="dim">Hip Hop · R&amp;B · Pop</span><span class="star">✦</span>
-  </div>
-</div>
-
 <!-- ================= ABOUT ================= -->
-<section id="about" aria-labelledby="about-h">
+<section id="about" class="band" aria-labelledby="about-h">
   <div class="wrap about-grid">
     <figure class="portrait reveal" aria-label="Portrait of Noize Beatz">
       <video class="portrait-img portrait-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
@@ -818,7 +802,7 @@
     </figure>
     <div class="about-copy reveal">
       <span class="eyebrow">// The Story</span>
-      <h2 id="about-h" class="display"><span class="foil">Architect</span> of Sound</h2>
+      <h2 id="about-h">The <em>architect</em> of sound</h2>
       <p>
         Noize Beatz is a dynamic producer and architect of sound known for crafting
         immersive, melodic productions that seamlessly blend hip hop, R&amp;B, and pop.
@@ -840,230 +824,60 @@
   </div>
 </section>
 
-<!-- ================= PILLARS ================= -->
-<section id="work" class="pillars" aria-labelledby="work-h">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">// The Standard</span>
-      <h2 id="work-h" class="display">Beats With Purpose.<span class="l2">Sound Without Limits.</span></h2>
-      <p class="lede">
-        From chart-topping hits to underground classics, Noize Beatz brings a distinctive
-        ear, unmatched work ethic and a passion for excellence to every record.
-      </p>
-    </div>
-    <div class="pillar-grid">
-      <article class="pillar reveal">
-        <div class="icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24"><rect x="2" y="9" width="2.6" height="6" rx="1.2" fill="#e9c96b"/><rect x="7" y="5" width="2.6" height="14" rx="1.2" fill="#e9c96b"/><rect x="12" y="8" width="2.6" height="8" rx="1.2" fill="#e9c96b"/><rect x="17" y="3" width="2.6" height="18" rx="1.2" fill="#e9c96b"/></svg>
-        </div>
-        <h3>Proven Hitmaker</h3>
-        <p>Crafting records that resonate worldwide across genres.</p>
-      </article>
-      <article class="pillar reveal">
-        <div class="icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="3" width="2.2" height="18" rx="1.1" fill="#e9c96b"/><rect x="11" y="3" width="2.2" height="18" rx="1.1" fill="#e9c96b"/><rect x="18" y="3" width="2.2" height="18" rx="1.1" fill="#e9c96b"/><rect x="2" y="13" width="6.2" height="3.4" rx="1.6" fill="#f8ecc0"/><rect x="9" y="6" width="6.2" height="3.4" rx="1.6" fill="#f8ecc0"/><rect x="16" y="15" width="6.2" height="3.4" rx="1.6" fill="#f8ecc0"/></svg>
-        </div>
-        <h3>Sonic Versatility</h3>
-        <p>Seamlessly blending Hip Hop, R&amp;B and Pop with a signature touch.</p>
-      </article>
-      <article class="pillar reveal">
-        <div class="icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#e9c96b" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="#e9c96b" stroke-width="1.6"/><path d="M3.5 12h17M4.8 7.5h14.4M4.8 16.5h14.4" stroke="#e9c96b" stroke-width="1.4"/></svg>
-        </div>
-        <h3>Global Impact</h3>
-        <p>Music that connects cultures and moves generations.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= STUDIO ================= -->
-<section id="studio" class="studioband" aria-labelledby="studio-h">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">// The Room</span>
-      <h2 id="studio-h" class="display"><span class="foil">The Studio</span> Above The City</h2>
-      <p class="lede">
-        Glass walls, monitors aimed at the skyline, and a room that stays inspiring
-        long after midnight. Records get finished up here — the city lights do half the work.
-      </p>
-      <div class="studio-points">
-        <div class="pt"><span class="dot"></span><p><strong>Attended sessions.</strong> Book time and cut records with production guidance in the room.</p></div>
-        <div class="pt"><span class="dot"></span><p><strong>Remote-first workflow.</strong> Files in, references matched, stems back — same standard local or overseas.</p></div>
-        <div class="pt"><span class="dot"></span><p><strong>Calibrated monitoring.</strong> Every mix checked on mains, nearfields, and the car ride home.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= SINGLES ================= -->
-<section id="singles" class="singles" aria-labelledby="singles-h">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="eyebrow">// Discography</span>
-        <h2 id="singles-h" class="display foil">Produced Singles</h2>
-      </div>
-      <p>Records on the radio, in the club, and on the charts — each one produced by Noize Beatz.</p>
-    </div>
-
-    <div class="singles-grid">
-      <a class="single reveal" href="#" aria-label="Pick A Side by Too $hort — listen">
-        <div class="cover cv-pickaside">
-          <span class="art-title">Too <span class="dollar">$</span>hort</span>
-          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
-        </div>
-        <div class="meta"><h3>Pick A Side</h3><div class="by">Too $hort</div></div>
-      </a>
-
-      <a class="single reveal" href="#" aria-label="Kinda Love by Teamarrr and D Smoke — listen">
-        <div class="cover cv-kindalove">
-          <span class="art-title">Kinda Love</span>
-          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
-        </div>
-        <div class="meta"><h3>Kinda Love</h3><div class="by">Teamarrr &amp; D Smoke</div></div>
-      </a>
-
-      <a class="single reveal" href="#" aria-label="Lemon and Lime by Elijah Connor — listen">
-        <div class="cover cv-lemonlime">
-          <span class="art-title">Lemon &amp; Lime</span>
-          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
-        </div>
-        <div class="meta"><h3>Lemon &amp; Lime</h3><div class="by">Elijah Connor</div></div>
-      </a>
-
-      <a class="single reveal" href="#" aria-label="American Gold by TLC — listen">
-        <div class="cover cv-americangold">
-          <span class="art-title">TLC</span>
-          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
-        </div>
-        <div class="meta"><h3>American Gold</h3><div class="by">TLC</div></div>
-      </a>
-
-      <a class="single reveal" href="#" aria-label="Ah! Ah! by Jaydon and 310babii — listen">
-        <div class="cover cv-ahah">
-          <span class="art-title">Ah! Ah!</span>
-          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
-        </div>
-        <div class="meta"><h3>Ah! Ah!</h3><div class="by">Jaydon &amp; 310babii</div></div>
-      </a>
-    </div>
-    <p class="singles-note">Link each cover to Spotify / Apple Music / YouTube — swap in official artwork before launch</p>
-  </div>
-</section>
-
-<!-- ================= MARQUEE 2 ================= -->
+<!-- ================= MARQUEE ================= -->
 <div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mq2">
-    <span class="dim">Proven Hitmaker</span><span class="star">✦</span>
-    <span class="foil">Sonic Versatility</span><span class="star">✦</span>
-    <span class="dim">Global Impact</span><span class="star">✦</span>
-    <span class="foil">Beats That Move Culture</span><span class="star">✦</span>
+  <div class="marquee-track" id="mq1">
+    <span class="foil">It's Time To Create</span><span class="star">✦</span>
+    <span class="dim">Beats That Move Culture</span><span class="star">✦</span>
+    <span class="foil">Noize Beatz</span><span class="star">✦</span>
+    <span class="dim">Hip Hop · R&amp;B · Pop</span><span class="star">✦</span>
   </div>
 </div>
 
-<!-- ================= BEAT STORE ================= -->
-<section id="beats" class="beatstore" aria-labelledby="beats-h">
+<!-- ================= BEATS / PLAYER ================= -->
+<section id="beats" class="band beats-band" aria-labelledby="beats-h">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
         <span class="eyebrow">// The Beat Store</span>
-        <h2 id="beats-h" class="display foil">License A Beat</h2>
+        <h2 id="beats-h">License a beat.<br><em>Leave with a record.</em></h2>
       </div>
       <p>Radio-ready instrumentals, delivered instantly with a signed license.
          Every lease includes Spotify, Apple Music &amp; YouTube rights.</p>
     </div>
 
-    <div class="beats-grid">
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>Culture Shift</h3><div class="genre">Hip Hop · Anthemic</div></div>
-          <span class="bpm">96 BPM · Gm</span>
-        </div>
-        <div class="player">
-          <button class="play" aria-label="Preview Culture Shift" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
-        </div>
-      </article>
+    <div class="deck reveal" id="deck">
+      <div class="deck-glow" aria-hidden="true"></div>
 
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>Gold Standard</h3><div class="genre">R&amp;B · Smooth · Late-night</div></div>
-          <span class="bpm">88 BPM · E♭</span>
+      <div class="np">
+        <div class="art">
+          <span class="art-fallback"><span class="chrome">N</span><span class="red-metal">|B</span></span>
+          <img id="npArt" alt="" src="">
         </div>
-        <div class="player">
-          <button class="play" aria-label="Preview Gold Standard" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
+        <div class="np-meta">
+          <div class="np-title serif" id="npTitle">Culture Shift</div>
+          <div class="np-sub" id="npSub">Hip Hop · Anthemic — 96 BPM · Gm</div>
         </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
+        <div class="scrub">
+          <div class="scrub-wave" id="scrubWave" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"></div>
+          <div class="scrub-time"><span id="tCur">0:00</span><span id="tDur">–:––</span></div>
         </div>
-      </article>
+        <div class="np-controls">
+          <button class="ctrl" id="btnPrev" aria-label="Previous beat">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M4 3h2.4v14H4zM17 3v14L7.5 10z"/></svg>
+          </button>
+          <button class="ctrl ctrl-play" id="btnPlay" aria-label="Play preview" aria-pressed="false">
+            <svg id="icPlay" width="22" height="24" viewBox="0 0 14 16" fill="currentColor"><path d="M1 1l12 7-12 7z"/></svg>
+            <svg id="icPause" width="18" height="20" viewBox="0 0 14 16" fill="currentColor" style="display:none"><path d="M1 1h4v14H1zM9 1h4v14H9z"/></svg>
+          </button>
+          <button class="ctrl" id="btnNext" aria-label="Next beat">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M13.6 3H16v14h-2.4zM3 3v14l9.5-7z"/></svg>
+          </button>
+        </div>
+        <p class="np-note" id="npNote">Preview audio: drop mp3s in assets/previews/</p>
+      </div>
 
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>Pressure</h3><div class="genre">Trap · Dark · 808-heavy</div></div>
-          <span class="bpm">142 BPM · Fm</span>
-        </div>
-        <div class="player">
-          <button class="play" aria-label="Preview Pressure" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
-        </div>
-      </article>
-
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>After Hours</h3><div class="genre">R&amp;B · Moody · Bounce</div></div>
-          <span class="bpm">102 BPM · Am</span>
-        </div>
-        <div class="player">
-          <button class="play" aria-label="Preview After Hours" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
-        </div>
-      </article>
-
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>Smoke &amp; Mirrors</h3><div class="genre">Pop · Hip Hop · Radio</div></div>
-          <span class="bpm">118 BPM · C</span>
-        </div>
-        <div class="player">
-          <button class="play" aria-label="Preview Smoke and Mirrors" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
-        </div>
-      </article>
-
-      <article class="beat reveal">
-        <div class="beat-top">
-          <div><h3>Night Shift</h3><div class="genre">Trap Soul · Melodic</div></div>
-          <span class="bpm">124 BPM · Dm</span>
-        </div>
-        <div class="player">
-          <button class="play" aria-label="Preview Night Shift" aria-pressed="false"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></button>
-          <div class="wave" aria-hidden="true"></div>
-        </div>
-        <div class="beat-foot">
-          <span class="price">$34.99 <small>MP3 LEASE</small></span>
-          <a href="#licenses">License →</a>
-        </div>
-      </article>
+      <div class="tracks" id="tracks" role="list"></div>
     </div>
 
     <div class="licenses reveal" id="licenses">
@@ -1101,12 +915,82 @@
   </div>
 </section>
 
+<!-- ================= SINGLES ================= -->
+<section id="singles" class="band singles" aria-labelledby="singles-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">// Discography</span>
+        <h2 id="singles-h">Produced <em>singles</em></h2>
+      </div>
+      <p>Records on the radio, in the club, and on the charts — each one produced by Noize Beatz.</p>
+    </div>
+
+    <div class="singles-grid">
+      <a class="single reveal" href="#" aria-label="Pick A Side by Too $hort — listen">
+        <div class="cover cv-pickaside">
+          <span class="art-title">Too <span class="dollar">$</span>hort</span>
+          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
+        </div>
+        <div class="meta"><h3>Pick A Side</h3><div class="by">Too $hort</div></div>
+      </a>
+      <a class="single reveal" href="#" aria-label="Kinda Love by Teamarrr and D Smoke — listen">
+        <div class="cover cv-kindalove">
+          <span class="art-title">Kinda Love</span>
+          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
+        </div>
+        <div class="meta"><h3>Kinda Love</h3><div class="by">Teamarrr &amp; D Smoke</div></div>
+      </a>
+      <a class="single reveal" href="#" aria-label="Lemon and Lime by Elijah Connor — listen">
+        <div class="cover cv-lemonlime">
+          <span class="art-title">Lemon &amp; Lime</span>
+          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
+        </div>
+        <div class="meta"><h3>Lemon &amp; Lime</h3><div class="by">Elijah Connor</div></div>
+      </a>
+      <a class="single reveal" href="#" aria-label="American Gold by TLC — listen">
+        <div class="cover cv-americangold">
+          <span class="art-title">TLC</span>
+          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
+        </div>
+        <div class="meta"><h3>American Gold</h3><div class="by">TLC</div></div>
+      </a>
+      <a class="single reveal" href="#" aria-label="Ah! Ah! by Jaydon and 310babii — listen">
+        <div class="cover cv-ahah">
+          <span class="art-title">Ah! Ah!</span>
+          <span class="badge"><i><svg width="16" height="18" viewBox="0 0 14 16"><path d="M1 1l12 7-12 7z" fill="#171006"/></svg></i></span>
+        </div>
+        <div class="meta"><h3>Ah! Ah!</h3><div class="by">Jaydon &amp; 310babii</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STUDIO ================= -->
+<section id="studio" class="studioband" aria-labelledby="studio-h">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">// The Room</span>
+      <h2 id="studio-h">The studio <em>above the city</em></h2>
+      <p class="lede">
+        Glass walls, monitors aimed at the skyline, and a room that stays inspiring
+        long after midnight. Records get finished up here — the city lights do half the work.
+      </p>
+      <div class="studio-points">
+        <div class="pt"><span class="dot"></span><p><strong>Attended sessions.</strong> Book time and cut records with production guidance in the room.</p></div>
+        <div class="pt"><span class="dot"></span><p><strong>Remote-first workflow.</strong> Files in, references matched, stems back — same standard local or overseas.</p></div>
+        <div class="pt"><span class="dot"></span><p><strong>Calibrated monitoring.</strong> Every mix checked on mains, nearfields, and the car ride home.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= EMAIL LIST ================= -->
-<section id="list" class="list" aria-labelledby="list-h">
+<section id="list" class="band list" aria-labelledby="list-h">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">// The Inner Circle</span>
-      <h2 id="list-h" class="display">Free Beat Pack.<br><span class="gold-l">First On Every Drop.</span></h2>
+      <h2 id="list-h">Free beat pack.<br><span class="gold-l">First on every drop.</span></h2>
       <p class="sub">
         Join the list and get a free tagged beat pack today — plus new beats,
         placements, and collab openings before they hit socials.
@@ -1122,11 +1006,11 @@
 </section>
 
 <!-- ================= CONNECT ================= -->
-<section id="connect" class="connect" aria-labelledby="connect-h">
+<section id="connect" class="band connect" aria-labelledby="connect-h">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">// Let's Build</span>
-      <h2 id="connect-h" class="display"><span class="script" style="font-size:.55em;display:block;margin-bottom:10px">It's time to</span><span class="foil">Create.</span></h2>
+      <h2 id="connect-h" class="display"><span class="script-lead">It's time to</span><span class="foil">Create.</span></h2>
       <p class="sub">
         Placements, custom production, writing camps, and collaborations.
         Reach out directly or through management — every serious inquiry gets a reply.
@@ -1138,7 +1022,7 @@
     </div>
 
     <a class="qr-card reveal" href="https://instagram.com/noizebeatz" aria-label="Scan or tap to connect on Instagram">
-      <svg class="qr" viewBox="0 0 33 33" role="img" aria-label="QR code linking to Noize Beatz on Instagram"><path d="M2 2h7v1h-7zM11 2h3v1h-3zM15 2h1v1h-1zM18 2h4v1h-4zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM14 3h4v1h-4zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM12 4h4v1h-4zM18 4h5v1h-5zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM12 5h2v1h-2zM15 5h3v1h-3zM20 5h1v1h-1zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM12 6h5v1h-5zM18 6h3v1h-3zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h2v1h-2zM15 7h2v1h-2zM19 7h3v1h-3zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM12 9h3v1h-3zM16 9h1v1h-1zM19 9h2v1h-2zM22 9h1v1h-1zM2 10h1v1h-1zM5 10h1v1h-1zM7 10h2v1h-2zM10 10h3v1h-3zM14 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM25 10h1v1h-1zM2 11h2v1h-2zM7 11h1v1h-1zM13 11h1v1h-1zM16 11h2v1h-2zM22 11h3v1h-3zM27 11h1v1h-1zM30 11h1v1h-1zM5 12h2v1h-2zM8 12h1v1h-1zM13 12h1v1h-1zM18 12h1v1h-1zM20 12h2v1h-2zM26 12h4v1h-4zM3 13h1v1h-1zM6 13h1v1h-1zM9 13h4v1h-4zM14 13h1v1h-1zM16 13h2v1h-2zM20 13h1v1h-1zM25 13h1v1h-1zM28 13h2v1h-2zM2 14h1v1h-1zM5 14h1v1h-1zM7 14h5v1h-5zM13 14h1v1h-1zM18 14h2v1h-2zM21 14h5v1h-5zM27 14h1v1h-1zM29 14h2v1h-2zM4 15h1v1h-1zM6 15h2v1h-2zM10 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM20 15h4v1h-4zM7 16h2v1h-2zM10 16h2v1h-2zM13 16h2v1h-2zM17 16h2v1h-2zM20 16h1v1h-1zM22 16h3v1h-3zM27 16h4v1h-4zM2 17h3v1h-3zM6 17h2v1h-2zM9 17h3v1h-3zM13 17h1v1h-1zM15 17h2v1h-2zM18 17h2v1h-2zM24 17h2v1h-2zM27 17h1v1h-1zM29 17h1v1h-1zM3 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM12 18h1v1h-1zM15 18h3v1h-3zM19 18h1v1h-1zM21 18h3v1h-3zM25 18h1v1h-1zM29 18h1v1h-1zM4 19h1v1h-1zM9 19h1v1h-1zM14 19h1v1h-1zM17 19h1v1h-1zM24 19h2v1h-2zM27 19h1v1h-1zM30 19h1v1h-1zM2 20h1v1h-1zM4 20h2v1h-2zM7 20h3v1h-3zM11 20h1v1h-1zM14 20h2v1h-2zM18 20h1v1h-1zM22 20h1v1h-1zM24 20h1v1h-1zM29 20h2v1h-2zM5 21h1v1h-1zM7 21h1v1h-1zM9 21h2v1h-2zM12 21h2v1h-2zM15 21h1v1h-1zM18 21h6v1h-6zM26 21h1v1h-1zM29 21h2v1h-2zM2 22h1v1h-1zM4 22h1v1h-1zM6 22h4v1h-4zM14 22h1v1h-1zM16 22h2v1h-2zM21 22h6v1h-6zM28 22h1v1h-1zM10 23h2v1h-2zM13 23h1v1h-1zM15 23h1v1h-1zM18 23h2v1h-2zM21 23h2v1h-2zM26 23h1v1h-1zM28 23h3v1h-3zM2 24h7v1h-7zM15 24h2v1h-2zM19 24h2v1h-2zM22 24h1v1h-1zM24 24h1v1h-1zM26 24h1v1h-1zM29 24h1v1h-1zM2 25h1v1h-1zM8 25h1v1h-1zM10 25h2v1h-2zM13 25h1v1h-1zM15 25h1v1h-1zM17 25h2v1h-2zM21 25h2v1h-2zM26 25h4v1h-4zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM19 26h1v1h-1zM22 26h5v1h-5zM30 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM10 27h1v1h-1zM12 27h5v1h-5zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h6v1h-6zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM16 28h1v1h-1zM19 28h1v1h-1zM21 28h2v1h-2zM26 28h3v1h-3zM30 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM12 29h1v1h-1zM14 29h4v1h-4zM19 29h5v1h-5zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h3v1h-3zM14 30h2v1h-2zM19 30h1v1h-1zM22 30h2v1h-2zM27 30h1v1h-1zM29 30h1v1h-1z" fill="currentColor"/></svg>
+      <svg class="qr" viewBox="0 0 33 33" role="img" aria-label="QR code linking to Noize Beatz on Instagram"><path id="qrPath" d="" fill="currentColor"/></svg>
       <span class="qr-cap">Scan to Connect</span>
     </a>
 
@@ -1174,7 +1058,7 @@
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
-    <p class="foot-script script">Noize Beatz</p>
+    <p class="foot-script">Noize Beatz</p>
     <p class="foot-motto">It's Time To Create.</p>
     <ul class="foot-social">
       <li><a href="https://instagram.com/noizebeatz">Instagram</a></li>
@@ -1189,53 +1073,380 @@
 <script>
 (function(){
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  /* seamless marquees */
-  ['mq1','mq2'].forEach(function(id){
-    var t = document.getElementById(id);
-    t.innerHTML += t.innerHTML;
+  var QR_PATH = "M2 2h7v1h-7zM11 2h3v1h-3zM15 2h1v1h-1zM18 2h4v1h-4zM24 2h7v1h-7zM2 3h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM14 3h4v1h-4zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM30 3h1v1h-1zM2 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM12 4h4v1h-4zM18 4h5v1h-5zM24 4h1v1h-1zM26 4h3v1h-3zM30 4h1v1h-1zM2 5h1v1h-1zM4 5h3v1h-3zM8 5h1v1h-1zM12 5h2v1h-2zM15 5h3v1h-3zM20 5h1v1h-1zM24 5h1v1h-1zM26 5h3v1h-3zM30 5h1v1h-1zM2 6h1v1h-1zM4 6h3v1h-3zM8 6h1v1h-1zM12 6h5v1h-5zM18 6h3v1h-3zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h3v1h-3zM30 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h2v1h-2zM15 7h2v1h-2zM19 7h3v1h-3zM24 7h1v1h-1zM30 7h1v1h-1zM2 8h7v1h-7zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h7v1h-7zM12 9h3v1h-3zM16 9h1v1h-1zM19 9h2v1h-2zM22 9h1v1h-1zM2 10h1v1h-1zM5 10h1v1h-1zM7 10h2v1h-2zM10 10h3v1h-3zM14 10h1v1h-1zM17 10h1v1h-1zM21 10h1v1h-1zM23 10h1v1h-1zM25 10h1v1h-1zM2 11h2v1h-2zM7 11h1v1h-1zM13 11h1v1h-1zM16 11h2v1h-2zM22 11h3v1h-3zM27 11h1v1h-1zM30 11h1v1h-1zM5 12h2v1h-2zM8 12h1v1h-1zM13 12h1v1h-1zM18 12h1v1h-1zM20 12h2v1h-2zM26 12h4v1h-4zM3 13h1v1h-1zM6 13h1v1h-1zM9 13h4v1h-4zM14 13h1v1h-1zM16 13h2v1h-2zM20 13h1v1h-1zM25 13h1v1h-1zM28 13h2v1h-2zM2 14h1v1h-1zM5 14h1v1h-1zM7 14h5v1h-5zM13 14h1v1h-1zM18 14h2v1h-2zM21 14h5v1h-5zM27 14h1v1h-1zM29 14h2v1h-2zM4 15h1v1h-1zM6 15h2v1h-2zM10 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM20 15h4v1h-4zM7 16h2v1h-2zM10 16h2v1h-2zM13 16h2v1h-2zM17 16h2v1h-2zM20 16h1v1h-1zM22 16h3v1h-3zM27 16h4v1h-4zM2 17h3v1h-3zM6 17h2v1h-2zM9 17h3v1h-3zM13 17h1v1h-1zM15 17h2v1h-2zM18 17h2v1h-2zM24 17h2v1h-2zM27 17h1v1h-1zM29 17h1v1h-1zM3 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM12 18h1v1h-1zM15 18h3v1h-3zM19 18h1v1h-1zM21 18h3v1h-3zM25 18h1v1h-1zM29 18h1v1h-1zM4 19h1v1h-1zM9 19h1v1h-1zM14 19h1v1h-1zM17 19h1v1h-1zM24 19h2v1h-2zM27 19h1v1h-1zM30 19h1v1h-1zM2 20h1v1h-1zM4 20h2v1h-2zM7 20h3v1h-3zM11 20h1v1h-1zM14 20h2v1h-2zM18 20h1v1h-1zM22 20h1v1h-1zM24 20h1v1h-1zM29 20h2v1h-2zM5 21h1v1h-1zM7 21h1v1h-1zM9 21h2v1h-2zM12 21h2v1h-2zM15 21h1v1h-1zM18 21h6v1h-6zM26 21h1v1h-1zM29 21h2v1h-2zM2 22h1v1h-1zM4 22h1v1h-1zM6 22h4v1h-4zM14 22h1v1h-1zM16 22h2v1h-2zM21 22h6v1h-6zM28 22h1v1h-1zM10 23h2v1h-2zM13 23h1v1h-1zM15 23h1v1h-1zM18 23h2v1h-2zM21 23h2v1h-2zM26 23h1v1h-1zM28 23h3v1h-3zM2 24h7v1h-7zM15 24h2v1h-2zM19 24h2v1h-2zM22 24h1v1h-1zM24 24h1v1h-1zM26 24h1v1h-1zM29 24h1v1h-1zM2 25h1v1h-1zM8 25h1v1h-1zM10 25h2v1h-2zM13 25h1v1h-1zM15 25h1v1h-1zM17 25h2v1h-2zM21 25h2v1h-2zM26 25h4v1h-4zM2 26h1v1h-1zM4 26h3v1h-3zM8 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM19 26h1v1h-1zM22 26h5v1h-5zM30 26h1v1h-1zM2 27h1v1h-1zM4 27h3v1h-3zM8 27h1v1h-1zM10 27h1v1h-1zM12 27h5v1h-5zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h6v1h-6zM2 28h1v1h-1zM4 28h3v1h-3zM8 28h1v1h-1zM11 28h1v1h-1zM14 28h1v1h-1zM16 28h1v1h-1zM19 28h1v1h-1zM21 28h2v1h-2zM26 28h3v1h-3zM30 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM12 29h1v1h-1zM14 29h4v1h-4zM19 29h5v1h-5zM29 29h1v1h-1zM2 30h7v1h-7zM10 30h3v1h-3zM14 30h2v1h-2zM19 30h1v1h-1zM22 30h2v1h-2zM27 30h1v1h-1zM29 30h1v1h-1z";
+  /* ============ QR path (generated for instagram.com/noizebeatz) ============ */
+  document.getElementById('qrPath').setAttribute('d', QR_PATH);
+
+  /* ============ custom cursor ============ */
+  if (finePointer && !reduced) {
+    var dot = document.getElementById('cur-dot'), ring = document.getElementById('cur-ring');
+    var mx = -100, my = -100, rx = -100, ry = -100;
+    document.addEventListener('mousemove', function(e){ mx = e.clientX; my = e.clientY; });
+    document.addEventListener('mouseover', function(e){
+      ring.classList.toggle('hot', !!e.target.closest('a,button,summary,input,select,.scrub-wave,.track'));
+    });
+    (function curLoop(){
+      dot.style.transform = 'translate(' + (mx - 3) + 'px,' + (my - 3) + 'px)';
+      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+      ring.style.transform = 'translate(' + (rx - 18) + 'px,' + (ry - 18) + 'px)';
+      requestAnimationFrame(curLoop);
+    })();
+  } else {
+    document.getElementById('cur-dot').remove();
+    document.getElementById('cur-ring').remove();
+  }
+
+  /* ============ gold dust particles ============ */
+  var dustC = document.getElementById('dust');
+  var dctx = dustC.getContext('2d');
+  var motes = [];
+  function dustSize(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dustC.width = innerWidth * dpr; dustC.height = innerHeight * dpr;
+    dctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    motes = [];
+    var n = Math.floor(innerWidth / 34);
+    for (var i = 0; i < n; i++) motes.push({
+      x: Math.random() * innerWidth, y: Math.random() * innerHeight,
+      r: 0.4 + Math.random() * 1.5, vx: -0.06 + Math.random() * 0.12, vy: -0.04 - Math.random() * 0.12,
+      a: 0.05 + Math.random() * 0.3, tw: Math.random() * 6.28
+    });
+  }
+  function dustLoop(t){
+    dctx.clearRect(0, 0, innerWidth, innerHeight);
+    for (var i = 0; i < motes.length; i++) {
+      var m = motes[i];
+      m.x += m.vx; m.y += m.vy;
+      if (m.y < -4) { m.y = innerHeight + 4; m.x = Math.random() * innerWidth; }
+      if (m.x < -4) m.x = innerWidth + 4;
+      if (m.x > innerWidth + 4) m.x = -4;
+      dctx.fillStyle = 'rgba(233,201,107,' + (m.a * (0.6 + 0.4 * Math.sin(t * 0.0012 + m.tw))).toFixed(3) + ')';
+      dctx.beginPath(); dctx.arc(m.x, m.y, m.r, 0, 6.2832); dctx.fill();
+    }
+    if (!reduced) requestAnimationFrame(dustLoop);
+  }
+  dustSize(); window.addEventListener('resize', dustSize);
+  if (!reduced) requestAnimationFrame(dustLoop); else dustLoop(0);
+
+  /* ============ letter split ============ */
+  document.querySelectorAll('[data-split]').forEach(function(el){
+    var chars = el.textContent.split('');
+    el.textContent = '';
+    chars.forEach(function(c, i){
+      var s = document.createElement('span');
+      s.className = 'ch'; s.textContent = c;
+      s.style.transitionDelay = (0.05 + i * 0.055) + 's';
+      el.appendChild(s);
+    });
   });
 
-  /* optional local videos: remove cleanly when the asset file is absent */
+  /* ============ loader ============ */
+  var loader = document.getElementById('loader');
+  var ldFill = document.getElementById('ldFill'), ldPct = document.getElementById('ldPct');
+  var ldP = 0, ldReady = false, ldDone = false;
+  var ldTick = setInterval(function(){
+    ldP = Math.min(ldReady ? 100 : 88, ldP + (ldReady ? 12 : 4 + Math.random() * 6));
+    ldFill.style.width = ldP + '%'; ldPct.textContent = Math.round(ldP) + '%';
+    if (ldP >= 100 && !ldDone) {
+      ldDone = true; clearInterval(ldTick);
+      loader.classList.add('done');
+      document.querySelectorAll('#ov-hero')[0].classList.add('visible');
+    }
+  }, 90);
+  setTimeout(function(){ ldReady = true; }, 2400); // fallback if video never loads
+
+  /* ============ banner scene (canvas fallback behind/before video) ============ */
+  var canvas = document.getElementById('heroScene');
+  var ctx = canvas.getContext('2d');
+  var W = 0, H = 0, bldgs = [];
+  function sceneSize(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = canvas.getBoundingClientRect();
+    canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    W = r.width; H = r.height;
+    bldgs = [];
+    var x = 0;
+    while (x < W) {
+      var bw = 16 + Math.random() * 34;
+      var edge = Math.abs(x - W / 2) / (W / 2);
+      var bh = (18 + Math.random() * 80) * (0.35 + edge * 1.05);
+      var wins = [];
+      for (var i = 0; i < Math.floor(bh / 16); i++) if (Math.random() < 0.5)
+        wins.push({dx: 3 + Math.random() * (bw - 6), dy: 6 + Math.random() * (bh - 10), tw: Math.random() * 6.28});
+      bldgs.push({x: x, w: bw, h: bh, spire: Math.random() < 0.16, wins: wins});
+      x += bw + 3 + Math.random() * 9;
+    }
+  }
+  function sceneFrame(t){
+    ctx.clearRect(0, 0, W, H);
+    var floor = H * 0.865, mid = H * 0.42;
+    var g = ctx.createRadialGradient(W/2, floor, 0, W/2, floor, W * 0.55);
+    g.addColorStop(0, 'rgba(232,25,44,.26)'); g.addColorStop(0.55, 'rgba(232,25,44,.07)'); g.addColorStop(1, 'rgba(232,25,44,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    for (var x = 0; x < W; x += 4) {
+      var d = Math.abs(x - W / 2) / (W / 2);
+      var env = 0.22 + 0.78 * Math.exp(-Math.pow((d - 0.52) / 0.3, 2));
+      var osc = Math.abs(Math.sin(x * 0.055 + t * 0.0016) * 0.6 + Math.sin(x * 0.013 - t * 0.0009) * 0.4);
+      var hgt = env * H * 0.15 * (0.25 + 0.75 * osc);
+      var a = 0.05 + 0.38 * (hgt / (H * 0.15));
+      ctx.fillStyle = 'rgba(232,25,44,' + a.toFixed(3) + ')';
+      ctx.fillRect(x, mid - hgt, 1.6, hgt * 2);
+    }
+    for (var i = 0; i < bldgs.length; i++) {
+      var b = bldgs[i];
+      ctx.fillStyle = '#0a0405'; ctx.fillRect(b.x, floor - b.h, b.w, b.h);
+      ctx.fillStyle = 'rgba(232,25,44,.3)'; ctx.fillRect(b.x, floor - b.h, b.w, 1.2);
+      for (var j = 0; j < b.wins.length; j++) {
+        var wn = b.wins[j];
+        ctx.fillStyle = 'rgba(255,72,86,' + (0.35 + 0.35 * Math.sin(t * 0.0011 + wn.tw)).toFixed(3) + ')';
+        ctx.fillRect(b.x + wn.dx, floor - b.h + wn.dy, 1.6, 2.4);
+      }
+    }
+    var fg = ctx.createLinearGradient(0, floor, 0, H);
+    fg.addColorStop(0, 'rgba(6,3,3,.35)'); fg.addColorStop(1, 'rgba(6,3,3,.95)');
+    ctx.fillStyle = fg; ctx.fillRect(0, floor, W, H - floor);
+  }
+  var sceneOn = true;
+  sceneSize(); window.addEventListener('resize', sceneSize);
+  (function sceneLoop(t){
+    if (sceneOn) sceneFrame(t || 0);
+    if (!reduced) requestAnimationFrame(sceneLoop);
+  })(0);
+
+  /* ============ cinema scrub engine ============ */
+  var cinema = document.getElementById('cinema');
+  var vid = document.getElementById('cineVid');
+  var vidOk = false;
+  var srcs = vid.querySelectorAll('source');
+  srcs[srcs.length - 1].addEventListener('error', function(){
+    vid.remove(); vidOk = false; ldReady = true; // banner scene remains
+  });
+  vid.addEventListener('loadedmetadata', function(){ vidOk = true; });
+  vid.addEventListener('canplaythrough', function(){ ldReady = true; sceneOn = false; canvas.style.display = 'none'; }, {once: true});
+  setTimeout(function(){ if (!vidOk) ldReady = true; }, 5200);
+
+  /* dwell remap: gaussian density peaks at overlay centers */
+  var CENTERS = [0.065, 0.245, 0.44, 0.63, 0.80, 0.945];
+  var DWELL_W = 0.05, DWELL_PEAK = 3.2, N = 1600;
+  var lut = new Float32Array(N + 1);
+  (function buildLUT(){
+    var acc = 0, dens = new Float32Array(N + 1);
+    for (var i = 0; i <= N; i++) {
+      var p = i / N, d = 1;
+      for (var c = 0; c < CENTERS.length; c++) {
+        var dx = (p - CENTERS[c]) / DWELL_W;
+        d += DWELL_PEAK * Math.exp(-dx * dx);
+      }
+      dens[i] = d;
+    }
+    for (var i2 = 1; i2 <= N; i2++) { acc += (dens[i2 - 1] + dens[i2]) / 2; lut[i2] = acc; }
+    for (var i3 = 0; i3 <= N; i3++) lut[i3] /= acc;
+  })();
+  function remap(p){ /* invert forward map: find x where lut[x] = p */
+    if (p <= 0) return 0; if (p >= 1) return 1;
+    var lo = 0, hi = N;
+    while (hi - lo > 1) { var mid = (lo + hi) >> 1; if (lut[mid] < p) lo = mid; else hi = mid; }
+    var f = (p - lut[lo]) / (lut[hi] - lut[lo] || 1);
+    return (lo + f) / N;
+  }
+
+  var ovs = Array.prototype.slice.call(document.querySelectorAll('.ov'));
+  var chapters = document.getElementById('chapters');
+  var chDots = chapters.querySelectorAll('.ch');
+  var tintEl = document.getElementById('tint');
+  var cue = document.getElementById('scrollCue');
+  var curT = 0, seekBusy = false;
+  vid.addEventListener('seeked', function(){ seekBusy = false; });
+
+  function cinemaLoop(){
+    var rect = cinema.getBoundingClientRect();
+    var raw = Math.max(0, Math.min(1, -rect.top / (rect.height - innerHeight)));
+    var p = remap(raw);
+    var inView = rect.top < innerHeight && rect.bottom > 0;
+
+    if (inView) {
+      /* video scrub */
+      if (vidOk && vid.duration) {
+        var target = p * (vid.duration - 0.05);
+        curT += (target - curT) * 0.12;
+        if (!seekBusy && Math.abs(vid.currentTime - curT) > 0.033 && vid.readyState >= 2) {
+          seekBusy = true;
+          try { vid.currentTime = curT; } catch(e) { seekBusy = false; }
+        }
+      }
+      /* overlays */
+      ovs.forEach(function(ov){
+        var show = parseFloat(ov.dataset.show), hide = parseFloat(ov.dataset.hide);
+        ov.classList.toggle('visible', p >= show && p < hide);
+      });
+      /* chapters */
+      chapters.classList.toggle('on', raw > 0.01 && raw < 0.995);
+      var act = 0;
+      for (var c = 0; c < CENTERS.length; c++) if (p >= CENTERS[c] - 0.09) act = c;
+      chDots.forEach(function(d, i){ d.classList.toggle('on', i === act); });
+      /* tint: gold → red across the journey */
+      tintEl.style.background = 'linear-gradient(120deg, rgba(201,153,46,' + (0.5 - p * 0.3).toFixed(2) + '), rgba(232,25,44,' + (0.1 + p * 0.4).toFixed(2) + ') 70%)';
+      cue.classList.toggle('off', raw > 0.03);
+    } else {
+      chapters.classList.remove('on');
+    }
+    requestAnimationFrame(cinemaLoop);
+  }
+  if (!reduced) {
+    requestAnimationFrame(cinemaLoop);
+  } else {
+    ovs.forEach(function(ov){ ov.classList.add('visible'); });
+    if (vid) { vid.setAttribute('autoplay',''); vid.setAttribute('loop',''); vid.play && vid.play().catch(function(){}); }
+  }
+
+  /* ============ marquee ============ */
+  var mq = document.getElementById('mq1'); mq.innerHTML += mq.innerHTML;
+
+  /* ============ reveals ============ */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ============ optional local videos (portrait) ============ */
   document.querySelectorAll('video[data-optional]').forEach(function(v){
     function gone(){
       var host = v.closest('section') || v.closest('figure');
       if (host) host.classList.add('no-video');
       v.remove();
     }
-    /* a <source> error only means that candidate failed; give up on the last one */
     var sources = v.querySelectorAll('source');
-    if (sources.length) {
-      sources[sources.length - 1].addEventListener('error', gone);
-    } else {
-      v.addEventListener('error', gone, true);
-    }
-    v.addEventListener('canplay', function(){
-      var host = v.closest('section') || v.closest('figure');
-      if (host) host.classList.add('video-on');
-    });
+    if (sources.length) sources[sources.length - 1].addEventListener('error', gone);
+    else v.addEventListener('error', gone, true);
   });
 
-  /* beat store: waveforms + play toggles (visual preview) */
-  document.querySelectorAll('.beat').forEach(function(card){
-    var wave = card.querySelector('.wave');
-    for (var i = 0; i < 32; i++) {
-      var seg = document.createElement('i');
-      seg.style.height = (12 + Math.abs(Math.sin(i * 0.55)) * 68 + Math.random() * 18) + '%';
-      wave.appendChild(seg);
-    }
-    var btn = card.querySelector('.play');
-    btn.addEventListener('click', function(){
-      var was = card.classList.contains('playing');
-      document.querySelectorAll('.beat.playing').forEach(function(b){
-        b.classList.remove('playing');
-        b.querySelector('.play').setAttribute('aria-pressed', 'false');
-      });
-      if (!was) { card.classList.add('playing'); btn.setAttribute('aria-pressed', 'true'); }
-    });
+  /* ============ NOW PLAYING deck ============ */
+  var BEATS = [
+    {name: 'Culture Shift',  genre: 'Hip Hop · Anthemic',       bpm: '96 BPM · Gm',  slug: 'culture-shift',  art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003440_33fb9146-73ab-4cd5-b21e-958d2636a5ac_min.webp'},
+    {name: 'Gold Standard',  genre: 'R&B · Smooth · Late-night', bpm: '88 BPM · E♭', slug: 'gold-standard',  art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003443_5cf8ebab-534b-4173-906d-d6cace5c2ff1_min.webp'},
+    {name: 'Pressure',       genre: 'Trap · Dark · 808-heavy',   bpm: '142 BPM · Fm', slug: 'pressure',       art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003448_748526b8-1972-49fd-92c2-bb1626f3ee6e_min.webp'},
+    {name: 'After Hours',    genre: 'R&B · Moody · Bounce',      bpm: '102 BPM · Am', slug: 'after-hours',    art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003451_48658169-c748-42e0-bc2b-c70ee76576d9_min.webp'},
+    {name: 'Smoke & Mirrors',genre: 'Pop · Hip Hop · Radio',     bpm: '118 BPM · C',  slug: 'smoke-mirrors',  art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003454_80af1297-7a9d-4065-bcb2-d82fd206dfac_min.webp'},
+    {name: 'Night Shift',    genre: 'Trap Soul · Melodic',       bpm: '124 BPM · Dm', slug: 'night-shift',    art: 'https://d8j0ntlcm91z4.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/hf_20260708_003456_4ca59f5f-d8b4-438b-9336-1e647510fc6f_min.webp'}
+  ];
+  var deck = document.getElementById('deck');
+  var tracksEl = document.getElementById('tracks');
+  var npArt = document.getElementById('npArt'), npTitle = document.getElementById('npTitle'), npSub = document.getElementById('npSub');
+  var npNote = document.getElementById('npNote');
+  var wave = document.getElementById('scrubWave');
+  var tCur = document.getElementById('tCur'), tDur = document.getElementById('tDur');
+  var btnPlay = document.getElementById('btnPlay'), btnPrev = document.getElementById('btnPrev'), btnNext = document.getElementById('btnNext');
+  var icPlay = document.getElementById('icPlay'), icPause = document.getElementById('icPause');
+  var audio = new Audio();
+  var cur = 0, playing = false, hasAudio = false;
+  var BARS = 46, barEls = [];
+  var barShape = [];
+  for (var b = 0; b < BARS; b++) barShape.push(0.15 + Math.abs(Math.sin(b * 0.48)) * 0.65 + Math.random() * 0.2);
+  barShape.forEach(function(h){
+    var i = document.createElement('i');
+    i.style.height = (h * 100) + '%';
+    wave.appendChild(i); barEls.push(i);
   });
 
-  /* email capture: real POST once a form service ID is set; demo success until then */
+  function fmt(s){ if (!isFinite(s)) return '–:––'; s = Math.max(0, Math.floor(s)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
+
+  function loadArt(idx){
+    var t = BEATS[idx];
+    npArt.style.opacity = '0';
+    var local = 'assets/covers/' + t.slug + '.jpg';
+    var tried = 0;
+    npArt.onerror = function(){
+      tried++;
+      if (tried === 1 && t.art && t.art.indexOf('http') === 0) { npArt.src = t.art; }
+      else { npArt.onerror = null; npArt.removeAttribute('src'); }
+    };
+    npArt.onload = function(){ npArt.style.opacity = '1'; };
+    npArt.src = local;
+  }
+
+  function select(idx, autoplay){
+    cur = (idx + BEATS.length) % BEATS.length;
+    var t = BEATS[cur];
+    npTitle.textContent = t.name;
+    npSub.textContent = t.genre + ' — ' + t.bpm;
+    loadArt(cur);
+    tracksEl.querySelectorAll('.track').forEach(function(row, i){ row.classList.toggle('on', i === cur); });
+    stop();
+    hasAudio = false;
+    audio.src = 'assets/previews/' + t.slug + '.mp3';
+    audio.load();
+    if (autoplay) tryPlay();
+  }
+  function tryPlay(){
+    audio.play().then(function(){
+      playing = true; hasAudio = true; render();
+    }).catch(function(){
+      /* no preview file — run visual demo mode */
+      playing = true; hasAudio = false; demoT = 0; render();
+    });
+  }
+  function stop(){ playing = false; audio.pause(); render(); }
+  function render(){
+    icPlay.style.display = playing ? 'none' : 'block';
+    icPause.style.display = playing ? 'block' : 'none';
+    btnPlay.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    deck.classList.toggle('playing', playing);
+    npNote.textContent = hasAudio ? 'Previews are tagged — licenses are clean'
+                                  : 'Preview audio: drop mp3s in assets/previews/';
+  }
+  var demoT = 0, DEMO_LEN = 30;
+  (function deckLoop(){
+    var prog = 0, dur = 0, curS = 0;
+    if (playing) {
+      if (hasAudio && audio.duration) { dur = audio.duration; curS = audio.currentTime; prog = curS / dur; }
+      else { demoT += 1 / 60; if (demoT > DEMO_LEN) demoT = 0; dur = DEMO_LEN; curS = demoT; prog = demoT / DEMO_LEN; }
+    } else if (hasAudio && audio.duration) { dur = audio.duration; curS = audio.currentTime; prog = curS / dur; }
+    tCur.textContent = fmt(curS); tDur.textContent = fmt(dur);
+    wave.setAttribute('aria-valuenow', Math.round(prog * 100));
+    var lit = Math.floor(prog * BARS);
+    for (var i = 0; i < BARS; i++) {
+      barEls[i].classList.toggle('played', i <= lit && (playing || prog > 0));
+      if (playing && i <= lit) {
+        barEls[i].style.height = (barShape[i] * 100 * (0.75 + 0.25 * Math.sin(Date.now() * 0.008 + i))) + '%';
+      } else {
+        barEls[i].style.height = (barShape[i] * 100) + '%';
+      }
+    }
+    requestAnimationFrame(deckLoop);
+  })();
+  audio.addEventListener('ended', function(){ select(cur + 1, true); });
+  btnPlay.addEventListener('click', function(){ playing ? stop() : tryPlay(); });
+  btnPrev.addEventListener('click', function(){ select(cur - 1, playing); });
+  btnNext.addEventListener('click', function(){ select(cur + 1, playing); });
+  function seekTo(clientX){
+    var r = wave.getBoundingClientRect();
+    var f = Math.max(0, Math.min(1, (clientX - r.left) / r.width));
+    if (hasAudio && audio.duration) audio.currentTime = f * audio.duration;
+    else demoT = f * DEMO_LEN;
+  }
+  wave.addEventListener('click', function(e){ seekTo(e.clientX); });
+  wave.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight') { e.preventDefault(); hasAudio ? audio.currentTime += 5 : demoT += 2; }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); hasAudio ? audio.currentTime -= 5 : demoT -= 2; }
+  });
+
+  BEATS.forEach(function(t, i){
+    var row = document.createElement('button');
+    row.type = 'button'; row.className = 'track' + (i === 0 ? ' on' : ''); row.setAttribute('role', 'listitem');
+    row.innerHTML =
+      '<span class="t-idx mono">' + ('0' + (i + 1)).slice(-2) + '</span>' +
+      '<span><span class="t-name">' + t.name + '</span><span class="t-genre">' + t.genre + '</span></span>' +
+      '<span class="t-bpm">' + t.bpm + '</span>' +
+      '<span class="t-price">$34.99</span>';
+    row.addEventListener('click', function(){ select(i, true); });
+    tracksEl.appendChild(row);
+  });
+  select(0, false);
+
+  /* ============ email form ============ */
   var form = document.getElementById('emailForm');
   form.addEventListener('submit', function(e){
     if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
@@ -1243,128 +1454,6 @@
       document.querySelector('.list').classList.add('done');
     }
   });
-
-  /* scroll reveals */
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold: 0.15, rootMargin: '0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-
-  /* hero banner scene: red waveform, skyline, reflection */
-  var canvas = document.getElementById('heroScene');
-  var ctx = canvas.getContext('2d');
-  var W = 0, H = 0, bldgs = [];
-
-  function size(){
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var r = canvas.getBoundingClientRect();
-    canvas.width = r.width * dpr; canvas.height = r.height * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    W = r.width; H = r.height;
-    build();
-    if (reduced) frame(0);
-  }
-
-  function build(){
-    bldgs = [];
-    var x = 0;
-    while (x < W) {
-      var bw = 16 + Math.random() * 34;
-      var edge = Math.abs(x - W / 2) / (W / 2);           // 0 center → 1 edge
-      var bh = (18 + Math.random() * 80) * (0.35 + edge * 1.05);
-      var wins = [];
-      var n = Math.floor(bh / 16);
-      for (var i = 0; i < n; i++) {
-        if (Math.random() < 0.5) {
-          wins.push({dx: 3 + Math.random() * (bw - 6), dy: 6 + Math.random() * (bh - 10), tw: Math.random() * 6.28});
-        }
-      }
-      bldgs.push({x: x, w: bw, h: bh, spire: Math.random() < 0.16, wins: wins});
-      x += bw + 3 + Math.random() * 9;
-    }
-  }
-
-  function frame(t){
-    ctx.clearRect(0, 0, W, H);
-    var floor = H * 0.865;
-    var mid = H * 0.42;
-
-    /* red horizon + floor glow */
-    var g = ctx.createRadialGradient(W/2, floor, 0, W/2, floor, W * 0.55);
-    g.addColorStop(0, 'rgba(232,25,44,.26)');
-    g.addColorStop(0.55, 'rgba(232,25,44,.07)');
-    g.addColorStop(1, 'rgba(232,25,44,0)');
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, W, H);
-
-    /* equalizer waveform band across the middle */
-    for (var x = 0; x < W; x += 4) {
-      var d = Math.abs(x - W / 2) / (W / 2);
-      var env = 0.22 + 0.78 * Math.exp(-Math.pow((d - 0.52) / 0.3, 2)); // strongest beside the logo
-      var osc = Math.abs(Math.sin(x * 0.055 + t * 0.0016) * 0.6 + Math.sin(x * 0.013 - t * 0.0009) * 0.4);
-      var hgt = env * H * 0.15 * (0.25 + 0.75 * osc);
-      var a = 0.05 + 0.38 * (hgt / (H * 0.15));
-      ctx.fillStyle = 'rgba(232,25,44,' + a.toFixed(3) + ')';
-      ctx.fillRect(x, mid - hgt, 1.6, hgt * 2);
-      if (x % 16 === 0) {
-        ctx.fillStyle = 'rgba(255,80,95,' + (a * 0.9).toFixed(3) + ')';
-        ctx.fillRect(x, mid - hgt * 1.15, 1, hgt * 2.3);
-      }
-    }
-
-    /* skyline silhouettes with red rim light */
-    for (var i = 0; i < bldgs.length; i++) {
-      var b = bldgs[i];
-      ctx.fillStyle = '#0a0405';
-      ctx.fillRect(b.x, floor - b.h, b.w, b.h);
-      ctx.fillStyle = 'rgba(232,25,44,.3)';
-      ctx.fillRect(b.x, floor - b.h, b.w, 1.2);
-      if (b.spire) {
-        ctx.fillStyle = '#0a0405';
-        ctx.fillRect(b.x + b.w / 2 - 1, floor - b.h - 14, 2, 14);
-        ctx.fillStyle = 'rgba(255,80,95,.6)';
-        ctx.fillRect(b.x + b.w / 2 - 1, floor - b.h - 15, 2, 2);
-      }
-      for (var j = 0; j < b.wins.length; j++) {
-        var wn = b.wins[j];
-        var tw = reduced ? 0.5 : 0.35 + 0.35 * Math.sin(t * 0.0011 + wn.tw);
-        ctx.fillStyle = 'rgba(255,72,86,' + tw.toFixed(3) + ')';
-        ctx.fillRect(b.x + wn.dx, floor - b.h + wn.dy, 1.6, 2.4);
-      }
-    }
-
-    /* mirrored reflection below the floor line */
-    ctx.save();
-    ctx.globalAlpha = 0.14;
-    ctx.translate(0, floor * 2);
-    ctx.scale(1, -1);
-    for (var k = 0; k < bldgs.length; k++) {
-      var rb = bldgs[k];
-      ctx.fillStyle = '#e8192c';
-      ctx.fillRect(rb.x, floor - rb.h * 0.7, rb.w, rb.h * 0.7);
-    }
-    ctx.restore();
-    var fg = ctx.createLinearGradient(0, floor, 0, H);
-    fg.addColorStop(0, 'rgba(6,3,3,.35)');
-    fg.addColorStop(1, 'rgba(6,3,3,.95)');
-    ctx.fillStyle = fg;
-    ctx.fillRect(0, floor, W, H - floor);
-
-    /* hot spot under the wordmark */
-    var hs = ctx.createRadialGradient(W/2, floor + 4, 0, W/2, floor + 4, W * 0.16);
-    hs.addColorStop(0, 'rgba(255,60,75,.34)');
-    hs.addColorStop(1, 'rgba(255,60,75,0)');
-    ctx.fillStyle = hs;
-    ctx.fillRect(0, floor - 30, W, H - floor + 30);
-
-    if (!reduced) requestAnimationFrame(frame);
-  }
-
-  size();
-  window.addEventListener('resize', size);
-  if (!reduced) requestAnimationFrame(frame);
 })();
 </script>
 
