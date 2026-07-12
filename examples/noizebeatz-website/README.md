@@ -69,3 +69,28 @@ template structure (hero → work → about → connect).
 4. `og-cover.jpg` → a 1200×630 share image (the banner art crops well)
 5. Footer streaming links (Spotify / Apple Music / YouTube profiles)
 6. `bookings@noizebeatz.com` → your real booking email
+
+## Performance & caching
+
+The page is optimized for mobile: fonts load async with `font-display: swap`,
+the intro loader is capped at ~1.3s and never waits on assets, the hero film
+only downloads on screens ≥768px (phones get the poster + drawn scene), cover
+art and audio load on demand, and blur/grain effects are simplified under 768px.
+
+**Static-asset caching** is set at the host, not in HTML. Use whichever matches
+your host:
+
+Netlify — create `_headers` next to index.html:
+```
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+```
+
+Apache/cPanel — `.htaccess`:
+```
+<FilesMatch "\.(mp4|webp|jpg|png|mp3|woff2)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+```
