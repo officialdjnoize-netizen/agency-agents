@@ -28,8 +28,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" media="print" onload="this.media='all'"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"></noscript>
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"></noscript>
 
 <title>Noize Beatz — Music Producer, Mixing & Mastering Engineer | Atlanta & Los Angeles</title>
 <style>
@@ -53,8 +53,10 @@
     --text:#efe9dd;
     --warm-dim:#cfc4ae;
     --muted:#b0a68f;
-    --serif:'Playfair Display',Georgia,'Times New Roman',serif;
-    --sans:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    --font-display:'Playfair Display',Georgia,'Times New Roman',serif;
+    --font-body:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    --serif:var(--font-display);
+    --sans:var(--font-body);
     --radius:3px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -78,8 +80,7 @@
   @media(hover:hover) and (pointer:fine){ body{cursor:none} a,button,summary,input,select{cursor:none} }
 
   .display{
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-weight:900;text-transform:uppercase;letter-spacing:.01em;line-height:.92;
+    font-family:var(--font-body);font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:.92;
   }
   .serif{font-family:var(--serif);font-weight:300;letter-spacing:.01em}
   .serif i,.serif em{font-style:italic}
@@ -99,10 +100,10 @@
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
   .eyebrow{
-    font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-    font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+    font-family:var(--font-body);font-variant-numeric:tabular-nums;
+    font-size:.95rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
   }
-  .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+  .mono{font-variant-numeric:tabular-nums}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   section{position:relative}
   .band{padding:clamp(96px,11vw,150px) 0}
@@ -147,7 +148,7 @@
   #loader .ld-mark{font-size:1.3rem;letter-spacing:.4em;text-indent:.4em}
   #loader .ld-bar{width:150px;height:1.5px;background:#2a2214;overflow:hidden;border-radius:2px}
   #loader .ld-bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--gold-hi),var(--red));transition:width .3s ease}
-  #loader .ld-pct{font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.3em;color:var(--muted)}
+  #loader .ld-pct{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:.62rem;letter-spacing:.3em;color:var(--muted)}
 
   /* ================= CHAPTER MARKERS ================= */
   #chapters{
@@ -181,20 +182,19 @@
   .nav-logo-draw svg{display:block;filter:drop-shadow(0 2px 8px rgba(232,25,44,.35))}
   .nav-logo-draw .nb-words{
     display:flex;flex-direction:column;line-height:1;
-    font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    font-family:var(--font-body);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
   }
   .nav-logo-draw .nb-words b{font-weight:900}
   .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
   .nav-links a{
-    color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:400;
-    padding:12px 2px;display:inline-block;
-    letter-spacing:.22em;text-transform:uppercase;transition:color .2s;
+    color:#d6cdb9;text-decoration:none;font-size:1rem;font-weight:500;
+    padding:12px 4px;display:inline-block;
+    letter-spacing:.1em;text-transform:uppercase;transition:color .2s;
   }
   .nav-links a:hover,.nav-links a:focus-visible{color:var(--gold-hi)}
   .btn{
-    display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:var(--radius);
-    font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:10px;padding:16px 34px;min-height:48px;border-radius:var(--radius);
+    font-family:var(--font-body);font-size:1rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
     text-decoration:none;cursor:pointer;border:0;transition:transform .15s,box-shadow .25s,background .25s;
   }
   .btn:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
@@ -210,7 +210,7 @@
     box-shadow:0 0 26px rgba(232,25,44,.4),inset 0 1px 0 rgba(255,255,255,.4);
   }
   .btn-red:hover{transform:translateY(-1px);box-shadow:0 0 42px rgba(232,25,44,.6),inset 0 1px 0 rgba(255,255,255,.4)}
-  .nav .btn{padding:9px 20px}
+  .nav .btn{padding:12px 22px;min-height:44px;font-size:.95rem}
   .nav-links a.btn-gold,.nav-links a.btn-gold:hover,.nav-links a.btn-gold:focus-visible{color:#171006}
   @media(max-width:860px){.nav-links li:not(:last-child){display:none}}
 
@@ -232,7 +232,7 @@
   }
   .ov.visible{opacity:1;transform:translateY(-50%) translateX(0);filter:none;pointer-events:auto}
   .ov .ov-label{
-    font-family:ui-monospace,Menlo,monospace;font-size:.62rem;letter-spacing:.4em;
+    font-family:var(--font-body);font-weight:600;font-size:.95rem;letter-spacing:.16em;
     text-transform:uppercase;color:var(--gold);margin-bottom:20px;
   }
   .ov h2.serif{font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.12;color:var(--text)}
@@ -250,40 +250,23 @@
   #ov-hero .brand-mark .w1{color:#f4f0ea}
   #ov-hero .brand-mark .w2{color:var(--red)}
   #ov-hero .hero-h1{
-    font-size:clamp(1.9rem,4.6vw,3.7rem);line-height:1.12;color:var(--text);
+    font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.12;color:var(--text);
     text-shadow:0 2px 26px rgba(0,0,0,.6);text-wrap:balance;
   }
   #ov-hero .hero-sub{
     color:#e4dbc9;max-width:62ch;margin:22px auto 0;font-size:clamp(.95rem,1.4vw,1.06rem);
     text-shadow:0 1px 14px rgba(0,0,0,.7);
   }
-  #ov-hero .hero-ctas{margin-top:32px}
-  .svc-strip{
-    display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;align-items:center;
-    margin:40px auto 0;padding:16px 10px;max-width:860px;
-    border-top:1px solid rgba(201,153,46,.3);border-bottom:1px solid rgba(201,153,46,.3);
-    font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:#d8cdb6;
-    text-indent:0;
+  #ov-hero .hero-ctas{margin-top:30px}
+  .authority{
+    margin:30px auto 0;max-width:900px;padding:14px 22px;border-radius:var(--radius);
+    background:rgba(10,7,4,.62);border:1px solid rgba(201,153,46,.28);
+    font-size:clamp(1rem,1.4vw,1.15rem);font-weight:500;letter-spacing:.05em;
+    line-height:1.6;color:#f4efe4;
   }
-  .svc-strip i{color:var(--gold);font-style:normal}
   #ov-hero .brand-mark .ch{display:inline-block;opacity:0;transform:translateY(.35em);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.75,.2,1)}
   #ov-hero.visible .brand-mark .ch{opacity:1;transform:none}
-  #ov-hero .role{margin-top:22px;font-size:.82rem;letter-spacing:.6em;text-transform:uppercase;text-indent:.6em;color:var(--text)}
-  #ov-hero .tagline{
-    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
-    color:var(--gold-hi);font-size:clamp(1.5rem,3.4vw,2.4rem);margin-top:14px;
-  }
-  #ov-hero .hero-ctas{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
-  .statbar{
-    display:flex;gap:0;justify-content:center;margin:34px auto 0;max-width:820px;
-    background:rgba(244,240,234,.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-    border:1px solid rgba(244,240,234,.07);border-radius:var(--radius);
-  }
-  .statbar .st{flex:1;padding:18px 10px;text-align:center;border-left:1px solid rgba(244,240,234,.06)}
-  .statbar .st:first-child{border-left:0}
-  .statbar .num{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1.35rem}
-  .statbar .lab{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:5px}
-  @media(max-width:640px){.statbar{flex-wrap:wrap}.statbar .st{flex-basis:50%;border-top:1px solid rgba(244,240,234,.06)}}
+  #ov-hero .hero-ctas{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}}
 
   /* stage 2: vision quote */
   #ov-vision .qmark{font-family:var(--serif);font-size:5.5rem;line-height:.6;color:var(--gold);opacity:.85}
@@ -309,7 +292,7 @@
     border-bottom:1px dotted rgba(201,153,46,.35);
   }
   .cred-list .cr .who{font-family:var(--serif);font-size:1.15rem;color:var(--text)}
-  .cred-list .cr .what{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .cred-list .cr .what{margin-left:auto;font-family:var(--font-body);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 
   /* stage 6: CTA */
   #ov-cta{left:50%;right:auto;transform:translate(-50%,-50%) translateX(-20px);text-align:center;max-width:720px;width:calc(100% - 48px)}
@@ -319,24 +302,14 @@
   #ov-cta .sub{color:var(--warm-dim);margin-top:18px}
   #ov-cta .ctas{display:flex;gap:16px;justify-content:center;margin-top:34px;flex-wrap:wrap}
 
-  .scroll-cue{
-    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:11;
-    display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);
-    font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;text-indent:.34em;
-    opacity:1;transition:opacity .5s;
-  }
-  .scroll-cue::after{content:"";width:1px;height:34px;background:linear-gradient(180deg,var(--gold),transparent);animation:cue 1.6s ease-in-out infinite}
-  @keyframes cue{0%,100%{opacity:.3}50%{opacity:1}}
-  .scroll-cue.off{opacity:0}
-
   /* ================= TRUST BAR ================= */
   .trustbar{
     background:var(--ink-2);border-top:1px solid rgba(201,153,46,.22);
-    border-bottom:1px solid var(--line);padding:54px 0;text-align:center;
+    border-bottom:1px solid var(--line);padding:clamp(64px,8vw,110px) 0;text-align:center;
   }
   .trust-head{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.64rem;
-    letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+    font-family:var(--font-body);font-weight:600;font-size:1rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
   }
   .trust-names{
     list-style:none;display:flex;flex-wrap:wrap;justify-content:center;
@@ -348,11 +321,26 @@
     transition:color .25s;
   }
   .trust-names li:hover{color:var(--gold-hi)}
+  .trust-lede{
+    font-size:clamp(1.5rem,3vw,2.2rem);color:var(--text);max-width:26ch;
+    margin:26px auto 0;line-height:1.3;text-wrap:balance;
+  }
+  .trust-lede em{font-style:italic;color:var(--gold-hi)}
+  .cred-row{
+    list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 18px;
+    margin:34px auto 8px;max-width:1000px;padding:0;
+  }
+  .cred-row li{
+    font-size:1rem;font-weight:500;letter-spacing:.04em;color:#eee7d7;
+    padding:12px 22px;border:1px solid rgba(201,153,46,.3);border-radius:var(--radius);
+    background:rgba(201,153,46,.05);
+  }
+  .trust-names{margin-top:26px}
 
   /* ================= SERVICES ================= */
   .services-band{background:var(--ink)}
   .services-band .section-head{max-width:720px;margin-bottom:56px}
-  .services-band .section-head h2{font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.2rem);margin-top:14px;line-height:1.12;text-wrap:balance}
+  .services-band .section-head h2{font-family:var(--serif);font-size:clamp(2.25rem,4.5vw,3.5rem);margin-top:14px;line-height:1.12;text-wrap:balance}
   .services-band .section-head h2 em{font-style:italic}
   .services-band .section-head p{color:var(--muted);margin-top:18px;max-width:60ch}
   .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
@@ -369,14 +357,31 @@
     display:flex;align-items:center;justify-content:center;
     background:radial-gradient(circle at 32% 28%,#241c0e,#0c0906 70%);
   }
-  .svc h3{font-family:var(--serif);font-size:1.25rem;color:var(--text);font-weight:400}
+  .svc h3{font-family:var(--font-display);font-size:clamp(1.35rem,2vw,1.6rem);color:var(--text);font-weight:400}
   .svc p{color:var(--muted);font-size:1rem;flex:1}
   .svc .learn{
-    padding:10px 0;display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+    padding:12px 0;display:inline-block;font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
     color:var(--gold-hi);text-decoration:none;
   }
   .svc .learn:hover{color:#fff}
   @media(max-width:767px){.svc,.trust-names{backdrop-filter:none;-webkit-backdrop-filter:none}.svc{background:rgba(19,16,9,.85)}}
+
+  /* ================= PROCESS ================= */
+  .process-band{background:var(--ink);border-top:1px solid var(--line)}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;padding:0}
+  .step{
+    border:1px solid rgba(244,240,234,.08);border-radius:var(--radius);
+    background:rgba(244,240,234,.025);padding:34px 28px;
+    display:flex;flex-direction:column;gap:12px;
+    transition:border-color .25s,background .25s;
+  }
+  .step:hover{border-color:rgba(201,153,46,.4);background:rgba(201,153,46,.04)}
+  .step-n{
+    font-weight:800;font-size:1rem;color:var(--gold-hi);letter-spacing:.1em;
+  }
+  .step h3{font-family:var(--font-display);font-weight:400;font-size:clamp(1.35rem,2vw,1.6rem);color:var(--text)}
+  .step p{color:var(--muted);font-size:1rem}
+  @media(max-width:767px){.step{background:rgba(19,16,9,.85)}}
 
   /* ================= ABOUT ================= */
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
@@ -389,17 +394,17 @@
   .portrait::before,.portrait::after{content:"";position:absolute;width:26px;height:26px;border-color:var(--gold);border-style:solid;z-index:4}
   .portrait::before{top:-7px;left:-7px;border-width:2px 0 0 2px}
   .portrait::after{bottom:-7px;right:-7px;border-width:0 2px 2px 0}
-  .portrait .nb-mono{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:4.4rem;line-height:1}
-  .portrait .ph-note{font-family:ui-monospace,Menlo,monospace;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#5e522f}
+  .portrait .nb-mono{font-family:var(--font-body);font-weight:800;font-size:4.4rem;line-height:1}
+  .portrait .ph-note{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#5e522f}
   .portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
   .portrait-vid{z-index:3}
-  .about-copy h2{font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.2rem);margin:14px 0 26px;line-height:1.1}
+  .about-copy h2{font-family:var(--serif);font-size:clamp(2.25rem,4.5vw,3.5rem);margin:14px 0 26px;line-height:1.1}
   .about-copy h2 em{font-style:italic}
   .about-copy p{color:var(--muted);max-width:58ch}
   .about-copy p+p{margin-top:16px}
   .about-stats{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:40px;justify-content:start}
   @media(max-width:520px){.about-stats{grid-template-columns:1fr;gap:18px}}
-  .about-stats .num{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1.6rem}
+  .about-stats .num{font-family:var(--font-body);font-weight:800;font-size:1.6rem}
   .about-stats .lab{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:6px}
 
   /* ================= MARQUEE ================= */
@@ -409,14 +414,14 @@
   }
   .marquee-track{display:inline-block;animation:tick 26s linear infinite}
   @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .marquee span{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:1rem;letter-spacing:.24em;text-transform:uppercase;margin:0 20px}
+  .marquee span{font-family:var(--font-body);font-weight:800;font-size:1rem;letter-spacing:.24em;text-transform:uppercase;margin:0 20px}
   .marquee .dim{color:#4a3d22}
   .marquee .star{color:var(--gold);margin:0 20px;font-size:.85rem}
 
   /* ================= PLAYER DECK (beats) ================= */
   .beats-band{background:var(--ink-2);border-top:1px solid var(--line)}
   .beats-band .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px}
-  .beats-band .section-head h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;line-height:1.08}
+  .beats-band .section-head h2{font-family:var(--serif);font-size:clamp(2.25rem,4.5vw,3.5rem);margin-top:14px;line-height:1.08}
   .beats-band .section-head h2 em{font-style:italic}
   .beats-band .section-head p{color:var(--muted);max-width:40ch}
 
@@ -443,8 +448,7 @@
   }
   .np .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .5s}
   .np .art .art-fallback{
-    position:relative;z-index:0;font-family:"Archivo Black","Arial Black",Impact,sans-serif;
-    font-size:3rem;opacity:.9;
+    position:relative;z-index:0;font-family:var(--font-body);font-weight:800;font-size:3rem;opacity:.9;
   }
   .np .np-meta .np-title{font-family:var(--serif);font-size:1.7rem;color:var(--text)}
   .np .np-meta .np-sub{color:var(--muted);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
@@ -453,7 +457,7 @@
   .np .scrub-wave i{flex:1;border-radius:1px;background:#3a3120;min-height:3px;transition:background .2s}
   .np .scrub-wave i.played{background:linear-gradient(180deg,var(--gold-hi),var(--gold-deep))}
   .deck.playing .scrub-wave i.played{box-shadow:0 0 6px rgba(201,153,46,.35)}
-  .np .scrub-time{display:flex;justify-content:space-between;font-family:ui-monospace,Menlo,monospace;font-size:.64rem;color:var(--muted);letter-spacing:.1em}
+  .np .scrub-time{display:flex;justify-content:space-between;font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:.82rem;color:var(--muted);letter-spacing:.1em}
   .np .np-controls{display:flex;align-items:center;justify-content:center;gap:26px}
   .np .ctrl{
     background:transparent;border:0;color:var(--warm-dim);padding:12px;min-width:44px;min-height:44px;border-radius:50%;
@@ -467,7 +471,7 @@
     box-shadow:0 0 24px rgba(201,153,46,.4),inset 0 1px 0 rgba(255,255,255,.55);
   }
   .np .ctrl-play:hover{color:#171006;transform:scale(1.05)}
-  .np .np-note{font-family:ui-monospace,Menlo,monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#9a8b68;text-align:center}
+  .np .np-note{font-family:var(--font-body);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#9a8b68;text-align:center}
 
   .tracks{position:relative;z-index:1;display:flex;flex-direction:column}
   .track{
@@ -481,12 +485,12 @@
   .track:hover{background:rgba(201,153,46,.05)}
   .track.on{background:rgba(201,153,46,.08);border-left-color:var(--gold)}
   .track:focus-visible{outline:2px solid var(--gold-hi);outline-offset:-2px}
-  .track .t-idx{font-family:ui-monospace,Menlo,monospace;color:#5c4f33;font-size:.72rem;width:20px}
+  .track .t-idx{font-family:var(--font-body);font-variant-numeric:tabular-nums;color:#5c4f33;font-size:.72rem;width:20px}
   .track.on .t-idx{color:var(--gold-hi)}
   .track .t-name{font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem}
   .track .t-genre{display:block;font-size:.68rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;margin-top:3px;font-weight:300}
-  .track .t-bpm{font-family:ui-monospace,Menlo,monospace;font-size:.66rem;color:var(--gold-hi);border:1px solid rgba(201,153,46,.35);border-radius:3px;padding:3px 8px;white-space:nowrap}
-  .track .t-price{font-family:ui-monospace,Menlo,monospace;font-size:.8rem;color:#fff;white-space:nowrap}
+  .track .t-bpm{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:.82rem;color:var(--gold-hi);border:1px solid rgba(201,153,46,.35);border-radius:3px;padding:3px 8px;white-space:nowrap}
+  .track .t-price{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:.95rem;color:#fff;white-space:nowrap}
   @media(max-width:560px){.track{grid-template-columns:auto 1fr auto}.track .t-bpm{display:none}}
 
   /* licenses */
@@ -504,14 +508,14 @@
     font-size:.56rem;letter-spacing:.24em;padding:3px 10px;border-radius:2px;font-weight:700;
   }
   .lic h3{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500}
-  .lic .amt{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:2rem}
+  .lic .amt{font-family:var(--font-body);font-weight:800;font-size:2rem}
   .lic ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
   .lic li{font-size:.92rem;color:var(--muted);padding-left:18px;position:relative}
   .lic li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:2px;background:var(--gold)}
 
   /* ================= SINGLES ================= */
   .singles .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:52px}
-  .singles h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;line-height:1.08}
+  .singles h2{font-family:var(--serif);font-size:clamp(2.25rem,4.5vw,3.5rem);margin-top:14px;line-height:1.08}
   .singles h2 em{font-style:italic}
   .singles .section-head p{color:var(--muted);max-width:40ch}
   .singles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
@@ -523,7 +527,7 @@
     transition:box-shadow .25s,border-color .25s;
   }
   .single:hover .cover{border-color:var(--gold);box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 24px rgba(201,153,46,.25)}
-  .cover .art-title{font-family:"Archivo Black","Arial Black",Impact,sans-serif;text-transform:uppercase;line-height:.95;text-align:center;padding:0 12px;position:relative;z-index:2}
+  .cover .art-title{font-family:var(--font-body);font-weight:800;text-transform:uppercase;line-height:.95;text-align:center;padding:0 12px;position:relative;z-index:2}
   .cover .badge{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;background:rgba(12,9,6,.45);opacity:0;transition:opacity .25s}
   .single:hover .badge,.single:focus-visible .badge{opacity:1}
   .badge i{width:54px;height:54px;border-radius:50%;background:linear-gradient(180deg,#f0d283,#c9992e);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.5)}
@@ -550,46 +554,6 @@
   .single .meta h3{font-size:.9rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);font-weight:600}
   .single .meta .by{font-size:.78rem;letter-spacing:.06em;color:var(--muted);margin-top:3px}
 
-  /* ================= STUDIO ================= */
-  .studioband{
-    position:relative;overflow:hidden;padding:150px 0;
-    background:linear-gradient(180deg,#0f1420 0%,#26324a 40%,#7a6a4e 78%,#131009 100%);
-  }
-  .studioband::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,9,6,.85),rgba(12,9,6,.3) 45%,rgba(12,9,6,.9))}
-  .studioband .wrap{position:relative;z-index:2}
-  .studioband h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;text-shadow:0 2px 24px rgba(0,0,0,.6);line-height:1.08}
-  .studioband h2 em{font-style:italic}
-  .studioband .lede{color:#ded5c4;max-width:52ch;margin-top:20px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
-  .studio-points{display:flex;flex-direction:column;gap:14px;margin-top:34px}
-  .studio-points .pt{display:flex;gap:14px;align-items:flex-start}
-  .studio-points .pt .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);margin-top:9px;flex-shrink:0;box-shadow:0 0 10px rgba(240,210,131,.8)}
-  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:1.02rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
-  .studio-points .pt strong{color:#fff;font-weight:600}
-
-  /* ================= EMAIL LIST ================= */
-  .list{
-    background:radial-gradient(ellipse 70% 45% at 50% 0%,rgba(201,153,46,.14),transparent 60%),var(--cream);
-    color:var(--cream-ink);text-align:center;
-  }
-  .list .eyebrow{color:#9a7420}
-  .list h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);margin-top:14px;line-height:1.12}
-  .list h2 .gold-l{background:linear-gradient(105deg,#8a6516,#c9992e 40%,#8a6516 70%);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
-  .list .sub{color:#5c5142;max-width:46ch;margin:20px auto 0}
-  .email-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:560px;margin:38px auto 0}
-  .email-form input{
-    flex:1;min-width:240px;background:#fff;border:1px solid #cfc4ad;border-radius:var(--radius);
-    padding:15px 18px;font:inherit;font-size:.98rem;color:#171006;
-  }
-  .email-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,153,46,.22)}
-  .list .fine{margin-top:16px;font-size:.8rem;color:#6e6250;letter-spacing:.06em}
-  .list .ok{
-    display:none;margin:38px auto 0;max-width:480px;padding:18px 22px;
-    border:1px solid var(--gold);border-radius:var(--radius);background:rgba(201,153,46,.1);
-    font-weight:600;color:#171006;
-  }
-  .list.done .email-form{display:none}
-  .list.done .ok{display:block}
-
   /* ================= CONNECT ================= */
   .connect{
     background:radial-gradient(ellipse 80% 60% at 50% 115%,rgba(201,153,46,.18),transparent 65%),var(--ink-2);
@@ -597,50 +561,60 @@
   }
   .connect h2{font-size:clamp(2.4rem,7vw,5rem);margin-top:16px}
   .connect .script-lead{
-    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
+    font-family:var(--font-display);font-style:italic;
     font-size:.55em;display:block;margin-bottom:10px;color:var(--gold-hi);text-transform:none;letter-spacing:.01em;
   }
   .connect .sub{color:var(--muted);max-width:52ch;margin:24px auto 0}
-  .connect-ctas{display:flex;gap:16px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+  .connect-ctas{display:flex;justify-content:center;margin-top:44px}
+  .btn-xl{padding:20px 46px;font-size:1.08rem;box-shadow:0 0 44px rgba(201,153,46,.45),inset 0 1px 0 rgba(255,255,255,.55)}
   .qr-card{
     display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none;
     margin-top:56px;padding:24px 28px 18px;background:var(--cream);border-radius:var(--radius);
     border:1px solid var(--gold);box-shadow:0 0 34px rgba(201,153,46,.2);
   }
   .qr-card .qr{width:132px;height:132px;color:#171006;display:block}
-  .qr-card .qr-cap{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#5c5142}
+  .qr-card .qr-cap{font-family:var(--font-body);font-weight:600;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#5c5142}
   .connect-rows{max-width:640px;margin:56px auto 0;display:flex;flex-direction:column;border-top:1px solid var(--line);text-align:left}
   .connect-rows a{
     display:flex;justify-content:space-between;align-items:center;gap:20px;
     padding:20px 6px;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:background .2s;
   }
   .connect-rows a:hover{background:rgba(201,153,46,.06)}
-  .connect-rows .lab{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+  .connect-rows .lab{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .connect-rows .val{font-weight:600;letter-spacing:.04em;color:var(--gold-hi)}
   .faq{max-width:640px;margin:70px auto 0;text-align:left}
-  .faq .faq-title{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;text-align:center}
+  .faq .faq-title{font-size:.95rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;text-align:center}
   .faq details{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink);margin-bottom:10px}
   .faq summary{padding:19px 22px;cursor:pointer;list-style:none;font-weight:500;font-size:1.02rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";color:var(--gold);font-family:ui-monospace,Menlo,monospace;transition:transform .2s}
+  .faq summary::after{content:"+";color:var(--gold);font-family:var(--font-body);font-variant-numeric:tabular-nums;transition:transform .2s}
   .faq details[open] summary::after{transform:rotate(45deg)}
   .faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
   .faq .a{padding:0 20px 20px;color:var(--muted);font-size:1rem;max-width:60ch}
   .faq .a strong{color:var(--text);font-weight:600}
 
   /* ================= FOOTER ================= */
-  footer{padding:70px 0 46px;background:var(--ink);border-top:1px solid rgba(201,153,46,.28);text-align:center}
-  .foot-script{
-    font-family:"Snell Roundhand","Brush Script MT","Lucida Handwriting","Segoe Script",cursive;
-    font-size:clamp(2.2rem,5vw,3.2rem);color:var(--gold-hi);
+  footer{
+    padding:clamp(80px,10vw,130px) 0 60px;background:var(--ink);
+    border-top:1px solid rgba(201,153,46,.28);text-align:center;
   }
-  .foot-motto{margin-top:14px;font-size:.7rem;letter-spacing:.56em;text-transform:uppercase;color:var(--muted);text-indent:.56em}
-  .foot-social{display:flex;gap:26px;justify-content:center;list-style:none;margin-top:34px}
-  .foot-social a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
-  .foot-social a:hover{color:var(--gold-hi)}
-  .foot-mgmt{margin-top:34px;font-size:.8rem;color:#9a8b68;letter-spacing:.12em}
-  .foot-mgmt a{color:var(--gold);text-decoration:none;text-transform:uppercase;letter-spacing:.18em;font-weight:600}
+  .foot-stack{display:flex;flex-direction:column;align-items:center;gap:26px}
+  .foot-logo{
+    font-family:var(--font-body);font-weight:800;text-transform:uppercase;
+    font-size:clamp(1.9rem,4vw,2.8rem);letter-spacing:-.02em;line-height:1;
+    text-decoration:none;
+  }
+  .foot-motto{font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--gold-hi);margin-top:-6px}
+  .foot-social{display:flex;gap:14px 34px;flex-wrap:wrap;justify-content:center;list-style:none;padding:0;margin-top:10px}
+  .foot-social a{
+    color:#d6cdb9;text-decoration:none;font-size:1rem;font-weight:500;
+    letter-spacing:.1em;text-transform:uppercase;padding:10px 2px;display:inline-block;
+  }
+  .foot-social a:hover,.foot-social a:focus-visible{color:var(--gold-hi)}
+  .foot-mgmt{font-size:1rem;color:#b3a68f;margin-top:16px}
+  .foot-mgmt a{color:var(--gold);text-decoration:none;font-weight:600}
   .foot-mgmt a:hover{color:var(--gold-hi)}
+  .foot-copy{font-size:.9rem;color:#9a8b68}
 
   /* ================= MOBILE PERFORMANCE (<768px) =================
      same identity, cheaper pixels: no animated grain, no backdrop blur,
@@ -670,9 +644,7 @@
     .ov{position:relative;left:auto;top:auto;transform:none;opacity:1;filter:none;margin:60px auto;max-width:720px;padding:0 24px;pointer-events:auto}
     #ov-hero,#ov-cta{left:auto;transform:none}
     #ov-hero .brand-mark .ch{opacity:1;transform:none}
-    .scroll-cue{display:none}
     #chapters{display:none}
-    .scroll-cue::after{animation:none}
   }
 </style>
 
@@ -894,20 +866,17 @@
         <p class="brand-mark" aria-hidden="true">
           <span class="w1" data-split>NOIZE</span><span class="wsp">&nbsp;</span><span class="w2" data-split>BEATZ</span>
         </p>
-        <h1 class="hero-h1 serif">Professional music production<br>that brings your <em>vision to life.</em></h1>
+        <h1 class="hero-h1 serif">Professional music production that brings your <em>vision to life.</em></h1>
         <p class="hero-sub">
-          Noize Beatz is a premium music production studio — led by founder and creative
-          lead Theo Lawrence, between Atlanta and Los Angeles — helping independent
-          artists, record labels, and brands turn ideas into professional, release-ready
-          records with full creative direction from first session to final master.
+          From the first idea to the final master, I help artists, songwriters, and labels
+          create release-ready records through music production, vocal production, recording,
+          mixing, mastering, and creative direction.
         </p>
-        <div class="hero-ctas">
+        <p class="authority">№1 Billboard Producer&ensp;•&ensp;7× Grammy-Winning Artist Credits&ensp;•&ensp;Music Featured on STARZ &amp; Amazon&ensp;•&ensp;Trusted by Major Labels &amp; Independent Artists</p>
+        <div class="hero-ctas"><div class="hero-ctas">
           <a class="btn btn-gold" href="#connect">Book a Consultation</a>
           <a class="btn btn-line" href="#services">Explore Services</a>
         </div>
-        <p class="svc-strip" aria-label="Services">
-          <span>Music Production</span><i>·</i><span>Vocal Production</span><i>·</i><span>Recording</span><i>·</i><span>Mixing &amp; Mastering</span><i>·</i><span>Creative Direction</span><i>·</i><span>DJ Services</span>
-        </p>
       </div>
     </div>
 
@@ -966,17 +935,24 @@
       </div>
     </div>
 
-    <div class="scroll-cue" id="scrollCue">Scroll</div>
   </div>
 </section>
 
-<!-- ================= TRUST ================= -->
-<section id="trust" class="trustbar" aria-label="Credits and trust">
-  <p class="trust-head">Trusted by Major Artists, Labels &amp; Global Brands</p>
-  <ul class="trust-names reveal">
-    <li>TLC</li><li>Too $hort</li><li>Snoop Dogg</li><li>Christina Milian</li>
-    <li>Issa Rae</li><li>Atlantic Records</li><li>Raedio</li><li>Amazon</li><li>Starz</li>
-  </ul>
+<!-- ================= CREDENTIALS ================= -->
+<section id="trust" class="trustbar" aria-label="Featured credentials">
+  <div class="wrap">
+    <p class="trust-head">Featured Credentials</p>
+    <p class="trust-lede serif reveal">Trusted by Billboard-charting artists, major labels, and <em>global brands.</em></p>
+    <ul class="cred-row reveal" role="list">
+      <li>№1 Billboard Producer</li>
+      <li>Produced for 7× Grammy winners TLC</li>
+      <li>Music featured on STARZ</li>
+      <li>Music featured by Amazon</li>
+    </ul>
+    <ul class="trust-names reveal" role="list">
+      <li>Too $hort</li><li>Snoop Dogg</li><li>Christina Milian</li><li>Issa Rae / Raedio</li><li>Atlantic Records</li>
+    </ul>
+  </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
@@ -1041,6 +1017,33 @@
         <a class="learn" href="#connect">Check a date →</a>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process" class="band process-band" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">// The Process</span>
+      <h2 id="process-h" class="serif" style="font-size:clamp(2.25rem,4.5vw,3.5rem);margin-top:14px;line-height:1.12">From first call to <em>final master.</em></h2>
+    </div>
+    <ol class="steps" role="list">
+      <li class="step reveal">
+        <span class="step-n">01</span>
+        <h3>Consultation</h3>
+        <p>We scope your vision, references, timeline, and budget — and define exactly what release-ready means for your record.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">02</span>
+        <h3>Production</h3>
+        <p>Sessions in Atlanta, Los Angeles, or remote: production, vocals, and mixing shaped with you in the room — revisions included.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">03</span>
+        <h3>Release-Ready</h3>
+        <p>Final masters delivered to streaming spec with stems and files organized — ready for DSPs, sync, and radio.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -1229,44 +1232,7 @@
   </div>
 </section>
 
-<!-- ================= STUDIO ================= -->
-<section id="studio" class="studioband" aria-labelledby="studio-h">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">// The Room</span>
-      <h2 id="studio-h">The studio <em>above the city</em></h2>
-      <p class="lede">
-        Glass walls, monitors aimed at the skyline, and a room that stays inspiring
-        long after midnight. Records get finished up here — the city lights do half the work.
-      </p>
-      <div class="studio-points">
-        <div class="pt"><span class="dot"></span><p><strong>Attended sessions.</strong> Book time and cut records with production guidance in the room.</p></div>
-        <div class="pt"><span class="dot"></span><p><strong>Remote-first workflow.</strong> Files in, references matched, stems back — same standard local or overseas.</p></div>
-        <div class="pt"><span class="dot"></span><p><strong>Calibrated monitoring.</strong> Every mix checked on mains, nearfields, and the car ride home.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ================= EMAIL LIST ================= -->
-<section id="list" class="band list" aria-labelledby="list-h">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">// The Inner Circle</span>
-      <h2 id="list-h">Free beat pack.<br><span class="gold-l">First on every drop.</span></h2>
-      <p class="sub">
-        Join the list and get a free tagged beat pack today — plus new beats,
-        placements, and collab openings before they hit socials.
-      </p>
-      <form class="email-form" id="emailForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Join the email list">
-        <input type="email" name="email" required placeholder="your@email.com" autocomplete="email" aria-label="Email address">
-        <button type="submit" class="btn btn-gold">Get The Free Pack</button>
-      </form>
-      <p class="ok" id="emailOk">You're in. Check your inbox for the free pack. 🎧</p>
-      <p class="fine">No spam — beats, drops, and openings only. Unsubscribe anytime.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ================= CONNECT ================= -->
 <section id="connect" class="band connect" aria-labelledby="connect-h">
@@ -1275,13 +1241,13 @@
       <span class="eyebrow">// Let's Build</span>
       <h2 id="connect-h" class="display"><span class="script-lead">It's time to</span><span class="foil">Create.</span></h2>
       <p class="sub">
-        Tell me about your project — a free consultation to scope your record, timeline,
-        and budget. Production, vocals, mixing, mastering, creative direction, or a DJ
-        booking: every serious inquiry gets a reply within 24 hours.
+        Tell me about your project. Whether you're creating your first single or your next
+        major release, every consultation begins with understanding your vision, your goals,
+        and how we can build a record that stands out. Serious inquiries receive a response
+        within 24 hours.
       </p>
       <div class="connect-ctas">
-        <a class="btn btn-gold" href="mailto:bookings@noizebeatz.com?subject=Consultation%20Request">Book a Consultation</a>
-        <a class="btn btn-line" href="https://instagram.com/noizebeatz">DM @noizebeatz</a>
+        <a class="btn btn-gold btn-xl" href="mailto:bookings@noizebeatz.com?subject=Consultation%20Request">Book a Consultation</a>
       </div>
     </div>
 
@@ -1329,16 +1295,19 @@
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <div class="wrap">
-    <p class="foot-script">Noize Beatz</p>
-    <p class="foot-motto">It's Time To Create.</p>
-    <ul class="foot-social">
+  <div class="wrap foot-stack">
+    <a class="foot-logo" href="#top" aria-label="Noize Beatz — back to top">
+      <span class="chrome">NOIZE</span>&nbsp;<span class="red-metal">BEATZ</span>
+    </a>
+    <p class="foot-motto serif"><em>It's time to create.</em></p>
+    <ul class="foot-social" role="list">
       <li><a href="https://instagram.com/noizebeatz">Instagram</a></li>
       <li><a href="#">Spotify</a></li>
       <li><a href="#">Apple Music</a></li>
       <li><a href="#">YouTube</a></li>
     </ul>
-    <p class="foot-mgmt">Represented by <a href="https://www.hirizemanagement.com">Hi Rize Management</a> · © 2026 Noize Beatz</p>
+    <p class="foot-mgmt">Represented by <a href="https://www.hirizemanagement.com">Hi Rize Management</a></p>
+    <p class="foot-copy">© 2026 Noize Beatz. All rights reserved.</p>
   </div>
 </footer>
 
@@ -1538,7 +1507,6 @@
   var chapters = document.getElementById('chapters');
   var chDots = chapters.querySelectorAll('.ch');
   var tintEl = document.getElementById('tint');
-  var cue = document.getElementById('scrollCue');
   var curT = 0, seekBusy = false;
   vid.addEventListener('seeked', function(){ seekBusy = false; });
 
@@ -1570,7 +1538,6 @@
       chDots.forEach(function(d, i){ d.classList.toggle('on', i === act); });
       /* tint: gold → red across the journey */
       tintEl.style.background = 'linear-gradient(120deg, rgba(201,153,46,' + (0.5 - p * 0.3).toFixed(2) + '), rgba(232,25,44,' + (0.1 + p * 0.4).toFixed(2) + ') 70%)';
-      cue.classList.toggle('off', raw > 0.03);
     } else {
       chapters.classList.remove('on');
     }
@@ -1734,15 +1701,6 @@
   select(0, false);
   deferArt = false;
   artIO.observe(deck);
-
-  /* ============ email form ============ */
-  var form = document.getElementById('emailForm');
-  form.addEventListener('submit', function(e){
-    if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
-      e.preventDefault();
-      document.querySelector('.list').classList.add('done');
-    }
-  });
 })();
 </script>
 
