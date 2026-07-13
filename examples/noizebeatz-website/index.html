@@ -59,11 +59,21 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
+  html{font-size:112.5%}  /* 18px base — effortless reading on every screen */
   body{
     background:var(--ink);color:var(--text);
-    font-family:var(--sans);font-size:16px;line-height:1.65;font-weight:300;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    font-family:var(--sans);line-height:1.72;font-weight:300;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
   }
+  p{max-width:66ch}
+  .skip{
+    position:fixed;left:16px;top:-64px;z-index:10000;
+    background:var(--gold-hi);color:#171006;font-weight:600;
+    padding:12px 22px;border-radius:var(--radius);text-decoration:none;
+    transition:top .2s;
+  }
+  .skip:focus{top:12px;outline:2px solid #171006}
   ::selection{background:var(--gold);color:#0c0906}
   @media(hover:hover) and (pointer:fine){ body{cursor:none} a,button,summary,input,select{cursor:none} }
 
@@ -95,7 +105,7 @@
   .mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
   section{position:relative}
-  .band{padding:110px 0}
+  .band{padding:clamp(96px,11vw,150px) 0}
 
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -177,7 +187,8 @@
   .nav-logo-draw .nb-words b{font-weight:900}
   .nav-links{display:flex;gap:30px;align-items:center;list-style:none}
   .nav-links a{
-    color:var(--muted);text-decoration:none;font-size:.74rem;font-weight:400;
+    color:var(--muted);text-decoration:none;font-size:.78rem;font-weight:400;
+    padding:12px 2px;display:inline-block;
     letter-spacing:.22em;text-transform:uppercase;transition:color .2s;
   }
   .nav-links a:hover,.nav-links a:focus-visible{color:var(--gold-hi)}
@@ -225,7 +236,7 @@
     text-transform:uppercase;color:var(--gold);margin-bottom:20px;
   }
   .ov h2.serif{font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.12;color:var(--text)}
-  .ov .ov-body{color:var(--warm-dim);margin-top:20px;max-width:52ch;font-size:1.02rem;font-weight:300}
+  .ov .ov-body{color:var(--warm-dim);margin-top:22px;max-width:52ch;font-size:1.08rem;font-weight:300;line-height:1.75}
 
   /* stage 1: hero */
   #ov-hero{max-width:none;right:max(6vw,28px)}
@@ -341,7 +352,7 @@
   /* ================= SERVICES ================= */
   .services-band{background:var(--ink)}
   .services-band .section-head{max-width:720px;margin-bottom:56px}
-  .services-band .section-head h2{font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);margin-top:14px;line-height:1.1}
+  .services-band .section-head h2{font-family:var(--serif);font-size:clamp(2rem,4.6vw,3.2rem);margin-top:14px;line-height:1.12;text-wrap:balance}
   .services-band .section-head h2 em{font-style:italic}
   .services-band .section-head p{color:var(--muted);margin-top:18px;max-width:60ch}
   .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
@@ -359,9 +370,9 @@
     background:radial-gradient(circle at 32% 28%,#241c0e,#0c0906 70%);
   }
   .svc h3{font-family:var(--serif);font-size:1.25rem;color:var(--text);font-weight:400}
-  .svc p{color:var(--muted);font-size:.93rem;flex:1}
+  .svc p{color:var(--muted);font-size:1rem;flex:1}
   .svc .learn{
-    font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
+    padding:10px 0;display:inline-block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;
     color:var(--gold-hi);text-decoration:none;
   }
   .svc .learn:hover{color:#fff}
@@ -445,7 +456,7 @@
   .np .scrub-time{display:flex;justify-content:space-between;font-family:ui-monospace,Menlo,monospace;font-size:.64rem;color:var(--muted);letter-spacing:.1em}
   .np .np-controls{display:flex;align-items:center;justify-content:center;gap:26px}
   .np .ctrl{
-    background:transparent;border:0;color:var(--warm-dim);padding:6px;border-radius:50%;
+    background:transparent;border:0;color:var(--warm-dim);padding:12px;min-width:44px;min-height:44px;border-radius:50%;
     display:flex;align-items:center;justify-content:center;transition:color .2s,transform .15s;
   }
   .np .ctrl:hover{color:var(--gold-hi);transform:scale(1.08)}
@@ -456,7 +467,7 @@
     box-shadow:0 0 24px rgba(201,153,46,.4),inset 0 1px 0 rgba(255,255,255,.55);
   }
   .np .ctrl-play:hover{color:#171006;transform:scale(1.05)}
-  .np .np-note{font-family:ui-monospace,Menlo,monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#6b5f45;text-align:center}
+  .np .np-note{font-family:ui-monospace,Menlo,monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#9a8b68;text-align:center}
 
   .tracks{position:relative;z-index:1;display:flex;flex-direction:column}
   .track{
@@ -495,7 +506,7 @@
   .lic h3{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500}
   .lic .amt{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-size:2rem}
   .lic ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:7px}
-  .lic li{font-size:.84rem;color:var(--muted);padding-left:18px;position:relative}
+  .lic li{font-size:.92rem;color:var(--muted);padding-left:18px;position:relative}
   .lic li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:2px;background:var(--gold)}
 
   /* ================= SINGLES ================= */
@@ -552,7 +563,7 @@
   .studio-points{display:flex;flex-direction:column;gap:14px;margin-top:34px}
   .studio-points .pt{display:flex;gap:14px;align-items:flex-start}
   .studio-points .pt .dot{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);margin-top:9px;flex-shrink:0;box-shadow:0 0 10px rgba(240,210,131,.8)}
-  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:.96rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+  .studio-points .pt p{margin:0;color:#e6ddcc;font-size:1.02rem;max-width:52ch;text-shadow:0 1px 10px rgba(0,0,0,.7)}
   .studio-points .pt strong{color:#fff;font-weight:600}
 
   /* ================= EMAIL LIST ================= */
@@ -570,7 +581,7 @@
     padding:15px 18px;font:inherit;font-size:.98rem;color:#171006;
   }
   .email-form input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,153,46,.22)}
-  .list .fine{margin-top:16px;font-size:.74rem;color:#8a7c66;letter-spacing:.06em}
+  .list .fine{margin-top:16px;font-size:.8rem;color:#6e6250;letter-spacing:.06em}
   .list .ok{
     display:none;margin:38px auto 0;max-width:480px;padding:18px 22px;
     border:1px solid var(--gold);border-radius:var(--radius);background:rgba(201,153,46,.1);
@@ -609,12 +620,12 @@
   .faq{max-width:640px;margin:70px auto 0;text-align:left}
   .faq .faq-title{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;text-align:center}
   .faq details{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink);margin-bottom:10px}
-  .faq summary{padding:17px 20px;cursor:pointer;list-style:none;font-weight:500;font-size:.92rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .faq summary{padding:19px 22px;cursor:pointer;list-style:none;font-weight:500;font-size:1.02rem;display:flex;justify-content:space-between;align-items:center;gap:14px}
   .faq summary::-webkit-details-marker{display:none}
   .faq summary::after{content:"+";color:var(--gold);font-family:ui-monospace,Menlo,monospace;transition:transform .2s}
   .faq details[open] summary::after{transform:rotate(45deg)}
   .faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
-  .faq .a{padding:0 20px 18px;color:var(--muted);font-size:.92rem;max-width:60ch}
+  .faq .a{padding:0 20px 20px;color:var(--muted);font-size:1rem;max-width:60ch}
   .faq .a strong{color:var(--text);font-weight:600}
 
   /* ================= FOOTER ================= */
@@ -625,9 +636,9 @@
   }
   .foot-motto{margin-top:14px;font-size:.7rem;letter-spacing:.56em;text-transform:uppercase;color:var(--muted);text-indent:.56em}
   .foot-social{display:flex;gap:26px;justify-content:center;list-style:none;margin-top:34px}
-  .foot-social a{color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+  .foot-social a{color:var(--muted);text-decoration:none;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase}
   .foot-social a:hover{color:var(--gold-hi)}
-  .foot-mgmt{margin-top:34px;font-size:.74rem;color:#6b5f45;letter-spacing:.12em}
+  .foot-mgmt{margin-top:34px;font-size:.8rem;color:#9a8b68;letter-spacing:.12em}
   .foot-mgmt a{color:var(--gold);text-decoration:none;text-transform:uppercase;letter-spacing:.18em;font-weight:600}
   .foot-mgmt a:hover{color:var(--gold-hi)}
 
@@ -666,6 +677,21 @@
 </style>
 
 <!-- ===== SEO / AEO structured data ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Noize Beatz",
+  "description": "Noize Beatz is a premium music production studio serving independent artists, record labels, brands, and businesses — music production, vocal production, recording, mixing, mastering, artist development, creative direction, and DJ services.",
+  "url": "https://noizebeatz.com",
+  "sameAs": ["https://instagram.com/noizebeatz"],
+  "founder": {"@type": "Person", "name": "Theo Lawrence", "jobTitle": "Founder & Creative Lead"},
+  "location": [
+    {"@type": "Place", "name": "Atlanta, GA"},
+    {"@type": "Place", "name": "Los Angeles, CA"}
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -802,6 +828,8 @@
   <span class="ch"><b></b><i></i></span>
 </nav>
 
+<a class="skip" href="#main-content">Skip to content</a>
+
 <!-- ================= NAV ================= -->
 <header class="nav">
   <div class="wrap nav-inner">
@@ -846,7 +874,7 @@
   </div>
 </header>
 
-<main id="top">
+<main id="top"><span id="main-content" tabindex="-1"></span>
 <!-- ================= CINEMA ================= -->
 <section id="cinema" aria-label="Noize Beatz — cinematic intro">
   <div class="stage">
@@ -868,10 +896,10 @@
         </p>
         <h1 class="hero-h1 serif">Professional music production<br>that brings your <em>vision to life.</em></h1>
         <p class="hero-sub">
-          Noize Beatz is a music producer, vocal producer, and mixing &amp; mastering engineer —
-          based between Atlanta and Los Angeles — helping independent artists, labels, and brands
-          turn ideas into professional, release-ready records with full creative direction from
-          first session to final master.
+          Noize Beatz is a premium music production studio — led by founder and creative
+          lead Theo Lawrence, between Atlanta and Los Angeles — helping independent
+          artists, record labels, and brands turn ideas into professional, release-ready
+          records with full creative direction from first session to final master.
         </p>
         <div class="hero-ctas">
           <a class="btn btn-gold" href="#connect">Book a Consultation</a>
@@ -956,7 +984,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">// Services</span>
-      <h2 id="services-h">Everything your record needs,<br><em>under one roof.</em></h2>
+      <h2 id="services-h">Everything your record needs, <em>under one roof.</em></h2>
       <p>
         From first idea to final master — professional music production services for
         independent artists, record labels, songwriters, singers, brands, and content
@@ -993,6 +1021,18 @@
         <h3>Creative Direction</h3>
         <p>A single sonic vision across your project — references, rollout, and records that sound like they belong together.</p>
         <a class="learn" href="#connect">Shape your sound →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M11 3.5l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L3.8 8.8l5-.7z" fill="none" stroke="#e9c96b" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Artist Development</h3>
+        <p>A structured path from raw talent to release-ready artist — sound, catalog, and confidence built record by record.</p>
+        <a class="learn" href="#connect">Build your path →</a>
+      </article>
+      <article class="svc reveal">
+        <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="6" width="16" height="11" rx="2.5" fill="none" stroke="#e9c96b" stroke-width="1.7"/><circle cx="11" cy="11.5" r="3.1" fill="none" stroke="#e9c96b" stroke-width="1.6"/><path d="M7.5 6l1.2-2h4.6l1.2 2" fill="none" stroke="#e9c96b" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3>Recording Sessions</h3>
+        <p>Attended sessions in Atlanta and Los Angeles — calibrated rooms, dialed engineering, zero wasted studio hours.</p>
+        <a class="learn" href="#connect">Book the room →</a>
       </article>
       <article class="svc reveal">
         <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="8.4" fill="none" stroke="#e9c96b" stroke-width="1.7"/><circle cx="11" cy="11" r="2.6" fill="#e9c96b"/><path d="M11 2.6a8.4 8.4 0 0 1 5.9 2.4" stroke="#f8ecc0" stroke-width="1.7" fill="none" stroke-linecap="round"/></svg></div>
@@ -1123,6 +1163,11 @@
         Through rich vocal production, layered instrumentation, and an unwavering
         commitment to bringing each artist's creative vision to life, Noize continues
         to shape the future of today's music.
+      </p>
+      <p>
+        Founded and led by <strong>Theo Lawrence</strong> — producer, engineer, and
+        creative lead — Noize Beatz operates as a full creative studio: one team, one
+        standard, from writing room to final master.
       </p>
       <div class="about-stats" role="list">
         <div role="listitem"><div class="num foil">№1</div><div class="lab">Billboard Plaque</div></div>
@@ -1608,6 +1653,7 @@
     var t = BEATS[cur];
     npTitle.textContent = t.name;
     npSub.textContent = t.genre + ' — ' + t.bpm;
+    npArt.alt = 'Cover art for ' + t.name;
     if (!deferArt) loadArt(cur);
     tracksEl.querySelectorAll('.track').forEach(function(row, i){ row.classList.toggle('on', i === cur); });
     stop();
