@@ -384,8 +384,28 @@
   @media(max-width:767px){.step{background:rgba(19,16,9,.85)}}
 
   /* ================= ABOUT ================= */
-  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+  #about{padding-top:0}
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(48px,6vw,84px);align-items:start}
   @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}}
+  .about-figure{margin:-72px 0 0;position:relative;z-index:2}
+  @media(max-width:900px){.about-figure{margin-top:-48px;max-width:520px}}
+  .about-figure .portrait{box-shadow:0 40px 90px rgba(0,0,0,.55)}
+  .portrait-cap{
+    display:flex;flex-direction:column;gap:4px;
+    margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,153,46,.35);
+  }
+  .portrait-cap .cap-name{font-weight:600;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text)}
+  .portrait-cap .cap-role{font-size:.9rem;color:var(--muted);letter-spacing:.06em}
+  .about-copy{padding-top:clamp(40px,6vw,84px)}
+  .about-roles{
+    display:flex;flex-wrap:wrap;gap:8px 14px;margin:18px 0 8px;
+    font-size:.9rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#d6cdb9;
+  }
+  .about-roles i{color:var(--gold);font-style:normal}
+  .about-lede{
+    font-family:var(--font-display);font-size:clamp(1.15rem,1.8vw,1.4rem);
+    line-height:1.6;color:#ece4d2;
+  }
   .portrait{
     aspect-ratio:4/5;position:relative;border:1px solid rgba(201,153,46,.5);
     background:radial-gradient(ellipse 80% 55% at 50% 30%,rgba(201,153,46,.14),transparent 65%),linear-gradient(180deg,#171208,#0c0906);
@@ -402,7 +422,7 @@
   .about-copy h2 em{font-style:italic}
   .about-copy p{color:var(--muted);max-width:58ch}
   .about-copy p+p{margin-top:16px}
-  .about-stats{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:40px;justify-content:start}
+  .about-stats{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:44px;justify-content:start;border-top:1px solid var(--line);padding-top:28px}
   @media(max-width:520px){.about-stats{grid-template-columns:1fr;gap:18px}}
   .about-stats .num{font-family:var(--font-body);font-weight:800;font-size:1.6rem}
   .about-stats .lab{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:6px}
@@ -1141,21 +1161,28 @@
 <!-- ================= ABOUT ================= -->
 <section id="about" class="band" aria-labelledby="about-h">
   <div class="wrap about-grid">
-    <figure class="portrait reveal" aria-label="Portrait of Noize Beatz">
-      <video class="portrait-img portrait-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
-        <source src="assets/portrait-loop.mp4" type="video/mp4">
-      </video>
-      <img class="portrait-img" loading="lazy" decoding="async" width="800" height="1000" src="assets/portrait.jpg"
-           alt="Noize Beatz seated at the mixing console in the studio"
-           data-remote="https://d2ol7oe51mr4n9.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/645eda08-90fb-43e9-8844-6c0515ec3891_resize.jpg"
-           onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.remove()}">
-      <span class="nb-mono foil">N|B</span>
-      <span class="ph-note">assets/portrait-loop.mp4 or portrait.jpg goes here</span>
+    <figure class="about-figure reveal">
+      <div class="portrait" aria-hidden="false">
+        <video class="portrait-img portrait-vid" autoplay muted loop playsinline data-optional aria-hidden="true">
+          <source src="assets/portrait-loop.mp4" type="video/mp4">
+        </video>
+        <img class="portrait-img" loading="lazy" decoding="async" width="800" height="1000" src="assets/portrait.jpg"
+             alt="Theo Lawrence of Noize Beatz seated at the mixing console in the studio"
+             data-remote="https://d2ol7oe51mr4n9.cloudfront.net/user_3G6qc82PNxEfWeJWyWR1i78JB8M/645eda08-90fb-43e9-8844-6c0515ec3891_resize.jpg"
+             onerror="if(this.dataset.remote){this.src=this.dataset.remote;this.removeAttribute('data-remote')}else{this.remove()}">
+        <span class="nb-mono foil" aria-hidden="true">N|B</span>
+        <span class="ph-note" aria-hidden="true">assets/portrait-loop.mp4 or portrait.jpg goes here</span>
+      </div>
+      <figcaption class="portrait-cap">
+        <span class="cap-name">Theo Lawrence</span>
+        <span class="cap-role">Founder &amp; Creative Lead — Atlanta · Los Angeles</span>
+      </figcaption>
     </figure>
     <div class="about-copy reveal">
       <span class="eyebrow">// The Story</span>
       <h2 id="about-h">The <em>architect</em> of sound</h2>
-      <p>
+      <p class="about-roles" aria-label="Roles"><span>Producer</span><i>·</i><span>Engineer</span><i>·</i><span>Creative Direction</span></p>
+      <p class="about-lede">
         Noize Beatz is a dynamic producer and architect of sound known for crafting
         immersive, melodic productions that seamlessly blend hip hop, R&amp;B, and pop.
         From records for Grammy Award-winning artists to breakout singles for rising
